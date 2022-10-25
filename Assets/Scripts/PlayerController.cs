@@ -5,41 +5,52 @@ using UnityEngine.Sprites;
 
 public class PlayerController : MonoBehaviour
 {
-   private Rigidbody2D rb2D;
-   private Animator animator;
+   private Rigidbody2D rb;
+   private Animator anim;
+   public float hf = 0.0f;
+   public float vf = 0.0f;
 
-   public float speed = 2.0f;
+   public float movementSpeed = 5f;
+   public Vector2 movement;
 
    
 
    private void Start()
    {
-    rb2D = GetComponent<Rigidbody2D>();
-    animator = GetComponent<Animator>();
+    rb = this.GetComponent<Rigidbody2D>();
+    anim = this.GetComponent<Animator>();
+    
 
    }
 
    private void Update()
    {
+    
+    movement.x = Input.GetAxisRaw("Horizontal");
+    movement.y = Input.GetAxisRaw("Vertical");
+    movement = movement.normalized;
 
-    if(Input.GetKey(KeyCode.A))
+    hf = movement.x > 0.01f ? movement.x : movement.x < -0.01f ? 1 : 0;
+    vf = movement.y > 0.01f ? movement.y : movement.y < -0.01f ? 1 : 0;
+    if (movement.x < -0.01f)
     {
-        animator.Play("Left");
-        transform.position += Vector3.left * speed * Time.deltaTime;
-    }
-    if(Input.GetKey(KeyCode.D))
+        this.gameObject.transform.localScale = new Vector3(-1, 1, 1);
+    } else
     {
-        GetComponent<Animator>().SetTrigger("D");
+        this.gameObject.transform.localScale = new Vector3(1, 1, 1);
     }
-    if(Input.GetKey(KeyCode.S))
-    {
-        GetComponent<Animator>().SetTrigger("S");
-    }
-    if(Input.GetKey(KeyCode.W))
-    {
-        GetComponent<Animator>().SetTrigger("W");
-    }
+
+    anim.SetFloat("Horizontal", hf);
+    anim.SetFloat("Vertical", movement.y);
+    anim.SetFloat("Speed", vf);
+
     
    }
+
+   private void FixedUpdate()
+   {
+    rb.MovePosition(rb.position + movement * movementSpeed * Time.fixedDeltaTime);
+   }
+
 }
 
