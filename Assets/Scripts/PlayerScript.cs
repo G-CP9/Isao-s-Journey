@@ -56,5 +56,9 @@ public class PlayerScript : MonoBehaviour
         isMoving = false;
     }
 
-   
+    
+
+
+
+
 }

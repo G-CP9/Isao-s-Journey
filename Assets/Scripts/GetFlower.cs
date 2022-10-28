@@ -10,26 +10,42 @@ public class GetFlower : MonoBehaviour
     private bool _isPickedUp = false;
     private bool ctrl;
     private BoxCollider2D bd;
+    
 
     private void Start()
     {
         bd = GetComponent<BoxCollider2D>();
+
+        
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
-
+     
         Debug.Log(collision.gameObject);
-        if (ctrl && !_isPickedUp && collision.gameObject.tag == "Player")
+        if(collision.gameObject.tag == "Player")
         {
-            transform.SetParent(collision.transform, true);
-            _isPickedUp = true;
-            Destroy(bd.gameObject);
+            
+            if (ctrl && !_isPickedUp)
+            {
+                transform.SetParent(collision.transform, true);
+                _isPickedUp = true;
+                Destroy(bd.gameObject);
+
+            }
+
         }
         
+
+        
+
     }
+
+
+
 
     void Update()
     {
+       
         if (Input.GetKeyDown(KeyCode.P))
         {
             ctrl = true;
