@@ -4,12 +4,14 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Flor
+  - Flower
+  - Pink
+  - Blue
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - GameObjects
   - Water
   - UI
   - 
@@ -41,4 +43,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BackGround
+    uniqueID: 2695884693
+    locked: 0
+  - name: GameObjects
+    uniqueID: 2710378633
+    locked: 0
+  - name: UI
+    uniqueID: 969166091
     locked: 0
