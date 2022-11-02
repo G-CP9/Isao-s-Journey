@@ -18,20 +18,8 @@ public class PlayerScript : MonoBehaviour
     private Animator animator;
    
 
-
-    //Tipos de flores
-    public static List<string> flowers= new List<string>();
-    
-
-
     private void Start()
     {
-        
-
-        //Una lista que a lo mejor nos sirve mas adelante
-        List<string> flowers = new List<string>();
-        flowers.Add("Blue");
-        flowers.Add("Pink");
 
     }
 
@@ -44,7 +32,13 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        Movement();
+        Animate();
+    }
+
+
+    void Movement()
+    {
         if (!isMoving)
         {
             input.x = Input.GetAxisRaw("Horizontal");
@@ -64,10 +58,9 @@ public class PlayerScript : MonoBehaviour
                 StartCoroutine(Move(targetPos));
             }
         }
-
-        animator.SetBool("isMoving", isMoving);
-        animator.SetBool("isPicking", isPicking);
     }
+
+
 
     IEnumerator Move(Vector3 targetPos)
     {
@@ -101,7 +94,11 @@ public class PlayerScript : MonoBehaviour
         Debug.Log(isPicking);
     }
     
-
+    void Animate()
+    {
+        animator.SetBool("isMoving", isMoving);
+        animator.SetBool("isPicking", isPicking);
+    }
 
 
 
