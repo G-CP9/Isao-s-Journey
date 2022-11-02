@@ -1,30 +1,37 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
+
+
 
 public class PlayerScript : MonoBehaviour
 {
+    //Player Movement
+
     public float moveSpeed;
     private bool isMoving;
+    private bool isPicking;
     private Vector2 input;
 
     private Animator animator;
+   
 
-    //Toolbar
-    public Text Blue_flowers;
-    int num_blue;
-    public GameObject Icon_B; //icono de la flor azul
 
-    public Text Pink_flowers;
-    int num_pink;
-    public GameObject Icon_P; //icono de la flor azul
+    //Tipos de flores
+    public static List<string> flowers= new List<string>();
+    
+
 
     private void Start()
     {
-        //Ocultamos Botones
-        Icon_B.SetActive(false);
-        Icon_P.SetActive(false);
+        
+
+        //Una lista que a lo mejor nos sirve mas adelante
+        List<string> flowers = new List<string>();
+        flowers.Add("Blue");
+        flowers.Add("Pink");
 
     }
 
@@ -37,6 +44,7 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
         if (!isMoving)
         {
             input.x = Input.GetAxisRaw("Horizontal");
@@ -58,6 +66,7 @@ public class PlayerScript : MonoBehaviour
         }
 
         animator.SetBool("isMoving", isMoving);
+        animator.SetBool("isPicking", isPicking);
     }
 
     IEnumerator Move(Vector3 targetPos)
@@ -74,33 +83,24 @@ public class PlayerScript : MonoBehaviour
         isMoving = false;
     }
 
-    public void UpdateScore(string item)
+
+    
+  
+
+    public void Pick_Flower(bool pickup)
     {
-        if (item == "Blue")
+        if (pickup)
         {
-            Debug.Log("Ha entrado, guarra");
-            num_blue += 1;
-            Debug.Log(num_blue);
-            Blue_flowers.text = "x" + num_blue.ToString();
-
-            if (num_blue == 1)
-            {
-                Icon_B.SetActive(true);
-            }
+            isMoving = false;
+            isPicking = true;
         }
-        if (item == "Pink")
+        else
         {
-            num_pink++;
-            Pink_flowers.text = "x" + num_pink.ToString();
-
-            if (num_pink == 1)
-            {
-                Icon_P.SetActive(true);
-            }
-
+            isPicking = false;
         }
-
+        Debug.Log(isPicking);
     }
+    
 
 
 

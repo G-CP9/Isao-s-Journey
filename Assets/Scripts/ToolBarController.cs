@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ToolBarController : MonoBehaviour
 {
-    //Toolbar
+    //Toolbar set up
     public Text Blue_flowers;
     int num_blue;
     public GameObject Icon_B; //icono de la flor azul
@@ -14,17 +14,24 @@ public class ToolBarController : MonoBehaviour
     int num_pink;
     public GameObject Icon_P; //icono de la flor azul
 
+
     private void Start()
     {
+        //Ocultamos Botones
         Icon_B.SetActive(false);
         Icon_P.SetActive(false);
     }
 
-    public void flower_type(Collider2D item )
+
+
+
+    public void UpdateScore(string item)
     {
-        if(item.gameObject.tag == "Blue")
+        if (item == "Blue")
         {
-            num_blue++;
+            //Debug.Log("Ha entrado, guarra");
+            num_blue += 1;
+            //Debug.Log(num_blue);
             Blue_flowers.text = "x" + num_blue.ToString();
 
             if (num_blue == 1)
@@ -32,7 +39,7 @@ public class ToolBarController : MonoBehaviour
                 Icon_B.SetActive(true);
             }
         }
-        if(item.gameObject.tag == "Pink")
+        if (item == "Pink")
         {
             num_pink++;
             Pink_flowers.text = "x" + num_pink.ToString();

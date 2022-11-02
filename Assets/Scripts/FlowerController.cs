@@ -4,6 +4,10 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+
+
+
 public class FlowerController : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -11,31 +15,35 @@ public class FlowerController : MonoBehaviour
 
     private bool _isPickedUp = false;
     private bool ctrl;
+    bool pick;
     string flor;
-    BoxCollider2D bd;
 
     //Vinculamos el personaje
-    public PlayerScript PlayerScript;
+    public ToolBarController toolBar;
+    public PlayerScript playerScript;
+
+    
 
 
     private void Start()
     {
 
-        bd = GetComponent<BoxCollider2D>();
-        PlayerScript = FindObjectOfType<PlayerScript>();   
-        
+        toolBar = FindObjectOfType<ToolBarController>();
+        playerScript = FindObjectOfType<PlayerScript>();
+
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Player")
         {
-            Debug.Log(collision.gameObject.tag);
+            //Debug.Log(collision.gameObject.tag);
 
             if (ctrl && !_isPickedUp)
             {
                 flor = (this.gameObject.tag).ToString();
                 Debug.Log(flor);
-                PlayerScript.UpdateScore(flor);
+                toolBar.UpdateScore(flor);
+                playerScript.Pick_Flower(pick);
                 transform.SetParent(collision.transform, true);
                 _isPickedUp = true;
                 Destroy(this.gameObject);
@@ -51,6 +59,7 @@ public class FlowerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P))
         {
             ctrl = true;
+            pick = false;
 
         }
         else if (Input.GetKeyUp(KeyCode.P))
@@ -58,8 +67,12 @@ public class FlowerController : MonoBehaviour
             ctrl = false;
             if (_isPickedUp)
             {
-                transform.SetParent(null);
+                
+
+                transform.SetParent(ºnull);
                 _isPickedUp = false;
+                pick = true;
+
             }
         }
     }

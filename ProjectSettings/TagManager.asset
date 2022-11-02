@@ -7,6 +7,9 @@ TagManager:
   - Flower
   - Pink
   - Blue
+  - Flor
+  - Bin
+  - Inventory
   layers:
   - Default
   - TransparentFX
