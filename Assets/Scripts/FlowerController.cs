@@ -69,7 +69,7 @@ public class FlowerController : MonoBehaviour
             {
                 
 
-                transform.SetParent(ºnull);
+                transform.SetParent(null);
                 _isPickedUp = false;
                 pick = true;
 
