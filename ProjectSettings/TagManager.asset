@@ -4,12 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Flower
-  - Pink
-  - Blue
-  - Flor
-  - Bin
   - Inventory
+  - PlantA
+  - PlantB
+  - PlantC
   layers:
   - Default
   - TransparentFX

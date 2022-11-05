@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -9,18 +10,32 @@ using UnityEngine.UI;
 public class PlayerScript : MonoBehaviour
 {
     //Player Movement
-
     public float moveSpeed;
-    private bool isMoving;
-    private bool isPicking;
+    private bool isMoving = false;
+    private bool isPicking = false;
+    private bool canMove = true;
     private Vector2 input;
 
+    //Player actions
+    private bool _isPickedUp = false;
+    private bool ctrl;
+    string flower;
+    string thing;
+
+    //Vinculamos la toolbar
+    public ToolBarController toolBar;
+
+
+
+
+    //Player animations
     private Animator animator;
    
 
     private void Start()
     {
-
+        toolBar = FindObjectOfType<ToolBarController>();
+            
     }
 
     private void Awake()
@@ -29,24 +44,26 @@ public class PlayerScript : MonoBehaviour
 
     }
 
+   
+
     // Update is called once per frame
     void Update()
     {
+        Inputs();
         Movement();
         Animate();
     }
 
-
     void Movement()
     {
-        if (!isMoving)
+        if (!isMoving && canMove == true)
         {
             input.x = Input.GetAxisRaw("Horizontal");
             input.y = Input.GetAxisRaw("Vertical");
 
             if (input.x != 0) input.y = 0;
 
-            if (input != Vector2.zero)
+            if (input != Vector2.zero )
             {
                 animator.SetFloat("moveX", input.x);
                 animator.SetFloat("moveY", input.y);
@@ -59,8 +76,6 @@ public class PlayerScript : MonoBehaviour
             }
         }
     }
-
-
 
     IEnumerator Move(Vector3 targetPos)
     {
@@ -76,30 +91,81 @@ public class PlayerScript : MonoBehaviour
         isMoving = false;
     }
 
-
-    
-  
-
-    public void Pick_Flower(bool pickup)
+    void Animate()
     {
-        if (pickup)
+        animator.SetBool("isMoving", isMoving);
+    }
+
+
+    void Inputs()
+    {
+        if(Input.GetKeyUp(KeyCode.P))
         {
-            isMoving = false;
-            isPicking = true;
+            if(thing == "Flower")
+            {
+                animator.SetTrigger("PickFlower");
+                isPicking = true;
+            }
+            
+            
         }
         else
         {
             isPicking = false;
+
         }
-        Debug.Log(isPicking);
     }
-    
-    void Animate()
+
+  
+
+    private void OnCollisionStay2D(Collision2D collision)
     {
-        animator.SetBool("isMoving", isMoving);
-        animator.SetBool("isPicking", isPicking);
+        
+        if ((collision.gameObject.tag == "PlantA") || (collision.gameObject.tag == "PlantB") || (collision.gameObject.tag == "PlantC"))
+        {
+            Debug.Log(collision.gameObject.tag);
+            thing = "Flower";
+            if (isPicking)
+            {
+                //Identificamos el tipo de flor que recogemos
+                flower = (collision.gameObject.tag).ToString();
+                
+
+                //Decidimos de forma aleatoria si la flor será venenosa
+                int i = Random.Range(1,6);
+                Debug.Log(i);
+                if(i == 5)
+                {
+                    flower = "Poison";
+                }
+
+                //Actualizamos el inventario
+                toolBar.UpdateScore(flower);
+
+                //Destruimos el objeto después de cogerlo
+                
+                _isPickedUp = true;
+                
+                Destroy(collision.gameObject);
+                
+                
+                
+            }
+
+
+        }
+
+        
+
     }
 
+    void LockMovement()
+    {
+        canMove = false;
+    }
 
-
+    void UnlockMovement()
+    {
+        canMove = true;
+    }
 }
