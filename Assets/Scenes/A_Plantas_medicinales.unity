@@ -1285,6 +1285,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1297151584}
   m_CullTransparentMesh: 1
+--- !u!1 &1339974057
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1339974059}
+  - component: {fileID: 1339974058}
+  m_Layer: 0
+  m_Name: PlantSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1339974058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1339974057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d045bb118512fd4498c7df4448f1551, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flowerToSpawn:
+  - {fileID: 8216229695206736, guid: a0430387f32c2f646879a221ab89df91, type: 3}
+  - {fileID: 5913275101819077026, guid: 88255cb9fc241a44db5ec53afa139c89, type: 3}
+  - {fileID: 6548628448987157025, guid: b4484f20645ee1e4ebfbe8bece96ae01, type: 3}
+  isTimer: 0
+  timeToSpawn: 0
+  isRandomized: 0
+--- !u!4 &1339974059
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1339974057}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -11.8147745, y: -3.005754, z: 2039.4797}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1441918440
 GameObject:
   m_ObjectHideFlags: 0
