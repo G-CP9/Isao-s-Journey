@@ -8,6 +8,7 @@ TagManager:
   - PlantA
   - PlantB
   - PlantC
+  - Wall
   layers:
   - Default
   - TransparentFX
