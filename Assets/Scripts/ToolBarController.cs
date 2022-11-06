@@ -30,6 +30,10 @@ public class ToolBarController : MonoBehaviour
     //Vinculamos la ProgressBar
     public ProgressBar p_bar;
 
+    //Score
+    public Text Score;
+    int score;
+
 
     private void Start()
     {
@@ -41,7 +45,7 @@ public class ToolBarController : MonoBehaviour
 
 
         //ProgressBar
-        p_bar = FindObjectOfType<ProgressBar>();
+        p_bar.SetInitProgress();
     }
 
 
@@ -60,7 +64,9 @@ public class ToolBarController : MonoBehaviour
             }
 
             //Planta A = 1 punto
-            p_bar.IncrementProgress(0.7f);
+            //p_bar.IncrementProgress(0.01f);
+            score++;
+
         }
         if (item == "PlantB")
         {
@@ -73,8 +79,8 @@ public class ToolBarController : MonoBehaviour
             }
 
             //Planta B = 3 puntos
-            p_bar.IncrementProgress(0.73f);
-
+            //p_bar.IncrementProgress(0.03f);
+            score = score + 3;
         }
         if (item == "PlantC")
         {
@@ -87,7 +93,8 @@ public class ToolBarController : MonoBehaviour
             }
 
             //Planta C = 5 puntos
-            p_bar.IncrementProgress(0.75f);
+            //p_bar.IncrementProgress(0.05f);
+            score = score + 5;
         }
 
         if (item == "Poison")
@@ -99,10 +106,14 @@ public class ToolBarController : MonoBehaviour
             {
                 Icon_P.SetActive(true);
             }
+            //Planta venenosa: -2 puntos
+            //p_bar.DecreaseProgress(0.2f);
+
+            score = score - 2;
 
         }
-
-        //Planta venenosa: -2 puntos
-        p_bar.IncrementProgress(0.72f);
+        
+        p_bar.SetProgress(score);
+        
     }
 }

@@ -5,31 +5,16 @@ using UnityEngine.UI;
 
 public class ProgressBar : MonoBehaviour
 {
-    private Slider slider;
-    public float FillSpeed = 0.5f;
-    private float targetProgress = 0;
+    public Slider slider;
 
-    // Start is called before the first frame update
-    private void Awake()
+    public void SetInitProgress()
     {
-        slider= gameObject.GetComponent<Slider>();
+        slider.maxValue = 30;
+        slider.minValue = 0;
     }
 
-    void Start()
+    public void SetProgress(int score)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (slider.value < targetProgress)
-            slider.value += FillSpeed * Time.deltaTime;
-    }
-
-    public void IncrementProgress(float newProgress)
-    {
-        targetProgress = slider.value + newProgress;
-        Debug.Log(targetProgress);
+        slider.value = score;
     }
 }
