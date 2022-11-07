@@ -4,34 +4,45 @@ using UnityEngine;
 
 public class ThrowableObject : MonoBehaviour
 {
-    public Transform slingshot;
+    public Transform SlingshotHead;
     public float angle;
     public float power;
     public float windAngle;
     public float windPower;
     private Rigidbody2D rb;
-    // Start is called before the first frame update
+    private Vector2 screenBounds;
+    private float objectWidth;
+    private float objectHeight;
+    private bool onFlight;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        rb.gravityScale = 0;
+        transform.position = SlingshotHead.position;
+        screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
+        objectWidth = transform.GetComponent<SpriteRenderer>().bounds.size.x / 2;
+        objectHeight = transform.GetComponent<SpriteRenderer>().bounds.size.y / 2;
+        onFlight = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && !onFlight)
         {
             Throw();
         }
-    }
-
-    private void FixedUpdate() {
-        
+        if ((transform.position.y - objectHeight) < -screenBounds.y || (transform.position.x - objectWidth) < -screenBounds.x || (transform.position.x + objectWidth) > screenBounds.x)
+        {
+            onFlight = false;
+        }
     }
 
     public void Throw()
     {
-        transform.position = slingshot.position;
+        onFlight = true;
+        rb.gravityScale = 1;
+        transform.position = SlingshotHead.position;
         // slingshot throw
         float radAngle = angle * Mathf.Deg2Rad;
         float x = Mathf.Cos(radAngle) * power;
@@ -48,7 +59,20 @@ public class ThrowableObject : MonoBehaviour
     {
         if (other.gameObject.tag == "Ground")
         {
-            print("touchedGround");
+            onFlight = false;
+        }
+        if (other.gameObject.tag == "Platform")
+        {
+            rb.velocity = rb.velocity/2;
+            onFlight = false;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D other) {
+        if (other.gameObject.tag == "Platform")
+        {
+            rb.velocity = new Vector2(0, 0);
+            rb.angularVelocity = 0;
         }
     }
 }
