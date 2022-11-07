@@ -4,42 +4,51 @@ using UnityEngine;
 
 public class ThrowableObject : MonoBehaviour
 {
-    [SerializeField] float _InitialVelocity;
-    [SerializeField] float _Angle;
-    [SerializeField] Transform _FirePoint;
-
-    private void Start() {
-        transform.position = _FirePoint.position;
+    public Transform slingshot;
+    public float angle;
+    public float power;
+    public float windAngle;
+    public float windPower;
+    private Rigidbody2D rb;
+    // Start is called before the first frame update
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
     }
 
-
-    private void Update()
+    // Update is called once per frame
+    void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            float angle = _Angle * Mathf.Deg2Rad;
-            StopAllCoroutines();
-            StartCoroutine(Coroutine_Movement(_InitialVelocity, angle));
+            Throw();
         }
     }
 
-    IEnumerator Coroutine_Movement(float initialVelocity, float angle)
+    private void FixedUpdate() {
+        
+    }
+
+    public void Throw()
     {
-        float time = 0;
-        while (time < 100)
-        {
-            float x = initialVelocity * time * Mathf.Cos(angle);
-            float y = initialVelocity * time * Mathf.Sin(angle) - (1f / 2f) * - Physics.gravity.y * Mathf.Pow(time, 2);
-            transform.position = _FirePoint.position + new Vector3(x, y, 0);
-            time += Time.deltaTime;
-            yield return null;
-        }
+        transform.position = slingshot.position;
+        // slingshot throw
+        float radAngle = angle * Mathf.Deg2Rad;
+        float x = Mathf.Cos(radAngle) * power;
+        float y = Mathf.Sin(radAngle) * power;
+        // wind influence
+        float windRadAngle = windAngle * Mathf.Deg2Rad;
+        float windX = Mathf.Cos(windRadAngle) * windPower;
+        float windY = Mathf.Sin(windRadAngle) * windPower;
+        // throw
+        rb.velocity = new Vector2(x + windX, y + windY);
     }
 
-    private void OnCollisionEnter2D(Collision2D other) {
+    private void OnCollisionEnter2D(Collision2D other)
+    {
         if (other.gameObject.tag == "Ground")
         {
-            StopAllCoroutines();
+            print("touchedGround");
         }
     }
 }
