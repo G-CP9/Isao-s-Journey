@@ -38,8 +38,12 @@ public class SlingshotMinigameManager : MonoBehaviour
         if (success)
         {
             points++;
-            print("Points: " + points);
+            print("NICE!");
         }
-        StartTurn();
+        else
+        {
+            print("MEH!");
+        }
+        Invoke("StartTurn", 3.0f);
     }
 }

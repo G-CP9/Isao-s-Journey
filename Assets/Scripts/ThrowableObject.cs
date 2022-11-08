@@ -9,6 +9,7 @@ public class ThrowableObject : MonoBehaviour
     public float power;
     private Rigidbody2D rb;
     private SlingshotMinigameManager minigame;
+    private bool turnFinished;
 
     void Start()
     {
@@ -80,11 +81,16 @@ public class ThrowableObject : MonoBehaviour
     public void StartTurn()
     {
         PlaceObject();
+        turnFinished = false;
     }
 
     public void FinishTurn(bool success)
     {
-        minigame.EndTurn(success);
+        if (!turnFinished)
+        {
+            minigame.EndTurn(success);
+            turnFinished = true;
+        }
     }
 
 }
