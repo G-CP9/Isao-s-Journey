@@ -8,19 +8,12 @@ public class ThrowableObject : MonoBehaviour
     public float angle;
     public float power;
     private Rigidbody2D rb;
-    private Vector2 screenBounds;
-    private float objectWidth;
-    private float objectHeight;
-    private bool turnFinished;
     private SlingshotMinigameManager minigame;
 
     void Start()
     {
         minigame = SlingshotMinigameManager.Instance;
         rb = GetComponent<Rigidbody2D>();
-        screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
-        objectWidth = transform.GetComponent<SpriteRenderer>().bounds.size.x / 2;
-        objectHeight = transform.GetComponent<SpriteRenderer>().bounds.size.y / 2;
         minigame.StartTurn();
     }
 
@@ -29,13 +22,6 @@ public class ThrowableObject : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && minigame.canThrow)
         {
             Throw();
-        }
-        if ((transform.position.y - objectHeight) < -screenBounds.y || (transform.position.x - objectWidth) < -screenBounds.x || (transform.position.x + objectWidth) > screenBounds.x)
-        {
-            if (!turnFinished)
-            {
-                FinishTurn(false);
-            }
         }
     }
 
@@ -57,11 +43,15 @@ public class ThrowableObject : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.tag == "Ground")
+        if (other.gameObject.tag == "Defeat")
         {
             FinishTurn(false);
         }
-        if (other.gameObject.tag == "Platform")
+        else if (other.gameObject.tag == "Ground")
+        {
+            FinishTurn(false);
+        }
+        else if (other.gameObject.tag == "Platform")
         {
             rb.velocity = rb.velocity/2;
             FinishTurn(true);
@@ -89,13 +79,11 @@ public class ThrowableObject : MonoBehaviour
 
     public void StartTurn()
     {
-        turnFinished = false;
         PlaceObject();
     }
 
     public void FinishTurn(bool success)
     {
-        turnFinished = true;
         minigame.EndTurn(success);
     }
 
