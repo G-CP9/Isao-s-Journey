@@ -69,7 +69,7 @@ public class ThrowableObject : MonoBehaviour
     private void PlaceObject()
     {
         rb.gravityScale = 0;
-        transform.position = SlingshotHead.position;
+        transform.position = new Vector3(SlingshotHead.position.x, SlingshotHead.position.y, 0);
         StopObject();
     }
 
