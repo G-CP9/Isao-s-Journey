@@ -5,8 +5,6 @@ using UnityEngine;
 public class ThrowableObject : MonoBehaviour
 {
     public Transform SlingshotHead;
-    public float angle;
-    public float power;
     private Rigidbody2D rb;
     private SlingshotMinigameManager minigame;
     private bool turnFinished;
@@ -31,9 +29,9 @@ public class ThrowableObject : MonoBehaviour
         minigame.canThrow = false;
         rb.gravityScale = 1;
         // slingshot throw
-        float radAngle = angle * Mathf.Deg2Rad;
-        float x = Mathf.Cos(radAngle) * power;
-        float y = Mathf.Sin(radAngle) * power;
+        float radAngle = minigame.throwAngle * Mathf.Deg2Rad;
+        float x = Mathf.Cos(radAngle) * minigame.throwPower;
+        float y = Mathf.Sin(radAngle) * minigame.throwPower;
         // wind influence
         float windRadAngle = minigame.windAngle * Mathf.Deg2Rad;
         float windX = Mathf.Cos(windRadAngle) * minigame.windPower;
