@@ -143,7 +143,6 @@ public class Player : MonoBehaviour
     void Inputs()
     {
         Debug.Log(box_open);
-        Is_touching(thing);
         //If the button pressed is <<P>> & player isn't moving
         if (canInteract)
         {
@@ -288,32 +287,10 @@ public class Player : MonoBehaviour
         
     }
 
-
-    //Is Isao touching something?
-    private void Is_touching(string thing)
+    private void OnCollisionExit2D(Collision2D collision)
     {
-        if (thing == "Null")
-        {
-            canInteract = false;
-        }
-        else
-        {
-            canInteract = true;
-        }
-
+        canInteract = true;
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         //EVENTS
