@@ -9,6 +9,10 @@ TagManager:
   - PlantB
   - PlantC
   - Wall
+  - Bin
+  - Box
+  - Lavanda
+  - Camomila
   layers:
   - Default
   - TransparentFX

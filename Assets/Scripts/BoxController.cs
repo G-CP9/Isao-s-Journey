@@ -1,68 +1,69 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.UIElements;
+using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class BinController : MonoBehaviour
+public class BoxController : MonoBehaviour
 {
-    public bool bin_open;
+    public bool box_open;
     string flower;
     public ToolBarController toolBar;
+    public bool isThrowing;
 
-
-
+    
+    
 
     private void Start()
     {
-        bin_open = false;
+        box_open = false;
 
         toolBar = FindObjectOfType<ToolBarController>();
 
-
+        
 
     }
     public void OpenState(bool state)
     {
-        bin_open = state;
-        if (bin_open)
+        box_open = state;
+        if(box_open)
         {
-            Debug.Log("bin Open");
+            Debug.Log("Box Open");
         }
         else
         {
-            Debug.Log("bin Close");
+            Debug.Log("Box Close");
         }
     }
 
     private void Update()
     {
-
-        if (bin_open)
+        
+        if (box_open)
         {
             Input_flower();
 
-            toolBar.ThrowFlower(flower);
+            toolBar.KeepFlower(flower);
             flower = "";
         }
 
     }
 
-
+   
     private void Input_flower()
     {
-        if (Input.GetKeyUp(KeyCode.Alpha1))
+        if(Input.GetKeyUp(KeyCode.Alpha1))
         {
-            if (toolBar.num_Lavanda > 0)
+            if(toolBar.num_Lavanda > 0)
             {
                 flower = "Lavanda";
                 toolBar.num_objects--;
+                isThrowing = true;
             }
             else
             {
                 Debug.Log("No tienes flores A");
             }
-
+                
         }
 
         if (Input.GetKeyUp(KeyCode.Alpha2))
@@ -71,7 +72,7 @@ public class BinController : MonoBehaviour
             {
                 flower = "Camomila";
                 toolBar.num_objects--;
-
+                isThrowing = true;
             }
             else
             {
@@ -86,7 +87,7 @@ public class BinController : MonoBehaviour
             {
                 flower = "PlantC";
                 toolBar.num_objects--;
-
+                isThrowing = true;
             }
             else
             {
@@ -101,7 +102,7 @@ public class BinController : MonoBehaviour
             {
                 flower = "Poison1";
                 toolBar.num_objects--;
-
+                isThrowing = true;
             }
             else
             {
@@ -116,7 +117,7 @@ public class BinController : MonoBehaviour
             {
                 flower = "Poison2";
                 toolBar.num_objects--;
-
+                isThrowing = true;
             }
             else
             {
@@ -131,7 +132,7 @@ public class BinController : MonoBehaviour
             {
                 flower = "Poison3";
                 toolBar.num_objects--;
-
+                isThrowing = true;
             }
             else
             {
@@ -140,8 +141,5 @@ public class BinController : MonoBehaviour
 
         }
     }
-
-
-
 
 }
