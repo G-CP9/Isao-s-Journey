@@ -16,14 +16,6 @@ public class ThrowableObject : MonoBehaviour
         minigame.StartTurn();
     }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space) && minigame.canThrow)
-        {
-            Throw();
-        }
-    }
-
     public void Throw()
     {
         minigame.canThrow = false;
