@@ -8,6 +8,7 @@ public class SlingshotMinigameManager : MonoBehaviour
 
     public ThrowableObject throwableObject;
     public ThrowInput throwInput;
+    public Animator animator;
     public Wind Wind;
 
     public int turn = 0;
@@ -47,7 +48,7 @@ public class SlingshotMinigameManager : MonoBehaviour
         } 
          else if (canThrow && Input.GetKeyUp(KeyCode.Space))
         {
-            throwableObject.Throw();
+            AnimateThrow();
         }
     }
 
@@ -76,5 +77,17 @@ public class SlingshotMinigameManager : MonoBehaviour
             points++;
         }
         Invoke("StartTurn", 2.0f);
+    }
+
+    public void AnimateThrow()
+    {
+        if (throwAngle < 16) animator.SetTrigger("ThrowLow");
+        else if (throwAngle < 31) animator.SetTrigger("ThrowMedium");
+        else animator.SetTrigger("ThrowHigh");
+    }
+
+    public void Throw()
+    {
+        throwableObject.Throw();
     }
 }
