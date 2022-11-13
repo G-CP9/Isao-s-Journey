@@ -142,7 +142,6 @@ public class Player : MonoBehaviour
     //Player's inputs
     void Inputs()
     {
-        Debug.Log(box_open);
         //If the button pressed is <<P>> & player isn't moving
         if (canInteract)
         {

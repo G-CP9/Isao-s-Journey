@@ -7,16 +7,18 @@ public class Spawn : MonoBehaviour
     public int MAX_PLANTS;
     public int INITIAL_PLANTS;
 
-    public GameObject Lavanda;
-    public GameObject Camomila;
+    public GameObject planta;
+
 
     public float respawnTime;
     public Vector2 size;
 
     private void Start()
     {
-        for(int i = 0; i < INITIAL_PLANTS; i++)
+
+        for (int i = 0; i < INITIAL_PLANTS; i++)
         {
+
             spawnPlant();
         }
         StartCoroutine(spawnPlants());
@@ -27,15 +29,25 @@ public class Spawn : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(respawnTime);
-            if (gameObject.transform.childCount < MAX_PLANTS) spawnPlant();
+            if (gameObject.transform.childCount < MAX_PLANTS)
+            {
+                spawnPlant();
+                 
+            }
         }
     }
 
     private void spawnPlant()
     {
-        GameObject plant = Instantiate(Lavanda);
+        GameObject plant = Instantiate(planta);
         plant.transform.SetParent(gameObject.transform);
         Plant p = plant.GetComponent<Plant>();
         p.Spawn();
     }
+
+    
+
+
 }
+
+

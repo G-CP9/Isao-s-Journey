@@ -1306,7 +1306,6 @@ GameObject:
   m_Component:
   - component: {fileID: 790837359}
   - component: {fileID: 790837358}
-  - component: {fileID: 790837357}
   m_Layer: 3
   m_Name: Mapa
   m_TagString: Untagged
@@ -1314,24 +1313,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &790837357
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 790837356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d045bb118512fd4498c7df4448f1551, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MAX_PLANTS: 30
-  INITIAL_PLANTS: 10
-  Lavanda: {fileID: 8216229695206736, guid: a0430387f32c2f646879a221ab89df91, type: 3}
-  Camomila: {fileID: 5913275101819077026, guid: 88255cb9fc241a44db5ec53afa139c89, type: 3}
-  respawnTime: 0
-  size: {x: 0, y: 0}
 --- !u!212 &790837358
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1815,6 +1796,87 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1101449152}
   m_CullTransparentMesh: 1
+--- !u!1 &1189674203
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1189674206}
+  - component: {fileID: 1189674205}
+  - component: {fileID: 1189674204}
+  m_Layer: 0
+  m_Name: Lavanda
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1189674204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189674203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d045bb118512fd4498c7df4448f1551, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MAX_PLANTS: 20
+  INITIAL_PLANTS: 3
+  planta: {fileID: 5913275101819077026, guid: 88255cb9fc241a44db5ec53afa139c89, type: 3}
+  respawnTime: 10
+  size: {x: 0, y: 0}
+--- !u!60 &1189674205
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189674203}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -23.119772, y: -11.967178}
+      - {x: -24.12109, y: -13.462327}
+      - {x: -23.054173, y: -14.932184}
+      - {x: -7.9578724, y: -15.31904}
+      - {x: 15.062774, y: -14.2788}
+      - {x: 15.92865, y: -11.250871}
+--- !u!4 &1189674206
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189674203}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.3917034, y: -1.0304036, z: -0.7123356}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1223080738
 GameObject:
   m_ObjectHideFlags: 0
@@ -1891,6 +1953,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1223080738}
   m_CullTransparentMesh: 1
+--- !u!1 &1231016615
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1231016616}
+  m_Layer: 0
+  m_Name: Zonas_Flores
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1231016616
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231016615}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -17.471987, y: 5.6728573, z: -1.0590692}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1297151584
 GameObject:
   m_ObjectHideFlags: 0
@@ -3063,11 +3156,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 113785018974791826, guid: d6125d7029217b746a4b5538e34ad754, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.42
+      value: 81.28
       objectReference: {fileID: 0}
     - target: {fileID: 113785018974791826, guid: d6125d7029217b746a4b5538e34ad754, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.48
+      value: 21.78
       objectReference: {fileID: 0}
     - target: {fileID: 113785018974791826, guid: d6125d7029217b746a4b5538e34ad754, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3132,11 +3225,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3998517749319785437, guid: ab975954bb120f54f80dc4e162f96472, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.2222
+      value: 81.64
       objectReference: {fileID: 0}
     - target: {fileID: 3998517749319785437, guid: ab975954bb120f54f80dc4e162f96472, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.47
+      value: 17.87
       objectReference: {fileID: 0}
     - target: {fileID: 3998517749319785437, guid: ab975954bb120f54f80dc4e162f96472, type: 3}
       propertyPath: m_LocalPosition.z

@@ -37,7 +37,7 @@ public class Plant : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
         obstaculo = (other.gameObject.tag).ToString();
-        if (objetos.Contains(obstaculo))
+        if (obstaculo == "Lavanda")
         {
             FindLocation();
         }
