@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6548628448987157027}
   - component: {fileID: 6548628448987157024}
   - component: {fileID: 6548628448987157026}
+  - component: {fileID: 7942710646871369970}
   m_Layer: 0
   m_Name: PlantC
   m_TagString: PlantC
@@ -111,3 +112,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 40.244297, y: 59.21}
   m_EdgeRadius: 0
+--- !u!114 &7942710646871369970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6548628448987157025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c46cbdc88e56e9e4683650174b6b53a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

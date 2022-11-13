@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5913275101819077029}
   - component: {fileID: 5913275101819077028}
   - component: {fileID: 5913275101819077027}
+  - component: {fileID: 2286807686284273933}
   m_Layer: 3
   m_Name: Camomila
   m_TagString: Camomila
@@ -26,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5913275101819077026}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.66, y: -2.63, z: 0}
-  m_LocalScale: {x: 0.08, y: 0.09, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.08, y: 0.08, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -98,7 +99,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.04991722, y: 0.044371605}
+  m_Offset: {x: 1.020665, y: 0.07137108}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -109,5 +110,17 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8.694552, y: 12.655506}
+  m_Size: {x: 14.39009, y: 20.13474}
   m_EdgeRadius: 0
+--- !u!114 &2286807686284273933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5913275101819077026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c46cbdc88e56e9e4683650174b6b53a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
