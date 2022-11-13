@@ -10,7 +10,7 @@ public class ThrowInput : MonoBehaviour
     public Gradient gradient;
     public Image fill;
 
-    private void Start()
+    private void Awake()
     {
         minigame = SlingshotMinigameManager.Instance;
     }

@@ -11,7 +11,7 @@ public class Wind : MonoBehaviour
     public Sprite red;
     private Image image;
 
-    private void Start()
+    private void Awake()
     {
         minigame = SlingshotMinigameManager.Instance;
         image = GetComponent<Image>();

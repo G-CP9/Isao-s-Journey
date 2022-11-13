@@ -6,8 +6,8 @@ public class SlingshotMinigameManager : MonoBehaviour
 {
     public static SlingshotMinigameManager Instance;
 
-    public ThrowableObject ThrowableObject;
-    public ThrowInput ThrowInput;
+    public ThrowableObject throwableObject;
+    public ThrowInput throwInput;
     public Wind Wind;
 
     public int turn = 0;
@@ -29,7 +29,7 @@ public class SlingshotMinigameManager : MonoBehaviour
     {
         throwPower = 0;
         points = 0;
-        ThrowInput.SetMaxPower();
+        throwInput.SetMaxPower();
     }
 
     private void Update()
@@ -43,22 +43,22 @@ public class SlingshotMinigameManager : MonoBehaviour
         {
             throwPower += 10 * Time.deltaTime;
             if (throwPower > MAX_THROW_POWER) throwPower = MAX_THROW_POWER;
-            ThrowInput.SetPower();
+            throwInput.SetPower();
         } 
          else if (canThrow && Input.GetKeyUp(KeyCode.Space))
         {
-            ThrowableObject.Throw();
+            throwableObject.Throw();
         }
     }
 
     public void StartTurn()
     {
         throwPower = 0;
-        ThrowInput.SetPower();
+        throwInput.SetPower();
         turn++;
         ChangeWind();
         canThrow = true;
-        ThrowableObject.StartTurn();
+        throwableObject.StartTurn();
     }
 
     public void ChangeWind()
