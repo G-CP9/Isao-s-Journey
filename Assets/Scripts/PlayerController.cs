@@ -68,6 +68,9 @@ public class PlayerController : MonoBehaviour
     public void LockMovement()
     {
         canMove = false;
+        rigidBody.velocity = new Vector2(0, 0);
+        lastMoveDirection = moveDirection;
+        moveDirection = new Vector2(0, 0);
     }
 
     public void UnlockMovement()
