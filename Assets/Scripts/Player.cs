@@ -289,6 +289,8 @@ public class Player : MonoBehaviour
     private void OnCollisionExit2D(Collision2D collision)
     {
         canInteract = true;
+        flower = "Null";
+        thing = "Null";
     }
 
 
@@ -314,10 +316,8 @@ public class Player : MonoBehaviour
             Destroy(flower_object);
         }
 
-        flower = "Null";
-        thing = "Null";
+        
         canMove = true;
-        canInteract=false;
     }
 
 
