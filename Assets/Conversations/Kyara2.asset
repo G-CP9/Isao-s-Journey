@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8200a43d5a2fde47842b095a121196f, type: 3}
+  m_Name: Kyara2
+  m_EditorClassIdentifier: 
+  text: Yo soy Kyara. Bienvenido a la zona de Despor. En este momento nos viene muy
+    bien tu ayuda.
+  option1: "\xBFA que se debe la mascarilla?"
+  option2: "\xBFQue tipo de accion est\xE1is realizando en Despor?"
+  op1Conv: {fileID: 11400000, guid: 044af6ec6dddaad48a6bdf4c0b4cfdb3, type: 2}
+  op2Conv: {fileID: 11400000, guid: 535c8580ee06f1d469ea236ecd003b8b, type: 2}
