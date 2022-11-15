@@ -83,9 +83,9 @@ public class BoxController : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.Alpha3))
         {
-            if (toolBar.num_C > 0)
+            if (toolBar.num_Calendula > 0)
             {
-                flower = "PlantC";
+                flower = "Calendula";
                 toolBar.num_objects--;
                 isThrowing = true;
             }
@@ -98,9 +98,9 @@ public class BoxController : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.Alpha4))
         {
-            if (toolBar.num_poison > 0)
+            if (toolBar.num_e_lavanda > 0)
             {
-                flower = "Poison1";
+                flower = "Evil Lavanda";
                 toolBar.num_objects--;
                 isThrowing = true;
             }
@@ -113,9 +113,9 @@ public class BoxController : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.Alpha5))
         {
-            if (toolBar.num_poison2 > 0)
+            if (toolBar.num_e_camomila > 0)
             {
-                flower = "Poison2";
+                flower = "Evil Camomila";
                 toolBar.num_objects--;
                 isThrowing = true;
             }
@@ -128,9 +128,9 @@ public class BoxController : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.Alpha6))
         {
-            if (toolBar.num_poison3 > 0)
+            if (toolBar.num_e_calendula > 0)
             {
-                flower = "Poison3";
+                flower = "Evil Calendula";
                 toolBar.num_objects--;
                 isThrowing = true;
             }

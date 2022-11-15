@@ -228,7 +228,7 @@ public class Player : MonoBehaviour
 
         Debug.Log(collision.gameObject.tag);
         //If the player is touching a Flower
-        if ((collision.gameObject.tag == "Lavanda") || (collision.gameObject.tag == "Camomila") || (collision.gameObject.tag == "PlantC"))
+        if ((collision.gameObject.tag == "Lavanda") || (collision.gameObject.tag == "Camomila") || (collision.gameObject.tag == "Calendula"))
         {
             //Thing is a flower
             thing = "flower";

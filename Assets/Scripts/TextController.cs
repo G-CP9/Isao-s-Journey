@@ -19,6 +19,7 @@ public class TextController : MonoBehaviour
 
     void Start()
     {
+        StartWindow.SetActive(true);
         box = FindObjectOfType<BoxController>();
         bin = FindObjectOfType<BinController>();
         PauseGame();

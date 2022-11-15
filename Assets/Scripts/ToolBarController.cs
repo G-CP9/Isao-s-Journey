@@ -18,24 +18,24 @@ public class ToolBarController : MonoBehaviour
     public GameObject Icon_Camomila;
 
     //Flower C
-    public Text C_text;
-   public int num_C;
-    public GameObject Icon_C; //icon
+    public Text Calendula_text;
+   public int num_Calendula;
+    public GameObject Icon_Calendula; //icon
 
-    //Flower Poisoned 1
-    public Text P_text;
-    public int num_poison;
-    public GameObject Icon_P;
+    //Evil Lavanda
+    public Text Evil_lavanda_text;
+    public int num_e_lavanda;
+    public GameObject Icon_Evil_Lavanda;
 
     //Flower Poisoned 2
-    public Text P2_text;
-    public int num_poison2;
-    public GameObject Icon_P2;
+    public Text Evil_camomila_text;
+    public int num_e_camomila;
+    public GameObject Icon_Evil_Camomila;
 
     //Flower Poisoned 3
-    public Text P3_text;
-    public int num_poison3;
-    public GameObject Icon_P3;
+    public Text Evil_calendula_text;
+    public int num_e_calendula;
+    public GameObject Icon_Evil_Calendula;
 
 
     //ProgressBar
@@ -58,10 +58,10 @@ public class ToolBarController : MonoBehaviour
         //Hide the icons
         Icon_Lavanda.SetActive(false);
         Icon_Camomila.SetActive(false);
-        Icon_C.SetActive(false);
-        Icon_P.SetActive(false);
-        Icon_P2.SetActive(false);
-        Icon_P3.SetActive(false);
+        Icon_Calendula.SetActive(false);
+        Icon_Evil_Lavanda.SetActive(false);
+        Icon_Evil_Camomila.SetActive(false);
+        Icon_Evil_Calendula.SetActive(false);
 
 
         //ProgressBar
@@ -106,55 +106,55 @@ public class ToolBarController : MonoBehaviour
             Icon_Camomila.SetActive(false);
         }
 
-        //Lavandas C
-        C_text.text = "x" + num_C.ToString();
+        //Calendula
+        Calendula_text.text = "x" + num_Calendula.ToString();
 
-        if (num_C == 1)
+        if (num_Calendula == 1)
         {
-            Icon_C.SetActive(true);
+            Icon_Calendula.SetActive(true);
         }
-        if(num_C == 0)
+        if(num_Calendula == 0)
         {
-            Icon_C.SetActive(false);
+            Icon_Calendula.SetActive(false);
         }
 
         //Lavandas venenosas 1
-        P_text.text = "x" + num_poison.ToString();
+        Evil_lavanda_text.text = "x" + num_e_lavanda.ToString();
 
-        if (num_poison == 1)
+        if (num_e_lavanda == 1)
         {
-            Icon_P.SetActive(true);
+            Icon_Evil_Lavanda.SetActive(true);
         }
-        if (num_poison == 0)
+        if (num_e_lavanda == 0)
         {
-            Icon_P.SetActive(false);
+            Icon_Evil_Lavanda.SetActive(false);
         }
 
         //Lavandas venenosas 2
-        P2_text.text = "x" + num_poison2.ToString();
+        Evil_camomila_text.text = "x" + num_e_camomila.ToString();
 
-        if (num_poison2 == 1)
+        if (num_e_camomila == 1)
         {
-            Icon_P2.SetActive(true);
+            Icon_Evil_Camomila.SetActive(true);
         }
-        if (num_poison2 == 0)
+        if (num_e_camomila == 0)
         {
-            Icon_P2.SetActive(false);
+            Icon_Evil_Camomila.SetActive(false);
         }
 
 
 
 
         //Lavandas venenosas 3
-        P3_text.text = "x" + num_poison3.ToString();
+        Evil_calendula_text.text = "x" + num_e_calendula.ToString();
 
-        if (num_poison3 == 1)
+        if (num_e_calendula == 1)
         {
-            Icon_P3.SetActive(true);
+            Icon_Evil_Calendula.SetActive(true);
         }
-        if (num_poison3 == 0)
+        if (num_e_calendula == 0)
         {
-            Icon_P3.SetActive(false);
+            Icon_Evil_Calendula.SetActive(false);
         }
 
 
@@ -191,9 +191,9 @@ public class ToolBarController : MonoBehaviour
                     num_Camomila++;
 
                 }
-                if (item == "PlantC")
+                if (item == "Calendula")
                 {
-                    num_C++;
+                    num_Calendula++;
                     
                 }
                 
@@ -205,7 +205,7 @@ public class ToolBarController : MonoBehaviour
                 if (item == "Lavanda")
                 {
                     //Lavanda venenosa tipo 1
-                    num_poison++;
+                    num_e_lavanda++;
                     
                     
                 }
@@ -213,16 +213,16 @@ public class ToolBarController : MonoBehaviour
                 if (item == "Camomila")
                 {
                     //Lavanda venenosa tipo 2
-                    num_poison2++;
+                    num_e_camomila++;
                     
                     
 
                 }
 
-                if (item == "PlantC")
+                if (item == "Calendula")
                 {
                     //Lavanda venenosa tipo 2
-                    num_poison3++;
+                    num_e_calendula++;
                     
 
                     
@@ -255,28 +255,29 @@ public class ToolBarController : MonoBehaviour
             //Lavanda B = 3 puntos
             score = score + 3;
         }
-        if(flower == "PlantC")
+        if(flower == "Calendula")
         {
-            num_C--;
+            num_Calendula--;
             //Lavanda C = 5 puntos
             score = score + 5;
         }
-        if(flower == "Poison1")
+        if(flower == "Evil Lavanda")
         {
-            num_poison--;
+            num_e_lavanda--;
             //Lavanda venenosa 1 = -1 puntos
             score = score - 1;
-            Debug.Log("Vaya, has guardado una Lavanda venenosa");
+            Debug.Log("Vaya, has guardado una planta venenosa");
         }
-        if(flower == "Poison2")
+        if(flower == "Evil Camomila")
         {
-            num_poison2--;
+            num_e_camomila--;
             //Lavanda venenosa 1 = -3 puntos
             score = score - 3;
+
         }
-        if(flower == "Poison3")
+        if(flower == "Evil Calendula")
         {
-            num_poison3--;
+            num_e_calendula--;
             //Lavanda venenosa 1 = -5 puntos
             score = score - 3;
         }
@@ -295,22 +296,22 @@ public class ToolBarController : MonoBehaviour
         {
             num_Camomila--;
         }
-        if (flower == "PlantC")
+        if (flower == "Calendula")
         {
-            num_C--;
+            num_Calendula--;
         }
-        if (flower == "Poison1")
+        if (flower == "Evil Lavanda")
         {
-            num_poison--;
+            num_e_lavanda--;
             //Lavanda venenoa 1 = -1 puntos
         }
-        if (flower == "Poison2")
+        if (flower == "Evil Camomila")
         {
-            num_poison2--;
+            num_e_camomila--;
         }
-        if (flower == "Poison3")
+        if (flower == "Evil Calendula")
         {
-            num_poison3--;
+            num_e_calendula--;
         }
 
     }
