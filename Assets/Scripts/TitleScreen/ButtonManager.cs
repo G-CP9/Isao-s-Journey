@@ -1,18 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
+    public GameObject soundButton;
+    public Sprite soundOn;
+    public Sprite soundOff;
+    private Image image;
+
+    private void Awake()
+    {
+        image = soundButton.GetComponent<Image>();
+    }
+
     public void OnPlayButtonClick()
     {
-        print("Wiiiiiii!");
+        Debug.Log("Initiating Despor Scene");
+        SceneManager.LoadScene(sceneName:"Despor");
     }
 
     public void OnExitButtonClick()
     {
-        Application.Quit();
         Debug.Log("Quit!");
+        Application.Quit();
     }
 
     public void onSoundButtonClick()
@@ -20,12 +33,12 @@ public class ButtonManager : MonoBehaviour
         if (Game.Instance.sound)
         {
             Game.Instance.sound = false;
-            print("Sound OFF");
+            image.sprite = soundOff;
         }
         else
         {
             Game.Instance.sound = true;
-            print("Sound ON");
+            image.sprite = soundOn;
         }
     }
 }
