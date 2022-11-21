@@ -60,6 +60,7 @@ public class ThrowableObject : MonoBehaviour
     {
         rb.gravityScale = 0;
         transform.position = new Vector3(SlingshotHead.position.x, SlingshotHead.position.y, 0);
+        transform.rotation = Quaternion.identity;
         StopObject();
     }
 
