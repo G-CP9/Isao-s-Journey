@@ -20,24 +20,45 @@ public class food_sprite_changer : MonoBehaviour
 
     private void Update()
     {
-        
         Cook();
 
     }
 
     public void Cook()
     {
-        int time = Mathf.FloorToInt(food_Timer.timeValue);
-        Debug.Log(time);
-        if(time == 60)
+        if (food_Timer.isCooking == true)
         {
-            index = 0;
+            int time = Mathf.FloorToInt(food_Timer.timeValue);
+            Debug.Log(time);
+            if (time == 30)
+            {
+                index = 0;
+            }
+            if (time == 5)
+            {
+                index = 1;
+            }
+            if (time == 0)
+            {
+                index = 2;
+            }
+            Sprite state = food_states[index];
+            GetComponent<SpriteRenderer>().sprite = state;
         }
-        if(time == 50)
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log(collision.gameObject.tag);
+        if (collision.gameObject.tag == "Plancha")
         {
-            index = 1;
+            food_Timer.isCooking = true;
+            
         }
-        Sprite state = food_states[index];
-        GetComponent<SpriteRenderer>().sprite = state;
+        if(collision.gameObject.tag == "Basura")
+        {
+            Destroy(this.gameObject);
+
+        }
     }
 }

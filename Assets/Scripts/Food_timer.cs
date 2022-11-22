@@ -6,27 +6,30 @@ using UnityEngine.UI;
 
 public class Food_timer : MonoBehaviour
 {
-    public float timeValue = 40;
+    public float timeValue = 30;
     public Text timerText;
+    public bool isCooking;
     
     
 
     private void Start()
     {
-        
+        isCooking = false;
     }
     private void Update()
     {
-        if(timeValue > 0)
+        if(isCooking)
         {
-            timeValue -= Time.deltaTime;
+            if (timeValue > 0)
+            {
+                timeValue -= Time.deltaTime;
+            }
+            DisplayTime(timeValue);
         }
-        else
-        {
-            timeValue += 40;
-        } 
-        DisplayTime(timeValue);
+        Debug.Log(isCooking);
     }
+
+   
 
     void DisplayTime(float timeToDisplay)
     {
