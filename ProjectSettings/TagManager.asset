@@ -4,8 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Plancha
-  - Basura
+  - Grill
+  - Bin
+  - Food
+  - Pan
   layers:
   - Default
   - TransparentFX
