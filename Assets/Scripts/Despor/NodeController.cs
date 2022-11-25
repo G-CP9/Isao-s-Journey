@@ -13,11 +13,6 @@ public class NodeController : MonoBehaviour
         UpdateView();
     }
 
-    void Update()
-    {
-        
-    }
-
     public void UpdateNode(Button selectedOp)
     {
         if (selectedOp.name == "Opcion1")

@@ -7,8 +7,9 @@ using TMPro;
 public class NodeViewManager : MonoBehaviour
 {
     public TextMeshProUGUI text;
-    public Button op1Button;
-    public Button op2Button;
+    public GameObject optionsPlace;
+    //public Button op1Button;
+    //public Button op2Button;
     //public ConversationNode node;
 
     //// Start is called before the first frame update
@@ -20,8 +21,12 @@ public class NodeViewManager : MonoBehaviour
     public void InsertNode(ConversationNode node)
     {
         text.text = node.text;
-        op1Button.GetComponentInChildren<TextMeshProUGUI>().text = node.option1;
-        op2Button.GetComponentInChildren<TextMeshProUGUI>().text = node.option2;
+        foreach (string option in node.options)
+        {
+
+        }
+        //op1Button.GetComponentInChildren<TextMeshProUGUI>().text = node.option1;
+        //op2Button.GetComponentInChildren<TextMeshProUGUI>().text = node.option2;
     }
 
 }
