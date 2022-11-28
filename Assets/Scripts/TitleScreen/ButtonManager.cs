@@ -18,8 +18,7 @@ public class ButtonManager : MonoBehaviour
 
     public void OnPlayButtonClick()
     {
-        Debug.Log("Initiating Despor Scene");
-        SceneManager.LoadScene(sceneName:"Despor");
+        SceneManager.LoadScene(sceneName:"Slingshot");
     }
 
     public void OnExitButtonClick()
