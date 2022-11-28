@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class SlingshotMinigameManager : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class SlingshotMinigameManager : MonoBehaviour
     public ThrowInput throwInput;
     public Animator animator;
     public Wind Wind;
+    public TextMeshProUGUI score;
+    public TextMeshProUGUI throwResult;
 
     public int turn = 0;
     public bool canThrow = false;
@@ -18,9 +21,10 @@ public class SlingshotMinigameManager : MonoBehaviour
     public float windAngle;
     public float windPower;
     public float throwAngle;
-    public float throwPower;
     public float MAX_THROW_POWER;
-    public int points;
+    public float throwPower = 0;
+    public int POINTS_TO_WIN;
+    public int points = 0;
 
     private void Awake() {
         Instance = this;
@@ -28,8 +32,7 @@ public class SlingshotMinigameManager : MonoBehaviour
 
     private void Start()
     {
-        throwPower = 0;
-        points = 0;
+        score.text = points + "/" + POINTS_TO_WIN;
         throwInput.SetMaxPower();
     }
 
@@ -54,6 +57,7 @@ public class SlingshotMinigameManager : MonoBehaviour
 
     public void StartTurn()
     {
+        throwResult.text = "";
         throwPower = 0;
         throwInput.SetPower();
         turn++;
@@ -75,8 +79,25 @@ public class SlingshotMinigameManager : MonoBehaviour
         if (success)
         {
             points++;
+            score.text = points + "/" + POINTS_TO_WIN;
+            if (points == POINTS_TO_WIN)
+            {
+                throwResult.text = "HAS GANADO!";
+                // TODO CAMBIAR DE ESCENA
+            }
+            else
+            {
+                throwResult.text = "¡BIEN!";
+            }
         }
-        Invoke("StartTurn", 2.0f);
+        else
+        {
+            throwResult.text = "¡VUELVE A INTENTARLO!";
+        }
+        if (points != POINTS_TO_WIN)
+        {
+            Invoke("StartTurn", 2.0f);
+        }
     }
 
     public void AnimateThrow()
