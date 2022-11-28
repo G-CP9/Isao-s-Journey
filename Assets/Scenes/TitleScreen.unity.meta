@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scenes/TitleScreen.unity.meta
 guid: f53ad0cce64e447dfbea7c0f9345009e
+========
+guid: 1b8d251f9af63b746bf2f7ffe00ebb9b
+>>>>>>>> tirachinas:Assets/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
