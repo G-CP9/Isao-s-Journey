@@ -23,10 +23,7 @@ public class Food_controller : MonoBehaviour
 
     private void Update()
     {
-        if (estado == 3)
-        {
-            this.GetComponent<Draggeable>().enabled = true;
-        }
+        
 
     }
 
@@ -35,6 +32,7 @@ public class Food_controller : MonoBehaviour
         estado = index;
         Sprite state = food_states[index];
         GetComponent<SpriteRenderer>().sprite = state;
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -45,12 +43,7 @@ public class Food_controller : MonoBehaviour
             Destroy(this.gameObject);
 
         }
-        if (collision.gameObject.tag == "Pan")
-        {
-            this.transform.SetParent(collision.transform);
-            this.GetComponent<Draggeable>().enabled = false;
-
-        }
+        
 
     }
 

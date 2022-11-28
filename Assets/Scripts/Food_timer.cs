@@ -26,6 +26,7 @@ public class Food_timer : MonoBehaviour
             }
             DisplayTime(timeValue);
         }
+
         
         Debug.Log(isCooking);
     }

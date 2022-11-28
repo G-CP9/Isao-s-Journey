@@ -41,12 +41,7 @@ public class Grill_Controller : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Food")
-        {
-            grill_Timer.StartCooking = true;
-            food = collision.gameObject.GetComponent<Food_controller>();
-
-        }
+        
     }
 
     private void OnTriggerExit2D(Collider2D collision)
