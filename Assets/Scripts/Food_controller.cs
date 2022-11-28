@@ -13,21 +13,26 @@ public class Food_controller : MonoBehaviour
     public Grill_Controller grill;
 
 
+    int estado = 0;
+
+
     public void Start()
     {
-        
 
     }
 
     private void Update()
     {
-      
+        if (estado == 3)
+        {
+            this.GetComponent<Draggeable>().enabled = true;
+        }
 
     }
 
     public void Cook(int index)
     {
-       
+        estado = index;
         Sprite state = food_states[index];
         GetComponent<SpriteRenderer>().sprite = state;
     }
@@ -40,24 +45,19 @@ public class Food_controller : MonoBehaviour
             Destroy(this.gameObject);
 
         }
-
-
-    }
-    private void OnTriggerStay2D(Collider2D collision)
-    {
         if (collision.gameObject.tag == "Pan")
         {
-            collision.transform.SetParent(collision.transform);
+            this.transform.SetParent(collision.transform);
+            this.GetComponent<Draggeable>().enabled = false;
+
         }
+
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Pan")
-        {
-            collision.transform.SetParent(collision.transform,false);
-        }
-    }
+
+    
+
+   
 
 
 }
