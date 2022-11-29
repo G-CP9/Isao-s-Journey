@@ -1477,7 +1477,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1618354616}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 3.81766
+    OrthographicSize: 8.57
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -1501,7 +1501,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 653572257}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -73.8792, y: 10.926428, z: -10}
+  m_LocalPosition: {x: -65.99, y: 10.926428, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3524,7 +3524,7 @@ MonoBehaviour:
   box: {fileID: 288723457}
   bin: {fileID: 1898848122}
   moveSpeed: 150
-  maxSpeed: 3
+  maxSpeed: 6
   idleFriction: 0.9
   flower_object: {fileID: 0}
 --- !u!114 &1618354613
@@ -3999,7 +3999,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.81766
+  orthographic size: 8.57
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4023,9 +4023,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1649604864}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -73.8792, y: 10.926428, z: -10}
+  m_LocalPosition: {x: -65.99, y: 10.926428, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -4077,6 +4077,7 @@ GameObject:
   - component: {fileID: 1650382355}
   - component: {fileID: 1650382354}
   - component: {fileID: 1650382353}
+  - component: {fileID: 1650382359}
   m_Layer: 3
   m_Name: MapCollider
   m_TagString: Wall
@@ -4318,6 +4319,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &1650382359
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650382352}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -142.4833, y: -19.64647}
+      - {x: -143.17966, y: -20.009352}
+      - {x: -143.52486, y: -27.354473}
+      - {x: -146.44493, y: -25.920977}
+      - {x: -146.91675, y: -22.140944}
 --- !u!1 &1758240651
 GameObject:
   m_ObjectHideFlags: 3
@@ -4514,7 +4545,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7952175010567567308, guid: a5aec86acee1404418537a11791e72f5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -73.8792
+      value: -65.99
       objectReference: {fileID: 0}
     - target: {fileID: 7952175010567567308, guid: a5aec86acee1404418537a11791e72f5, type: 3}
       propertyPath: m_LocalPosition.y
