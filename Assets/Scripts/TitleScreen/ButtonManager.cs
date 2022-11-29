@@ -18,7 +18,7 @@ public class ButtonManager : MonoBehaviour
 
     public void OnPlayButtonClick()
     {
-        SceneManager.LoadScene(sceneName:"Slingshot");
+        SceneManager.LoadScene(sceneName:"Despor");
     }
 
     public void OnExitButtonClick()
