@@ -7,6 +7,7 @@ public class NodeController : MonoBehaviour
 {
     public NodeViewManager view;
     public ConversationNode currentNode;
+    public KyaraTalk talker;
 
     void Start()
     {
@@ -15,16 +16,22 @@ public class NodeController : MonoBehaviour
 
     public void UpdateNode(Button selectedOp)
     {
-        if (selectedOp.name == "Opcion1")
+        if (currentNode.last)
         {
-            currentNode = currentNode.op1Conv;
+            talker.EndTalk();
         }
         else
         {
-            currentNode = currentNode.op2Conv;
+            if (selectedOp.name == "Opcion1")
+            {
+                currentNode = currentNode.op1Conv;
+            }
+            else
+            {
+                currentNode = currentNode.op2Conv;
+            }
+            UpdateView();
         }
-        UpdateView();
-
     }
 
     void UpdateView()

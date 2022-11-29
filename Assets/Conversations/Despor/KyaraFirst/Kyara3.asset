@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c8200a43d5a2fde47842b095a121196f, type: 3}
-  m_Name: Kyara2_1
+  m_Name: Kyara3
   m_EditorClassIdentifier: 
-  text: "!Ah! Eso es porque en este momento Despor est\xE1 siendo asolada por una 
-    pandemia desconocida, y como he estado en contacto con pacientes debo llevarla
-    por seguridad. En este momento estamos tratando de encontrar una cura para esta
-    enfermedad."
+  text: Actualmente estamos tratando de encontrar una cura para una enfermedad desconocida
+    que asola Despor.
+  multiple: 1
+  last: 0
   option1: "Me gustar\xEDa ayudar a acelerar el proceso, \xBFcomo puedo hacerlo?"
-  option2: "\xBFY como podr\xEDa colaborar en el desarrollo de estas acciones?"
+  option2: "\xBFEs por eso que est\xE1 restringido el acceso a las casas?"
   op1Conv: {fileID: 11400000, guid: d6839bb2e5ba8d24c94b0868fad0019a, type: 2}
-  op2Conv: {fileID: 11400000, guid: d6839bb2e5ba8d24c94b0868fad0019a, type: 2}
+  op2Conv: {fileID: 11400000, guid: 535c8580ee06f1d469ea236ecd003b8b, type: 2}

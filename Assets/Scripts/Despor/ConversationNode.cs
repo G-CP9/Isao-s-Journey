@@ -6,9 +6,10 @@ using UnityEngine;
 public class ConversationNode : ScriptableObject
 {
     public string text;
-    public string[] options;
-    //public string option1;
-    //public string option2;
+    public bool multiple;
+    public bool last;
+    public string option1;
+    public string option2;
     public ConversationNode op1Conv;
     public ConversationNode op2Conv;
 }

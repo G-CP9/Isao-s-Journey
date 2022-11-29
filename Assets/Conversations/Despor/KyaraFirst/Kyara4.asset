@@ -10,11 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c8200a43d5a2fde47842b095a121196f, type: 3}
-  m_Name: Kyara2_2
+  m_Name: Kyara4
   m_EditorClassIdentifier: 
-  text: "Actualmente estamos tratando de encontrar una cura para una enfermedad \tdesconocida
-    que asola Despor."
-  option1: "Me gustar\xEDa ayudar a acelerar el proceso, \xBFcomo puedo hacerlo?"
-  option2: "\xBFY como podr\xEDa colaborar en el desarrollo de estas acciones?"
+  text: "\xA1Ah! Son mis compa\xF1eros que se encargan de vigilar que todo est\xE9
+    bajo control. Te indicar\xE1n los sitios importantes de la zona."
+  multiple: 0
+  last: 0
+  option1: "Gracias por la informaci\xF3n. \xBFQue deber\xEDa hacer a continuaci\xF3n
+    para ayudar?"
+  option2: 
   op1Conv: {fileID: 11400000, guid: d6839bb2e5ba8d24c94b0868fad0019a, type: 2}
-  op2Conv: {fileID: 11400000, guid: d6839bb2e5ba8d24c94b0868fad0019a, type: 2}
+  op2Conv: {fileID: 0}

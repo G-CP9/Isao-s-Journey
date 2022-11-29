@@ -10,13 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c8200a43d5a2fde47842b095a121196f, type: 3}
-  m_Name: Kyara3
+  m_Name: Kyara3_1 (End 1)
   m_EditorClassIdentifier: 
   text: "Para desarrollar la cura de esta enfermedad estamos utilizando plantas de
     la zona, pero en este momento estamos cortos de personal y no hay nadie para
     recoger m\xE1s plantas. Dir\xEDgete a la casa que hay m\xE1s a la derecha del
     pueblo y podr\xE1s acceder a la zona donde crecen estas plantas y ayudar a recolectarlas."
+  multiple: 0
+  last: 1
   option1: "De acuerdo. \xA1Voy para all\xE1!"
-  option2: "\xA1Voy en camino!"
+  option2: 
   op1Conv: {fileID: 0}
   op2Conv: {fileID: 0}
