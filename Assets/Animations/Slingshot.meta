@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Animations/Slingshot.meta
 guid: 9ba6656a7ece041ae938ee0e507abad5
+========
+guid: 89b39447626b1c447bfda31d04e6878b
+>>>>>>>> origin/despor:Assets/Animations.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
