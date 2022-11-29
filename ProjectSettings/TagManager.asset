@@ -8,6 +8,8 @@ TagManager:
   - Bin
   - Food
   - Pan
+  - Meat
+  - Rice
   layers:
   - Default
   - TransparentFX
