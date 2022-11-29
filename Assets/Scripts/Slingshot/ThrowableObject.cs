@@ -52,7 +52,7 @@ public class ThrowableObject : MonoBehaviour
     private void PlaceObject()
     {
         rb.gravityScale = 0;
-        transform.position = new Vector3(SlingshotHead.position.x, SlingshotHead.position.y, 0);
+        transform.position = new Vector3(SlingshotHead.position.x, SlingshotHead.position.y, SlingshotHead.position.z+1);
         transform.rotation = Quaternion.identity;
         StopObject();
     }
