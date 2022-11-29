@@ -42,18 +42,11 @@ public class ThrowableObject : MonoBehaviour
         {
             FinishTurn(false);
         }
-        else if (other.gameObject.tag == "Platform")
-        {
-            rb.velocity = rb.velocity/2;
-            FinishTurn(true);
-        }
     }
 
-    private void OnCollisionExit2D(Collision2D other) {
-        if (other.gameObject.tag == "Platform")
-        {
-            StopObject();
-        }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        FinishTurn(true);
     }
 
     private void PlaceObject()
