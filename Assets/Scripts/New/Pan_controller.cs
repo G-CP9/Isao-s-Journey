@@ -80,8 +80,12 @@ public class Pan_controller : MonoBehaviour
     {
         if (collision.gameObject.name == "Grill")
         {
-            onFire = true;
-            grill_Timer.StartCooking = true;
+            if(filled)
+            {
+                onFire = true;
+                grill_Timer.StartCooking = true;
+            }
+            
         }
     }
 
@@ -90,7 +94,7 @@ public class Pan_controller : MonoBehaviour
         if (collision.gameObject.name == "Grill")
         {
             onFire = false;
-            grill_Timer.StartCooking = true;
+            grill_Timer.StartCooking = false;
         }
     }
 
