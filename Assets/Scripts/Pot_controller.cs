@@ -4,40 +4,36 @@ using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
 
-public class Pan_controller : MonoBehaviour
+public class Pot_controller : MonoBehaviour
 {
     public Sprite[] pan_states;
 
     int estado;
     bool filled;
     bool onFire;
-    public Grill_timer grill_Timer;
+    public Timer timer;
 
     // Start is called before the first frame update
     void Start()
     {
-        estado= 0;
+        estado = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(onFire && filled) 
+        if (onFire && filled)
         {
-            int time = Mathf.FloorToInt(grill_Timer.timeValue);
+            int time = Mathf.FloorToInt(timer.timeValue);
             Debug.Log(time);
 
-            if (time == 29)
-            {
-                estado = 5;
-            }
             if (time == 5)
             {
-                estado = 6;
+                estado = 4;
             }
-            if (time == 0 )
+            if (time == 0)
             {
-                estado = 7;
+                estado = 5;
             }
         }
         Pan_render();
@@ -49,30 +45,18 @@ public class Pan_controller : MonoBehaviour
     {
 
         Debug.Log("Colisiooon");
-        if ((collision.gameObject.name == "Patata") && estado == 0)
+        if ((collision.gameObject.name == "Agua") && estado == 0)
         {
             estado = 1;
             Destroy(collision.gameObject);
         }
-        if ((collision.gameObject.name == "Zanahoria") && estado == 1)
+        if ((collision.gameObject.name == "Arroz") && estado == 1)
         {
             estado = 2;
             Destroy(collision.gameObject);
-
-        }
-        if ((collision.gameObject.name == "Cebolla") && estado == 2)
-        {
-            estado = 3;
-            Destroy(collision.gameObject);
-
-        }
-        if ((collision.gameObject.name == "Pollo") && estado == 3)
-        {
-            estado = 4;
-            Destroy(collision.gameObject);
             filled = true;
-
         }
+        
     }
 
 
@@ -80,12 +64,12 @@ public class Pan_controller : MonoBehaviour
     {
         if (collision.gameObject.name == "Grill")
         {
-            if(filled)
+            if (filled)
             {
                 onFire = true;
-                grill_Timer.StartCooking = true;
+                timer.StartCooking = true;
             }
-            
+
         }
     }
 
@@ -94,7 +78,7 @@ public class Pan_controller : MonoBehaviour
         if (collision.gameObject.name == "Grill")
         {
             onFire = false;
-            grill_Timer.StartCooking = false;
+            timer.StartCooking = false;
         }
     }
 
@@ -107,7 +91,7 @@ public class Pan_controller : MonoBehaviour
 
     public void Cook()
     {
-        
+
     }
 
 }

@@ -4,21 +4,23 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.UI;
 
-public class Food_timer : MonoBehaviour
-{
-    public float timeValue = 30;
-    public Text timerText;
-    public bool isCooking;
-    
-    
 
+public class Timer : MonoBehaviour
+{
+    public Text timerText;
+    public bool StartCooking;
+    public float timeValue = 15;
+
+    // Start is called before the first frame update
+   
     private void Start()
     {
-        isCooking = false;
+        StartCooking= false;
     }
+
     private void Update()
     {
-        if(isCooking)
+        if(StartCooking)
         {
             if (timeValue > 0)
             {
@@ -26,24 +28,20 @@ public class Food_timer : MonoBehaviour
             }
             DisplayTime(timeValue);
         }
-
-        
-        Debug.Log(isCooking);
     }
-
-   
 
     void DisplayTime(float timeToDisplay)
     {
-        if(timeToDisplay < 0)
+        if (timeToDisplay < 0)
         {
             timeToDisplay = 1;
         }
 
         float minutes = Mathf.FloorToInt(timeToDisplay / 60);
-        float seconds = Mathf.FloorToInt(timeToDisplay% 60);
+        float seconds = Mathf.FloorToInt(timeToDisplay % 60);
         float milliseconds = timeToDisplay % 1 * 1000;
 
-        timerText.text = string.Format("{0:00}:{1:00}",minutes, seconds);
+        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 }
+
