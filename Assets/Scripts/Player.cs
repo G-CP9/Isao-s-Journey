@@ -17,14 +17,15 @@ public class Player : MonoBehaviour
 {
     bool IsMoving
     { 
-        set{
+        set
+        {
             isMoving = value;
             animator.SetBool("isMoving", isMoving);
         }
     }
 
     //Player Movement
-    bool isMoving = false;
+    public bool isMoving = false;
     private bool canMove = true;
     private bool canInteract = false;
     
@@ -66,8 +67,12 @@ public class Player : MonoBehaviour
 
     //object
     public GameObject flower_object;
-
+    var grass_sound : AudioSource;
+    AudioSource walk_sound;
+    AudioSource sound;
     
+
+
 
 
 
@@ -81,7 +86,10 @@ public class Player : MonoBehaviour
 
         Book.SetActive(false);
 
+       
         
+
+
 
 
     }
@@ -121,8 +129,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         Inputs();
-        
-        
+        Player_Sounds();
     }
 
     //Get new player's position after an input
@@ -148,8 +155,10 @@ public class Player : MonoBehaviour
             if ((Input.GetKeyUp(KeyCode.P)))
             {
 
+
                 if(thing == "flower")
                 {
+                    
                     if (toolBar.num_objects < 10)
                     {
                         Pick(thing);
@@ -319,6 +328,40 @@ public class Player : MonoBehaviour
         
         canMove = true;
     }
+
+    void Player_Sounds()
+    {
+        if (isMoving)
+        {
+            if (!sound.isPlaying)
+            {
+                sound.Play();
+            }
+            
+        }
+        else
+        {
+            sound.Stop();
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "SpawnZone")
+        {
+            sound = grass_sound;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+       if(collision.gameObject.tag == "SpawnZone")
+        {
+            sound = walk_sound;
+        }
+    }
+
+
 
 
 
