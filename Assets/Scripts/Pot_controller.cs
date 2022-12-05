@@ -6,11 +6,12 @@ using UnityEngine;
 
 public class Pot_controller : MonoBehaviour
 {
-    public Sprite[] pan_states;
+    public Sprite[] pot_states;
 
     int estado;
     bool filled;
     bool onFire;
+    public bool isCook;
     public Timer timer;
 
     // Start is called before the first frame update
@@ -24,19 +25,25 @@ public class Pot_controller : MonoBehaviour
     {
         if (onFire && filled)
         {
+            isCook = false;
             int time = Mathf.FloorToInt(timer.timeValue);
             Debug.Log(time);
 
+            if (time == 12)
+            {
+                estado = 3;
+            }
             if (time == 5)
             {
                 estado = 4;
+                isCook= true;
             }
             if (time == 0)
             {
                 estado = 5;
             }
         }
-        Pan_render();
+        Pot_render();
     }
 
 
@@ -56,7 +63,12 @@ public class Pot_controller : MonoBehaviour
             Destroy(collision.gameObject);
             filled = true;
         }
-        
+        if ((collision.gameObject.name == "Plat") && isCook)
+        {
+            estado = 0;
+            filled = false;
+        }
+
     }
 
 
@@ -82,16 +94,19 @@ public class Pot_controller : MonoBehaviour
         }
     }
 
-    public void Pan_render()
+    public void Pot_render()
     {
-        Sprite state = pan_states[estado];
+        Sprite state = pot_states[estado];
         GetComponent<SpriteRenderer>().sprite = state;
 
     }
 
-    public void Cook()
+    public void Clear_out()
     {
-
+        estado = 0;
+        filled = false;
     }
+
+
 
 }
