@@ -67,9 +67,11 @@ public class Player : MonoBehaviour
 
     //object
     public GameObject flower_object;
-    var grass_sound : AudioSource;
-    AudioSource walk_sound;
-    AudioSource sound;
+    public AudioSource _sound;
+    public AudioClip walk_sound;
+    public AudioClip grass_sound;
+    
+    string sound;
     
 
 
@@ -85,9 +87,8 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         Book.SetActive(false);
+        _sound.clip = walk_sound;
 
-       
-        
 
 
 
@@ -331,25 +332,28 @@ public class Player : MonoBehaviour
 
     void Player_Sounds()
     {
+
         if (isMoving)
         {
-            if (!sound.isPlaying)
+            if (!_sound.isPlaying)
             {
-                sound.Play();
+                _sound.Play();
             }
-            
+
         }
         else
         {
-            sound.Stop();
+            _sound.Stop();
         }
+        
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "SpawnZone")
         {
-            sound = grass_sound;
+            _sound.clip = grass_sound;
         }
     }
 
@@ -357,7 +361,7 @@ public class Player : MonoBehaviour
     {
        if(collision.gameObject.tag == "SpawnZone")
         {
-            sound = walk_sound;
+            _sound.clip = walk_sound;
         }
     }
 
