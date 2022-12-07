@@ -34,6 +34,7 @@ public class SlingshotMinigameManager : MonoBehaviour
     {
         score.text = points + "/" + POINTS_TO_WIN;
         throwInput.SetMaxPower();
+        ChangeWind();
     }
 
     private void Update()
@@ -61,7 +62,6 @@ public class SlingshotMinigameManager : MonoBehaviour
         throwPower = 0;
         throwInput.SetPower();
         turn++;
-        ChangeWind();
         canThrow = true;
         throwableObject.StartTurn();
     }
@@ -88,6 +88,7 @@ public class SlingshotMinigameManager : MonoBehaviour
             else
             {
                 throwResult.text = "¡BIEN!";
+                ChangeWind();
             }
         }
         else
