@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class SlingshotMinigameManager : MonoBehaviour
 {
@@ -60,6 +61,7 @@ public class SlingshotMinigameManager : MonoBehaviour
     {
         throwResult.text = "";
         throwPower = 0;
+        throwInput.Show();
         throwInput.SetPower();
         turn++;
         canThrow = true;
@@ -76,14 +78,15 @@ public class SlingshotMinigameManager : MonoBehaviour
 
     public void EndTurn(bool success)
     {
+        throwInput.Hide();
         if (success)
         {
             points++;
             score.text = points + "/" + POINTS_TO_WIN;
             if (points == POINTS_TO_WIN)
             {
-                throwResult.text = "HAS GANADO!";
-                // TODO CAMBIAR DE ESCENA
+                throwResult.text = "¡HAS GANADO!";
+                Invoke("SwapScene", 2.0f);
             }
             else
             {
@@ -111,5 +114,10 @@ public class SlingshotMinigameManager : MonoBehaviour
     public void Throw()
     {
         throwableObject.Throw();
+    }
+
+    public void SwapScene()
+    {
+        SceneManager.LoadScene(sceneName:"TitleScreen");
     }
 }

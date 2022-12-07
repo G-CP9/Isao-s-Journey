@@ -31,4 +31,14 @@ public class ThrowInput : MonoBehaviour
         slider.value = minigame.throwPower;
         fill.color = gradient.Evaluate(slider.normalizedValue);
     }
+
+    public void Hide()
+    {
+        gameObject.SetActive(false);
+    }
+
+    public void Show()
+    {
+        gameObject.SetActive(true);
+    }
 }
