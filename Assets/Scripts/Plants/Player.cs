@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
 
     //Player Movement
     public bool isMoving = false;
+    bool isTouching;
     private bool canMove = true;
     private bool canInteract = false;
     
@@ -67,11 +68,12 @@ public class Player : MonoBehaviour
 
     //object
     public GameObject flower_object;
-    public AudioSource _sound;
+    public AudioSource walk;
     public AudioClip walk_sound;
     public AudioClip grass_sound;
+    public AudioClip pick;
     
-    string sound;
+    
     
 
 
@@ -87,7 +89,7 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         Book.SetActive(false);
-        _sound.clip = walk_sound;
+        
 
 
 
@@ -130,7 +132,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         Inputs();
-        Player_Sounds();
+        //Player_Sounds();
     }
 
     //Get new player's position after an input
@@ -156,13 +158,14 @@ public class Player : MonoBehaviour
             if ((Input.GetKeyUp(KeyCode.P)))
             {
 
-
+                isTouching= true;
                 if(thing == "flower")
                 {
                     
                     if (toolBar.num_objects < 10)
                     {
                         Pick(thing);
+                        
                     }
                     else
                     {
@@ -273,7 +276,7 @@ public class Player : MonoBehaviour
         if(thing == "flower")
         {
             //The player is picking a flower
-            
+
 
             int i = Random.Range(1, 3);
 
@@ -288,6 +291,7 @@ public class Player : MonoBehaviour
             }
 
             animator.SetTrigger("Pick");
+
         }
         if(thing == "box" && box.isThrowing == true)
         {
@@ -324,15 +328,16 @@ public class Player : MonoBehaviour
             toolBar.PickFlower(flower, isPoison);
 
             Destroy(flower_object);
+
         }
 
         
         canMove = true;
     }
 
-    void Player_Sounds()
+   /*void Player_Sounds()
     {
-
+        
         if (isMoving)
         {
             if (!_sound.isPlaying)
@@ -344,26 +349,30 @@ public class Player : MonoBehaviour
         else
         {
             _sound.Stop();
+
         }
-        
-        
-    }
+
+
+    }*/
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "SpawnZone")
         {
-            _sound.clip = grass_sound;
+            walk.clip = grass_sound;
         }
+        
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
        if(collision.gameObject.tag == "SpawnZone")
         {
-            _sound.clip = walk_sound;
+            walk.clip = walk_sound;
         }
     }
+   
+    
 
 
 
