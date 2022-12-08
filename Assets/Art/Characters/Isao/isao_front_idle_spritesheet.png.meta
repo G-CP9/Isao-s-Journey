@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1acdba95c5113a444951e863c1c61800
+guid: 8eab7644300e2e04796040753872b108
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -118,7 +118,7 @@ TextureImporter:
     maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -130,7 +130,7 @@ TextureImporter:
     maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -142,7 +142,7 @@ TextureImporter:
     maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -153,13 +153,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: isao_front_idle_spritesheet_4
+      name: isao_front_idle_spritesheet_0
       rect:
         serializedVersion: 2
-        x: 900
-        y: 1344
-        width: 122
-        height: 427
+        x: 881
+        y: 255
+        width: 162
+        height: 432
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,20 +167,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93778067b086c3a4cbf87956ef8d6cf3
-      internalID: 194488284
+      spriteID: b6db82aa306086746b54b1f8963be927
+      internalID: -1520156245
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isao_front_idle_spritesheet_5
+      name: isao_front_idle_spritesheet_1
       rect:
         serializedVersion: 2
-        x: 2821
-        y: 1346
-        width: 125
-        height: 424
+        x: 2803
+        y: 256
+        width: 162
+        height: 432
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -188,29 +188,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20ec37016b0e924409308c0f8ad5e6a1
-      internalID: 396721556
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: isao_front_idle_spritesheet_12
-      rect:
-        serializedVersion: 2
-        x: 900
-        y: 263
-        width: 122
-        height: 421
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 50c28f2dd5a5e454a8b0e049f31f5bb9
-      internalID: 1326269969
+      spriteID: bf29c4cfce28cab4b9ef84a39f960ea5
+      internalID: 1644398917
       vertices: []
       indices: 
       edges: []
@@ -226,21 +205,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      isao_front_idle_spritesheet_9: 60323971
-      isao_front_idle_spritesheet_12: 1326269969
-      isao_front_idle_spritesheet_13: -1200479430
-      isao_front_idle_spritesheet_4: 194488284
-      isao_front_idle_spritesheet_11: -216245317
-      isao_front_idle_spritesheet_7: 1368793156
-      isao_front_idle_spritesheet_1: -821321945
-      isao_front_idle_spritesheet_10: -1072704883
-      isao_front_idle_spritesheet_3: 1826482055
-      isao_front_idle_spritesheet_8: -97052561
-      isao_front_idle_spritesheet_0: -648114881
-      isao_front_idle_spritesheet_5: 396721556
-      isao_front_idle_spritesheet_2: -1231099365
-      isao_front_idle_spritesheet_6: -1392417648
-      isao_front_idle_spritesheet_14: 1805585864
+      isao_front_idle_spritesheet_1: 1644398917
+      isao_front_idle_spritesheet_0: -1520156245
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

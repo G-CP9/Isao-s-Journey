@@ -9,12 +9,16 @@ public class NPCWalkControl : MonoBehaviour
 
     Rigidbody2D rigidbody2d;
     Animator animator;
+    AudioSource audioSource;
+
+    public AudioClip step;
 
     void Start()
     {
         vertical = -1;
         rigidbody2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void FixedUpdate()
@@ -33,5 +37,15 @@ public class NPCWalkControl : MonoBehaviour
         {
             vertical = -vertical;
         }
+    }
+
+    public void PlaySound(AudioClip clip)
+    {
+        audioSource.PlayOneShot(clip);
+    }
+
+    public void Step()
+    {
+        PlaySound(step);
     }
 }

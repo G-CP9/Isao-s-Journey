@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7fc9d802edb3532499d3039e1281ede6
+guid: 7f0fd2328f9bbc8468da510b757aabf6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -118,7 +118,7 @@ TextureImporter:
     maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -130,7 +130,7 @@ TextureImporter:
     maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -142,7 +142,7 @@ TextureImporter:
     maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -156,10 +156,10 @@ TextureImporter:
       name: isao_back_andar_spritesheet_0
       rect:
         serializedVersion: 2
-        x: 903
-        y: 2429
-        width: 120
-        height: 421
+        x: 885
+        y: 1328
+        width: 161
+        height: 440
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,8 +167,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf2a229671c3b994c81665be7576ca5e
-      internalID: 1764942880
+      spriteID: ee050ece1416b8b4cbf92c60a4f0ce85
+      internalID: 2073502881
       vertices: []
       indices: 
       edges: []
@@ -177,10 +177,10 @@ TextureImporter:
       name: isao_back_andar_spritesheet_1
       rect:
         serializedVersion: 2
-        x: 2825
-        y: 2429
-        width: 120
-        height: 417
+        x: 2807
+        y: 1328
+        width: 161
+        height: 436
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -188,8 +188,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4719e601c66ff1e4d9d1601a87fc68d6
-      internalID: -644062967
+      spriteID: a6168d2fd733c4f4ba5d2904ed5bc730
+      internalID: -383031930
       vertices: []
       indices: 
       edges: []
@@ -198,10 +198,10 @@ TextureImporter:
       name: isao_back_andar_spritesheet_2
       rect:
         serializedVersion: 2
-        x: 903
-        y: 1338
-        width: 119
-        height: 431
+        x: 886
+        y: 239
+        width: 161
+        height: 448
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -209,8 +209,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e66500ee826492e40a75d6a706b05396
-      internalID: 55661358
+      spriteID: 330f743277a59ac45991d7f794b0daf2
+      internalID: -659703240
       vertices: []
       indices: 
       edges: []
@@ -219,10 +219,10 @@ TextureImporter:
       name: isao_back_andar_spritesheet_3
       rect:
         serializedVersion: 2
-        x: 2826
-        y: 1337
-        width: 119
-        height: 431
+        x: 2807
+        y: 230
+        width: 161
+        height: 456
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -230,29 +230,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60e8fdb487a3b0242a94da8aef47242b
-      internalID: 1158615186
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: isao_back_andar_spritesheet_4
-      rect:
-        serializedVersion: 2
-        x: 903
-        y: 265
-        width: 120
-        height: 421
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c5d2ae825c470e54da11a10cfe138c39
-      internalID: -1656921097
+      spriteID: 153bbc4e65028704c8cfad92865d5d1b
+      internalID: 500233359
       vertices: []
       indices: 
       edges: []
@@ -268,11 +247,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      isao_back_andar_spritesheet_4: -1656921097
-      isao_back_andar_spritesheet_1: -644062967
-      isao_back_andar_spritesheet_0: 1764942880
-      isao_back_andar_spritesheet_2: 55661358
-      isao_back_andar_spritesheet_3: 1158615186
+      isao_back_andar_spritesheet_4: -2000639946
+      isao_back_andar_spritesheet_1: -383031930
+      isao_back_andar_spritesheet_0: 2073502881
+      isao_back_andar_spritesheet_2: -659703240
+      isao_back_andar_spritesheet_3: 500233359
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

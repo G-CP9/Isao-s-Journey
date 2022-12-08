@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     Rigidbody2D rigidBody;
-    public Animator animator;
+    Animator animator;
+    AudioSource audioSource;
     public float moveSpeed;
     private Vector2 moveDirection;
     private Vector2 lastMoveDirection;
@@ -14,9 +15,13 @@ public class PlayerController : MonoBehaviour
     private float moveX;
     private float moveY;
 
+    public AudioClip step;
+
     private void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -76,5 +81,15 @@ public class PlayerController : MonoBehaviour
     public void UnlockMovement()
     {
         canMove = true;
+    }
+
+    public void PlaySound(AudioClip clip)
+    {
+        audioSource.PlayOneShot(clip);
+    }
+
+    public void Step()
+    {
+        PlaySound(step);
     }
 }

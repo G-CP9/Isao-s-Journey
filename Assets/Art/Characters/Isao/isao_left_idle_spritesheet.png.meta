@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a85f8fae913c8034abb4b870b053fbe9
+guid: 249978cdb35b8b744a68bb93632ba15d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -118,7 +118,7 @@ TextureImporter:
     maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -130,7 +130,7 @@ TextureImporter:
     maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -142,7 +142,7 @@ TextureImporter:
     maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -156,10 +156,10 @@ TextureImporter:
       name: isao_left_idle_spritesheet_0
       rect:
         serializedVersion: 2
-        x: 880
-        y: 1344
-        width: 90
-        height: 426
+        x: 865
+        y: 251
+        width: 103
+        height: 434
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,20 +167,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24ad1297985327b4da2d9aafe6878b42
-      internalID: -440889156
+      spriteID: 3ed79d92f4248cd49abc1714aac4d086
+      internalID: 760507943
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isao_left_idle_spritesheet_2
+      name: isao_left_idle_spritesheet_1
       rect:
         serializedVersion: 2
-        x: 2803
-        y: 1345
-        width: 87
-        height: 423
+        x: 2787
+        y: 251
+        width: 102
+        height: 434
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -188,29 +188,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 380b87cfaef26db488b7fe33784fba76
-      internalID: -571147030
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: isao_left_idle_spritesheet_4
-      rect:
-        serializedVersion: 2
-        x: 880
-        y: 263
-        width: 87
-        height: 422
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 14d49eac44fea77479129db6ee0c5860
-      internalID: -415825516
+      spriteID: c9932a6389b670544b6f2c8b00328d0d
+      internalID: -107623152
       vertices: []
       indices: 
       edges: []
@@ -226,12 +205,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      isao_left_idle_spritesheet_4: -415825516
-      isao_left_idle_spritesheet_2: -571147030
-      isao_left_idle_spritesheet_5: 1460022774
-      isao_left_idle_spritesheet_0: -440889156
-      isao_left_idle_spritesheet_3: 2017282539
-      isao_left_idle_spritesheet_1: -477067867
+      isao_left_idle_spritesheet_0: 760507943
+      isao_left_idle_spritesheet_1: -107623152
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
