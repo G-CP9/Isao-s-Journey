@@ -69,9 +69,17 @@ public class Player : MonoBehaviour
     //object
     public GameObject flower_object;
     public AudioSource walk;
+    public AudioSource interact;
+
+
     public AudioClip walk_sound;
     public AudioClip grass_sound;
-    public AudioClip pick;
+    public AudioClip book;
+    public AudioClip throw_bin;
+    public AudioClip open_bin;
+    public AudioClip open_box;
+
+    public PlayerSounds playerSounds;
     
     
     
@@ -89,7 +97,8 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         Book.SetActive(false);
-        
+
+        playerSounds= GetComponent<PlayerSounds>();
 
 
 
@@ -175,6 +184,7 @@ public class Player : MonoBehaviour
 
                 else if(thing == "box")
                 {
+                    interact.clip = open_box;
                     if (!box_open)
                     {
                         canMove = false;
@@ -193,6 +203,7 @@ public class Player : MonoBehaviour
                 }
                 else if (thing == "bin")
                 {
+                    interact.clip = open_bin;
                     if (!bin_open)
                     {
                         canMove = false;
@@ -209,6 +220,7 @@ public class Player : MonoBehaviour
 
                     }
                 }
+                playerSounds.Interact();
 
             }
             
@@ -217,8 +229,10 @@ public class Player : MonoBehaviour
         //Pude abrir el libro en cualquier momento
         if (Input.GetKeyDown(KeyCode.B) && !box_open)
         {
+            playerSounds.Book();
             if (!book_open)
             {
+               
                 canMove = false;
                 Book.SetActive(true);
                 book_open = true;

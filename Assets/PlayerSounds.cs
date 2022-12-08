@@ -7,6 +7,9 @@ public class PlayerSounds : MonoBehaviour
 {
     public AudioSource walk;
     public AudioSource pick;
+    public AudioSource book;
+    public AudioSource interact;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +42,22 @@ public class PlayerSounds : MonoBehaviour
         if (!pick.isPlaying)
         {
             pick.Play();
+        }
+    }
+
+    public void Book()
+    {
+        if (!book.isPlaying)
+        {
+            book.Play();
+        }
+    }
+
+    public void Interact()
+    {
+        if (!interact.isPlaying)
+        {
+            interact.Play();
         }
     }
 }
