@@ -19,6 +19,8 @@ public class Pan_controller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        isCook = false;
+
         estado = 0;
     }
 
@@ -27,12 +29,13 @@ public class Pan_controller : MonoBehaviour
     {
         if (onFire && filled)
         {
-            isCook = false;
+
             int time = Mathf.FloorToInt(timer.timeValue);
             Debug.Log(time);
 
             if (time == 12)
             {
+
                 estado = 6;
             }
             if (time == 5)
@@ -43,6 +46,8 @@ public class Pan_controller : MonoBehaviour
             if (time == 0)
             {
                 estado = 8;
+                isCook = false;
+
             }
         }
         Pan_render();
