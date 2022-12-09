@@ -9,10 +9,12 @@ public class Grill_controller : MonoBehaviour
 {
     public bool isEmpty;
     public GameObject objeto;
+
     // Start is called before the first frame update
     void Start()
     {
         isEmpty = true;
+        GetComponent<SpriteRenderer>().enabled= false;
     }
 
     // Update is called once per frame
@@ -23,11 +25,17 @@ public class Grill_controller : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
+
         isEmpty = false;
+        GetComponent<SpriteRenderer>().enabled = true;
+
 
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         isEmpty = true;
+        GetComponent<SpriteRenderer>().enabled = false;
+
     }
 }

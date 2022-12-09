@@ -19,13 +19,13 @@ public class Pan_controller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        estado= 0;
+        estado = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(onFire && filled) 
+        if (onFire && filled)
         {
             isCook = false;
             int time = Mathf.FloorToInt(timer.timeValue);
@@ -40,7 +40,7 @@ public class Pan_controller : MonoBehaviour
                 estado = 7;
                 isCook = true;
             }
-            if (time == 0 )
+            if (time == 0)
             {
                 estado = 8;
             }
@@ -98,12 +98,12 @@ public class Pan_controller : MonoBehaviour
         if (collision.gameObject.name == "Grill")
         {
 
-            if(filled)
+            if (filled)
             {
                 onFire = true;
                 timer.StartCooking = true;
             }
-            
+
         }
     }
 
@@ -130,6 +130,6 @@ public class Pan_controller : MonoBehaviour
     }
 
 
-   
+
 
 }
