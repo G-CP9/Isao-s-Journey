@@ -8,7 +8,7 @@ public class Pot_controller : MonoBehaviour
 {
     public Sprite[] pot_states;
 
-    int estado;
+    public int estado;
     bool filled;
     bool onFire;
     public bool isCook;
@@ -39,7 +39,7 @@ public class Pot_controller : MonoBehaviour
                 estado = 4;
                 isCook= true;
             }
-            if (time == 0)
+            if (time == 1)
             {
                 estado = 5;
                 isCook = false;
