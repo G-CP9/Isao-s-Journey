@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e9813847afdca6243a7faf701cb40e01
+guid: 7e29cccb6dccad544a0475415e764bc7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -118,7 +118,7 @@ TextureImporter:
     maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -130,7 +130,7 @@ TextureImporter:
     maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -142,7 +142,7 @@ TextureImporter:
     maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -153,13 +153,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: isao_right_andar_spritesheet_0
+      name: isao_RIGHt_andar_spritesheet_0
       rect:
         serializedVersion: 2
-        x: 884
-        y: 2428
-        width: 90
-        height: 413
+        x: 954
+        y: 1332
+        width: 103
+        height: 426
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,20 +167,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e28b44b3ed24374bb5aefe98199ab16
-      internalID: -2090241538
+      spriteID: 65340b320c22c0441a5efe214b70c979
+      internalID: -589512881
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isao_right_andar_spritesheet_1
+      name: isao_RIGHt_andar_spritesheet_1
       rect:
         serializedVersion: 2
-        x: 2806
-        y: 2428
-        width: 90
-        height: 413
+        x: 2876
+        y: 1332
+        width: 103
+        height: 434
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -188,20 +188,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f08e5911f5b22c44d8da79d676030540
-      internalID: 564471434
+      spriteID: 72a19ba9fd9e24b4bb8d0b9c825cae5f
+      internalID: 1298406027
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isao_right_andar_spritesheet_2
+      name: isao_RIGHt_andar_spritesheet_2
       rect:
         serializedVersion: 2
-        x: 846
-        y: 1339
-        width: 170
-        height: 429
+        x: 906
+        y: 263
+        width: 175
+        height: 422
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -209,20 +209,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98ed4ac30f086014dadd901bde96ad55
-      internalID: -1464586479
+      spriteID: 0ddb757b783d34f41bb06e9eba2e1894
+      internalID: 173984505
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isao_right_andar_spritesheet_3
+      name: isao_RIGHt_andar_spritesheet_3
       rect:
         serializedVersion: 2
-        x: 2780
-        y: 1350
-        width: 158
-        height: 418
+        x: 2828
+        y: 253
+        width: 181
+        height: 432
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -230,29 +230,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e84e06fa33812374d85d4191d51eae68
-      internalID: 1377478273
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: isao_right_andar_spritesheet_4
-      rect:
-        serializedVersion: 2
-        x: 884
-        y: 264
-        width: 90
-        height: 413
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f6ca72666e86466479fd57f3f308b68e
-      internalID: -1488144351
+      spriteID: 8b3965c5a2cabcb41ab362d77a972ae9
+      internalID: -78789304
       vertices: []
       indices: 
       edges: []
@@ -268,11 +247,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      isao_right_andar_spritesheet_4: -1488144351
-      isao_right_andar_spritesheet_2: -1464586479
-      isao_right_andar_spritesheet_3: 1377478273
-      isao_right_andar_spritesheet_1: 564471434
-      isao_right_andar_spritesheet_0: -2090241538
+      isao_RIGHt_andar_spritesheet_2: 173984505
+      isao_RIGHt_andar_spritesheet_1: 1298406027
+      isao_RIGHt_andar_spritesheet_0: -589512881
+      isao_RIGHt_andar_spritesheet_3: -78789304
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

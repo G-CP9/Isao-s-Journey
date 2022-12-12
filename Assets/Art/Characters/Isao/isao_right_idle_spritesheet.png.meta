@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 30780aded93077e408002e3689542f0f
+guid: fdecf28ea0c80a746927f3c2f727d45f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -118,7 +118,7 @@ TextureImporter:
     maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -130,7 +130,7 @@ TextureImporter:
     maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -142,7 +142,7 @@ TextureImporter:
     maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -153,13 +153,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: isao_right_idle_spritesheet_0
+      name: isao_RIGHt_idle_spritesheet_0
       rect:
         serializedVersion: 2
-        x: 882
-        y: 1345
-        width: 89
-        height: 423
+        x: 955
+        y: 250
+        width: 102
+        height: 434
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,20 +167,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03d81d0ab6181f74a9d65bc4f02d9f28
-      internalID: 1673372430
+      spriteID: 4e191023de3fefe4a9331169306ffeeb
+      internalID: -1937540432
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isao_right_idle_spritesheet_2
+      name: isao_RIGHt_idle_spritesheet_1
       rect:
         serializedVersion: 2
-        x: 2804
-        y: 1346
-        width: 89
-        height: 422
+        x: 2876
+        y: 250
+        width: 103
+        height: 434
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -188,29 +188,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 603870afcffe3524ba4771a422bc750b
-      internalID: -1312343153
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: isao_right_idle_spritesheet_8
-      rect:
-        serializedVersion: 2
-        x: 884
-        y: 263
-        width: 84
-        height: 423
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f9142e876ebde67439551beeff62d71c
-      internalID: -890728315
+      spriteID: 6dc84b09466422a47a5c6a9bd0be9473
+      internalID: 430692700
       vertices: []
       indices: 
       edges: []
@@ -226,17 +205,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      isao_right_idle_spritesheet_5: 1823929826
-      isao_right_idle_spritesheet_6: -1225681870
-      isao_right_idle_spritesheet_8: -890728315
-      isao_right_idle_spritesheet_7: 905986076
-      isao_right_idle_spritesheet_10: 804952947
-      isao_right_idle_spritesheet_9: -1560808402
-      isao_right_idle_spritesheet_3: -36393391
-      isao_right_idle_spritesheet_2: -1312343153
-      isao_right_idle_spritesheet_0: 1673372430
-      isao_right_idle_spritesheet_4: -2055201311
-      isao_right_idle_spritesheet_1: -315615979
+      isao_RIGHt_idle_spritesheet_0: -1937540432
+      isao_RIGHt_idle_spritesheet_1: 430692700
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
