@@ -5,13 +5,15 @@ using UnityEngine;
 public class NPCWalkControl : MonoBehaviour
 {
     public float speed;
-    int vertical;
+    public bool upDown;
+    int vertical, horizontal;
 
     Rigidbody2D rigidbody2d;
     Animator animator;
 
     void Start()
     {
+        horizontal = -1;
         vertical = -1;
         rigidbody2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -21,8 +23,16 @@ public class NPCWalkControl : MonoBehaviour
     {
         Vector2 position = rigidbody2d.position;
 
-        position.y += speed * vertical * Time.deltaTime;
-        animator.SetFloat("Vertical", vertical);
+        if (upDown)
+        {
+            position.y += speed * vertical * Time.deltaTime;
+            animator.SetFloat("Vertical", vertical);
+        }
+        else
+        {
+            position.x += speed * horizontal * Time.deltaTime;
+            animator.SetFloat("Horizontal", horizontal);
+        }
 
         rigidbody2d.MovePosition(position);
     }
@@ -32,6 +42,7 @@ public class NPCWalkControl : MonoBehaviour
         if (collision.gameObject.CompareTag("Wall"))
         {
             vertical = -vertical;
+            horizontal = -horizontal;
         }
     }
 }
