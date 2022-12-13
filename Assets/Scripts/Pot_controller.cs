@@ -18,6 +18,8 @@ public class Pot_controller : MonoBehaviour
     void Start()
     {
         estado = 0;
+        isCook = false;
+
     }
 
     // Update is called once per frame
@@ -25,7 +27,6 @@ public class Pot_controller : MonoBehaviour
     {
         if (onFire && filled)
         {
-            isCook = false;
             int time = Mathf.FloorToInt(timer.timeValue);
             Debug.Log(time);
 
@@ -41,6 +42,8 @@ public class Pot_controller : MonoBehaviour
             if (time == 0)
             {
                 estado = 5;
+                isCook = false;
+
             }
         }
         Pot_render();
