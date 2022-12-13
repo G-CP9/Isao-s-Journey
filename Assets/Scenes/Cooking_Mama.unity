@@ -1066,7 +1066,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1305261307}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f106e03a03573946804b6c5f92d15d7, type: 3}
+  m_Script: {fileID: 11500000, guid: d54db18493b56064d9d89731b266e04e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pan_states:
@@ -1075,6 +1075,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 135b73c94edd61b47aa3b7b5a18f3ac3, type: 3}
   - {fileID: 21300000, guid: 267cc4785098ea94fa8460cc0d11eed0, type: 3}
   - {fileID: 21300000, guid: 931d5545c9387cf4f9086619fd023f62, type: 3}
+  - {fileID: 21300000, guid: 5266e26adbe2a2d43992d2993b575ac2, type: 3}
   - {fileID: 21300000, guid: 5266e26adbe2a2d43992d2993b575ac2, type: 3}
   - {fileID: 21300000, guid: 5dfb65b08d63c8147ab0b49839b59e5f, type: 3}
   - {fileID: 21300000, guid: 8f5e0fa39a71482449e17f188e915d7a, type: 3}
@@ -1723,7 +1724,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 47a90a3d10475a24099062d8151026c5, type: 3}
   - {fileID: 21300000, guid: 4025b8e29518c1b44a894ec48925e77f, type: 3}
   complete: 0
-  pan_Controller: {fileID: 0}
+  pan: {fileID: 0}
   pot_Controller: {fileID: 0}
 --- !u!212 &1874362492
 SpriteRenderer:

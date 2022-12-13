@@ -14,7 +14,7 @@ public class plat_controller : MonoBehaviour
 
     
     
-    public Pan_controller pan_Controller;
+    public Pan pan;
     public Pot_controller pot_Controller;
 
     // Start is called before the first frame update
@@ -53,9 +53,9 @@ public class plat_controller : MonoBehaviour
         }
         if (collision.gameObject.name == "Pan")
         {
-            pan_Controller = collision.gameObject.GetComponent<Pan_controller>();
+            pan = collision.gameObject.GetComponent<Pan>();
 
-            if (pan_Controller.isCook)
+            if (pan.isCook)
             {
                 if (estado == 0)
                 {
