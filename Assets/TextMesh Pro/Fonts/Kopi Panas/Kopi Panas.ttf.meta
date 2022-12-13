@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 8b84b01a60db8b5499e2d644e1cd02f9
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Kopi Panas
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 56a24cf855c9cb94a86402477bdc0afd, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
