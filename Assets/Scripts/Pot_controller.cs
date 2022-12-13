@@ -74,7 +74,7 @@ public class Pot_controller : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "Grill")
+        if (collision.gameObject.tag== "Grill")
         {
             if (filled)
             {
@@ -87,7 +87,7 @@ public class Pot_controller : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "Grill")
+        if (collision.gameObject.tag == "Grill")
         {
             onFire = false;
             timer.StartCooking = false;
