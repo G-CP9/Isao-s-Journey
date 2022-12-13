@@ -78,6 +78,7 @@ public class Player : MonoBehaviour
     public AudioClip throw_bin;
     public AudioClip open_bin;
     public AudioClip open_box;
+    public AudioClip pick_flower;
 
     public PlayerSounds playerSounds;
     
@@ -258,6 +259,7 @@ public class Player : MonoBehaviour
         if ((collision.gameObject.tag == "Lavanda") || (collision.gameObject.tag == "Camomila") || (collision.gameObject.tag == "Calendula"))
         {
             //Thing is a flower
+            interact.clip = pick_flower;
             thing = "flower";
             //Get what type of Flower
             flower = (collision.gameObject.tag).ToString();

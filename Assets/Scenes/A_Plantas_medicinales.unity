@@ -5046,6 +5046,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 1665f7db13f5546429c3b1bb48c53771, type: 3}
     - target: {fileID: 2957546254192332449, guid: a87e26842ec0dc4448103e95d0a1768c, type: 3}
+      propertyPath: pick_flower
+      value: 
+      objectReference: {fileID: 8300000, guid: e397172498b323248876398108fe32b9, type: 3}
+    - target: {fileID: 2957546254192332449, guid: a87e26842ec0dc4448103e95d0a1768c, type: 3}
       propertyPath: playerSounds
       value: 
       objectReference: {fileID: 7952175011230549851}
