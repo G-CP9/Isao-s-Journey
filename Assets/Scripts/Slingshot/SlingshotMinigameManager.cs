@@ -118,6 +118,6 @@ public class SlingshotMinigameManager : MonoBehaviour
 
     public void SwapScene()
     {
-        SceneManager.LoadScene(sceneName:"TitleScreen");
+        SceneManager.LoadScene(sceneName:"Montovo2");
     }
 }

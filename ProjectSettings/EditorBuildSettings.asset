@@ -12,9 +12,21 @@ EditorBuildSettings:
     path: Assets/Scenes/Despor.unity
     guid: 5fda1acca84354a239e51f0f0c6fdb55
   - enabled: 1
-    path: Assets/Scenes/Slingshot.unity
-    guid: 2ca516b49800b43f69dc73a3c694959b
+    path: Assets/Scenes/Despor2.unity
+    guid: 6faac7899fbfe4ec6bf0bad27055a541
   - enabled: 1
     path: Assets/Scenes/Montovo.unity
     guid: f68809083425b0d47818803a83ebf3ea
+  - enabled: 1
+    path: Assets/Scenes/Slingshot.unity
+    guid: 2ca516b49800b43f69dc73a3c694959b
+  - enabled: 1
+    path: Assets/Scenes/Montovo2.unity
+    guid: 8cb964da3ddf94fc1993abef6bac2629
+  - enabled: 1
+    path: Assets/Scenes/Carrera2.unity
+    guid: 8c5eed73d1a18fc43b9864193438bb4b
+  - enabled: 1
+    path: Assets/Scenes/Opria.unity
+    guid: 0dd58b076b67d5845ba7bb881053b984
   m_configObjects: {}
