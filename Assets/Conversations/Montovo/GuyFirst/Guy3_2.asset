@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c8200a43d5a2fde47842b095a121196f, type: 3}
-  m_Name: Guy1
+  m_Name: Guy3_2
   m_EditorClassIdentifier: 
-  text: "\xBFQue onda? Bienvenida a Montovo. Por lo que veo est\xE1s aqu\xED de voluntaria,
-    \xBFcierto?"
+  text: "S\xED, efectivamente. Las personas del voluntariado lo construyeron al venir
+    como medidad de emergencia."
   multiple: 0
   last: 0
-  option1: "S\xED, reci\xE9n me he unido. Me llamo Angelica, \xBFt\xFA eres...?"
+  option1: "Ya veo. Deber\xEDa servir para lanzar las medicinas que ha tra\xEDdo
+    mi compa\xF1ero Isao."
   option2: 
-  op1Conv: {fileID: 11400000, guid: ee604066519214d4683aecf50013fb3a, type: 2}
+  op1Conv: {fileID: 11400000, guid: b39c003b2167a6144b24243b558a67c1, type: 2}
   op2Conv: {fileID: 0}

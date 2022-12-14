@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c8200a43d5a2fde47842b095a121196f, type: 3}
-  m_Name: Guy1
+  m_Name: Guy4
   m_EditorClassIdentifier: 
-  text: "\xBFQue onda? Bienvenida a Montovo. Por lo que veo est\xE1s aqu\xED de voluntaria,
-    \xBFcierto?"
+  text: "Dr\xEDgete pues cuanto antes hacia el tirachinas y te explicar\xE1n como
+    ayudar. \xA1Gracias!"
   multiple: 0
-  last: 0
-  option1: "S\xED, reci\xE9n me he unido. Me llamo Angelica, \xBFt\xFA eres...?"
+  last: 1
+  option1: "Ahora mismo voy para all\xE1."
   option2: 
-  op1Conv: {fileID: 11400000, guid: ee604066519214d4683aecf50013fb3a, type: 2}
+  op1Conv: {fileID: 0}
   op2Conv: {fileID: 0}
