@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Despor.unity
     guid: 5fda1acca84354a239e51f0f0c6fdb55
   - enabled: 1
+    path: Assets/Scenes/Plants.unity
+    guid: e24280258e5f4eb489487303df5e0b59
+  - enabled: 1
     path: Assets/Scenes/Despor2.unity
     guid: 6faac7899fbfe4ec6bf0bad27055a541
   - enabled: 1
