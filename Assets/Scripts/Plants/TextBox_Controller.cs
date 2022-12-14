@@ -126,7 +126,7 @@ public class TextBox_Controller : MonoBehaviour
         StartCoroutine(ExecuteAfterTime());
     }
 
-    void PauseGame()
+    public void PauseGame()
     {
         Time.timeScale = 0;
     }
