@@ -6,42 +6,33 @@ EditorUserSettings:
   serializedVersion: 4
   m_ConfigSettings:
     RecentlyUsedSceneGuid-0:
-      value: 5652035603055c585f0d552044765d4444161a78787a20647f784b31b6e3653e
-      flags: 0
-    RecentlyUsedSceneGuid-1:
-      value: 0504070701050a58085858274477081410151d2b7b2b7636747a4966b2b06d3d
-      flags: 0
-    RecentlyUsedSceneGuid-2:
       value: 5657500754540a580c56587145775e42454e1d7f7d2e76367d2a4b35e6e2616d
       flags: 0
-    RecentlyUsedSceneGuid-3:
+    RecentlyUsedSceneGuid-1:
       value: 05070c5e550c59035e5a5e7712735b44414f497274787531757a1831e4b33139
       flags: 0
-    RecentlyUsedSceneGuid-4:
+    RecentlyUsedSceneGuid-2:
       value: 555755070602510254080e2415775a1340151e7a2e2922627a794866e3b56069
       flags: 0
-    RecentlyUsedSceneGuid-5:
+    RecentlyUsedSceneGuid-3:
       value: 5b52565f53010d5a5e0a082449775913474e41792d2a23367b2b1c30b0b66661
       flags: 0
-    RecentlyUsedSceneGuid-6:
+    RecentlyUsedSceneGuid-4:
       value: 535550535d57590c5b0c5a75147607444315197d2e2a7e687c794860e0b96c6c
       flags: 0
-    RecentlyUsedSceneGuid-7:
+    RecentlyUsedSceneGuid-5:
       value: 5b52010300515e08095f0d7348255c44451541727a7c77697e7d4e6be0e2603a
       flags: 0
-    RecentlyUsedSceneGuid-8:
+    RecentlyUsedSceneGuid-6:
       value: 5a53045453000b0d5c5d0a234477084615151e7e7b7172342e7b446ae7b36439
       flags: 0
-    RecentlyUsedSceneGuid-9:
+    RecentlyUsedSceneGuid-7:
+      value: 0504070701050a58085858274477081410151d2b7b2b7636747a4966b2b06d3d
+      flags: 0
+    RecentlyUsedSceneGuid-8:
       value: 5152555354030b0f54565c7212770c16404e1c297b7b27632e7f4467bbb56d3a
       flags: 0
-    RecentlyUsedSceneGuid-1:
-      value: 5007505f030c5f0b0b0c5e7412700744154e4b737b7a71607d2c4c66bbb13539
-      flags: 0
-    RecentlyUsedSceneGuid-2:
-      value: 5150065f5d0d5b0d5c080876497a064413154d7c2f787f692b7c4837e4e4356f
-      flags: 0
-    RecentlyUsedSceneGuid-3:
+    RecentlyUsedSceneGuid-9:
       value: 500957075351510b0b580f2614205d44134e49727a7d2736782a4537e7b23139
       flags: 0
     vcSharedLogLevel:
