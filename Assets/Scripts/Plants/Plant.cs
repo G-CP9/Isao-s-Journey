@@ -7,7 +7,7 @@ public class Plant : MonoBehaviour
     Player player;
     GameObject parent;
     Bounds bounds;
-    bool collidingWithPlayer = false;
+    //bool collidingWithPlayer = false;
     
     string obstaculo;
 
@@ -35,7 +35,7 @@ public class Plant : MonoBehaviour
         }
         else if (obstaculo == "Player")
         {
-            collidingWithPlayer = true;
+            //collidingWithPlayer = true;
             player = other.gameObject.GetComponent<Player>();
         }
     }
@@ -44,7 +44,7 @@ public class Plant : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            collidingWithPlayer = false;
+            //collidingWithPlayer = false;
         }
     }
 
