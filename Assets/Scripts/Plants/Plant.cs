@@ -8,15 +8,7 @@ public class Plant : MonoBehaviour
     GameObject parent;
     Bounds bounds;
     bool collidingWithPlayer = false;
-    List<string> objetos = new List<string>()
-    {
-        "Lavanda",
-        "Camomila",
-        "PlantC",
-        "Box",
-        "Bin",
-        "Wall"
-    };
+    
     string obstaculo;
 
     public void Spawn()

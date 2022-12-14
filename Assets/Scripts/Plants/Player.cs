@@ -26,14 +26,15 @@ public class Player : MonoBehaviour
 
     //Player Movement
     public bool isMoving = false;
-    bool isTouching;
+    //bool isTouching;
     private bool canMove = true;
     private bool canInteract = false;
     
 
     //Player actions
-    string flower;
+    public string flower;
     public string thing;
+    public bool picked;
 
 
     //The toolbar
@@ -168,7 +169,7 @@ public class Player : MonoBehaviour
             if ((Input.GetKeyUp(KeyCode.P)))
             {
 
-                isTouching= true;
+                //isTouching= true;
                 if(thing == "flower")
                 {
                     
@@ -344,6 +345,7 @@ public class Player : MonoBehaviour
             toolBar.PickFlower(flower, isPoison);
 
             Destroy(flower_object);
+            picked = true;
 
         }
 
