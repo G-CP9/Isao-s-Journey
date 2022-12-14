@@ -144,7 +144,7 @@ public class Player : MonoBehaviour
     {
         Inputs();
         //Player_Sounds();
-        Debug.Log(canInteract);
+        //Debug.Log(canInteract);
     }
 
     //Get new player's position after an input
