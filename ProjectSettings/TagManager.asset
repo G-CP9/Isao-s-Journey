@@ -4,7 +4,17 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< HEAD
   - Wall
+=======
+  - Grill
+  - Bin
+  - Food
+  - Pan
+  - Meat
+  - Rice
+  - Potato
+>>>>>>> Cooking-Mama
   layers:
   - Default
   - TransparentFX
