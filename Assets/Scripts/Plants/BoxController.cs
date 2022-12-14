@@ -17,7 +17,7 @@ public class BoxController : MonoBehaviour
     {
         box_open = false;
 
-        toolBar = FindObjectOfType<ToolBarController>();
+        //toolBar = FindObjectOfType<ToolBarController>();
 
         
 

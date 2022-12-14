@@ -92,8 +92,8 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        toolBar = FindObjectOfType<ToolBarController>();
-        box = FindObjectOfType<BoxController>();
+        /*toolBar = FindObjectOfType<ToolBarController>();
+        box = FindObjectOfType<BoxController>();*/
 
 
         rb = GetComponent<Rigidbody2D>();
@@ -144,6 +144,7 @@ public class Player : MonoBehaviour
     {
         Inputs();
         //Player_Sounds();
+        Debug.Log(canInteract);
     }
 
     //Get new player's position after an input

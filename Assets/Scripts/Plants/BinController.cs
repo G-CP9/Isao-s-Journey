@@ -17,7 +17,7 @@ public class BinController : MonoBehaviour
     {
         bin_open = false;
 
-        toolBar = FindObjectOfType<ToolBarController>();
+        //toolBar = FindObjectOfType<ToolBarController>();
 
 
 

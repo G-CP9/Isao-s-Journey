@@ -46,6 +46,7 @@ public class TextBox_Controller : MonoBehaviour
     {
         text_box1.text = "";
         text_box2.text = "";
+        PauseGame();
         toolbar_object.SetActive(false);
         ProgressBar.SetActive(false);
         Inventory.SetActive(false);
