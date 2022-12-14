@@ -2762,7 +2762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instruccion: {fileID: 2087569343}
-  minigame: Cocina
+  minigame: Cooking
 --- !u!1001 &1249033314
 PrefabInstance:
   m_ObjectHideFlags: 0
