@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
 
     //Player actions
     string flower;
-    string thing;
+    public string thing;
 
 
     //The toolbar
@@ -221,7 +221,7 @@ public class Player : MonoBehaviour
 
                     }
                 }
-                playerSounds.Interact();
+                //playerSounds.Interact();
 
             }
             
