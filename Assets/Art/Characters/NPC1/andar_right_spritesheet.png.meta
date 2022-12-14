@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 523cc49aa660ae04cad7fae049d141ed
+guid: d8aac078478022d45bf8ccd12ca5b1c5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -153,85 +153,148 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: angelica_front_idle_spritesheet_0
+      name: andar_right_spritesheet_0
       rect:
         serializedVersion: 2
-        x: 750
-        y: 1086
-        width: 446
-        height: 899
+        x: 813
+        y: 3261
+        width: 272
+        height: 916
       alignment: 9
-      pivot: {x: 0.48507074, y: 0.03863641}
+      pivot: {x: 0.5, y: 0.035660524}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af75c913c0d216240b5b2fbf189def5b
-      internalID: -1032084577
+      spriteID: eea4fd6e7a665454d8d341dd89151f7d
+      internalID: -2085950552
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: angelica_front_idle_spritesheet_1
+      name: andar_right_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 2736
+        y: 3268
+        width: 236
+        height: 902
+      alignment: 9
+      pivot: {x: 0.5, y: 0.033171456}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02972e1a99b85d44fbedb61a99eb825f
+      internalID: -537760885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: andar_right_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 2203
+        width: 347
+        height: 890
+      alignment: 9
+      pivot: {x: 0.5, y: 0.024360571}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d579d3bda04783b49a5d3ccb5977ecdb
+      internalID: -1372064205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: andar_right_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 2721
+        y: 2197
+        width: 308
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5, y: 0.011138576}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f89a6e4f60dbded40b0949d1a7542b79
+      internalID: -242328953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: andar_right_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 1130
+        width: 397
+        height: 872
+      alignment: 9
+      pivot: {x: 0.5, y: 0.022247875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9badbc965b2ed764ab1b161251326b88
+      internalID: -818605641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: andar_right_spritesheet_5
       rect:
         serializedVersion: 2
         x: 2672
-        y: 1086
-        width: 446
-        height: 899
+        y: 1111
+        width: 408
+        height: 893
       alignment: 9
-      pivot: {x: 0.5, y: 0.03863641}
+      pivot: {x: 0.5, y: 0.015925596}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a76d700155342045ab3df024ca8c347
-      internalID: -257744422
+      spriteID: d315228c0f143a2438290fd24ac43299
+      internalID: -780001286
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: angelica_front_idle_spritesheet_2
+      name: andar_right_spritesheet_6
       rect:
         serializedVersion: 2
-        x: 750
-        y: 4
-        width: 443
-        height: 896
+        x: 703
+        y: 22
+        width: 400
+        height: 900
       alignment: 9
-      pivot: {x: 0.5, y: 0.03863641}
+      pivot: {x: 0.5, y: 0.022179294}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a748c59edcb30994b8a0943a78980a4a
-      internalID: -2024861153
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: angelica_front_idle_spritesheet_3
-      rect:
-        serializedVersion: 2
-        x: 2670
-        y: 4
-        width: 450
-        height: 896
-      alignment: 9
-      pivot: {x: 0.5, y: 0.03863641}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 70129220edc3d6b47b2e8666345239f4
-      internalID: -52543555
+      spriteID: c74b058023b54b04a8aaa06848e214b1
+      internalID: 2053126008
       vertices: []
       indices: 
       edges: []
@@ -247,10 +310,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      angelica_front_idle_spritesheet_3: -52543555
-      angelica_front_idle_spritesheet_0: -1032084577
-      angelica_front_idle_spritesheet_1: -257744422
-      angelica_front_idle_spritesheet_2: -2024861153
+      andar_right_spritesheet_5: -780001286
+      andar_right_spritesheet_3: -242328953
+      andar_right_spritesheet_1: -537760885
+      andar_right_spritesheet_4: -818605641
+      andar_right_spritesheet_0: -2085950552
+      andar_right_spritesheet_6: 2053126008
+      andar_right_spritesheet_2: -1372064205
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

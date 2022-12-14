@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 523cc49aa660ae04cad7fae049d141ed
+guid: 0af9f8acea549474684daf6c743c9edb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -153,85 +153,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: angelica_front_idle_spritesheet_0
+      name: guy_idle_spritesheet_0
       rect:
         serializedVersion: 2
-        x: 750
-        y: 1086
-        width: 446
-        height: 899
+        x: 739
+        y: 5
+        width: 429
+        height: 967
       alignment: 9
-      pivot: {x: 0.48507074, y: 0.03863641}
+      pivot: {x: 0.5, y: 0.03209748}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af75c913c0d216240b5b2fbf189def5b
-      internalID: -1032084577
+      spriteID: 769949f8e585b3c4a98f086990bfc0d1
+      internalID: -1520551946
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: angelica_front_idle_spritesheet_1
+      name: guy_idle_spritesheet_1
       rect:
         serializedVersion: 2
-        x: 2672
-        y: 1086
-        width: 446
-        height: 899
+        x: 2661
+        y: 5
+        width: 429
+        height: 967
       alignment: 9
-      pivot: {x: 0.5, y: 0.03863641}
+      pivot: {x: 0.5, y: 0.03404974}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a76d700155342045ab3df024ca8c347
-      internalID: -257744422
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: angelica_front_idle_spritesheet_2
-      rect:
-        serializedVersion: 2
-        x: 750
-        y: 4
-        width: 443
-        height: 896
-      alignment: 9
-      pivot: {x: 0.5, y: 0.03863641}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a748c59edcb30994b8a0943a78980a4a
-      internalID: -2024861153
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: angelica_front_idle_spritesheet_3
-      rect:
-        serializedVersion: 2
-        x: 2670
-        y: 4
-        width: 450
-        height: 896
-      alignment: 9
-      pivot: {x: 0.5, y: 0.03863641}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 70129220edc3d6b47b2e8666345239f4
-      internalID: -52543555
+      spriteID: bb87994b9efca6e4d8e4b6ffe9abdcca
+      internalID: 1113080681
       vertices: []
       indices: 
       edges: []
@@ -247,10 +205,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      angelica_front_idle_spritesheet_3: -52543555
-      angelica_front_idle_spritesheet_0: -1032084577
-      angelica_front_idle_spritesheet_1: -257744422
-      angelica_front_idle_spritesheet_2: -2024861153
+      guy_idle_spritesheet_1: 1113080681
+      guy_idle_spritesheet_0: -1520551946
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
