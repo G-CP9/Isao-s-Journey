@@ -1805,7 +1805,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instruccion: {fileID: 2087569343}
-  minigame: Carrera
+  minigame: Carrera2
 --- !u!1 &1229101022
 GameObject:
   m_ObjectHideFlags: 0
