@@ -5,8 +5,13 @@ using UnityEngine;
 public class NPCWalkControl : MonoBehaviour
 {
     public float speed;
+<<<<<<< HEAD
     public bool upDown;
     int vertical, horizontal;
+=======
+    int vertical, horizontal;
+    public bool upDown;
+>>>>>>> origin/montovo
 
     Rigidbody2D rigidbody2d;
     Animator animator;
@@ -18,6 +23,7 @@ public class NPCWalkControl : MonoBehaviour
     {
         horizontal = -1;
         vertical = -1;
+        horizontal = -1;
         rigidbody2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();

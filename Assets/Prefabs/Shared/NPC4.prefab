@@ -171,6 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.5
+  upDown: 1
   step: {fileID: 8300000, guid: b1db2a3858c985d4a92edbee0b2cbae0, type: 3}
 --- !u!82 &3955207565197373245
 AudioSource:

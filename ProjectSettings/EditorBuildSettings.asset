@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Slingshot.unity
     guid: 2ca516b49800b43f69dc73a3c694959b
+  - enabled: 1
+    path: Assets/Scenes/Montovo.unity
+    guid: f68809083425b0d47818803a83ebf3ea
   m_configObjects: {}
