@@ -2890,7 +2890,7 @@ MonoBehaviour:
   m_Follow: {fileID: 7952175011099359419}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 3.5
+    OrthographicSize: 5
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -3272,7 +3272,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.5
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3296,7 +3296,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2120382858}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.27, y: -12.98, z: -10}
+  m_LocalPosition: {x: -19.27, y: -12.157743, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3449,6 +3449,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1299879242908649518, guid: 47cacf80413fd8c4db4f75bd1e0e765f, type: 3}
+      propertyPath: moveSpeed
+      value: 3.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3514340211050888241, guid: 47cacf80413fd8c4db4f75bd1e0e765f, type: 3}
       propertyPath: m_Name
       value: ANGELICA
