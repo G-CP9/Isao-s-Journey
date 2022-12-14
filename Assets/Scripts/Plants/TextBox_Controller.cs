@@ -25,6 +25,13 @@ public class TextBox_Controller : MonoBehaviour
 
     //Start game
     public GameObject StartWindow;
+    public GameObject boton_salir;
+
+    public GameObject toolbar_object;
+    public GameObject ProgressBar;
+    public GameObject Inventory;
+    public GameObject Book;
+
 
 
     List<string> Flower_types = new List<string>()
@@ -39,6 +46,13 @@ public class TextBox_Controller : MonoBehaviour
     {
         text_box1.text = "";
         text_box2.text = "";
+        toolbar_object.SetActive(false);
+        ProgressBar.SetActive(false);
+        Inventory.SetActive(false);
+        Book.SetActive(false);
+
+
+
     }
 
     private void Update()
@@ -49,6 +63,11 @@ public class TextBox_Controller : MonoBehaviour
         {
             StartWindow.SetActive(false);
             ResumeGame();
+            boton_salir.SetActive(true);
+            toolbar_object.SetActive(true);
+            ProgressBar.SetActive(true);
+            Inventory.SetActive(true);
+            Book.SetActive(true);
 
         }
         else if (box.box_open)

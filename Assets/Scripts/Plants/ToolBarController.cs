@@ -279,7 +279,7 @@ public class ToolBarController : MonoBehaviour
         {
             num_e_calendula--;
             //Lavanda venenosa 1 = -5 puntos
-            score = score - 3;
+            score = score - 5;
         }
         
         
