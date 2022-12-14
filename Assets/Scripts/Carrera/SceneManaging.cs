@@ -14,4 +14,9 @@ public class SceneManaging : MonoBehaviour
     {
         SceneManager.LoadScene("Despor");
     }
+
+    public void Next()
+    {
+        SceneManager.LoadScene("Montovo");
+    }
 }
