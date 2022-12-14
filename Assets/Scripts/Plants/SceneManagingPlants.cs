@@ -17,6 +17,6 @@ public class SceneManagingPlants: MonoBehaviour
 
     public void Next()
     {
-        SceneManager.LoadScene("Opria");
+        SceneManager.LoadScene("Despor2");
     }
 }
