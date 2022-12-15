@@ -25,7 +25,7 @@ public class Game_manager : MonoBehaviour
 
     void FinishGame()
     {
-        textBox_Controller.PauseGame();
+        //textBox_Controller.PauseGame();
         final_screen.SetActive(true);
         boton_salir.SetActive(false);
     }

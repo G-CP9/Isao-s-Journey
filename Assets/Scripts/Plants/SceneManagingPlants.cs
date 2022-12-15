@@ -12,11 +12,13 @@ public class SceneManagingPlants: MonoBehaviour
 
     public void Exit()
     {
+        //Time.timeScale = 1;
         SceneManager.LoadScene("Despor");
     }
 
     public void Next()
     {
+        //Time.timeScale = 1;
         SceneManager.LoadScene("Despor2");
     }
 }
