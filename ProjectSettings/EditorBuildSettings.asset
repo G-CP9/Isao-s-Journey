@@ -39,6 +39,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Cooking.unity
     guid: 38ca6d80f6cddcb4e91865af5c8de2ea
   - enabled: 1
-    path: Assets/Scenes/Opria2.unity
-    guid: 9b0265b613fa4476cbf4794dc299e30a
+    path: Assets/Scenes/Credits.unity
+    guid: 3361f285e8320da40ac9dca1836de145
   m_configObjects: {}

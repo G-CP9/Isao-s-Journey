@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class plat_controller : MonoBehaviour
 {
@@ -48,6 +49,7 @@ public class plat_controller : MonoBehaviour
                 {
                     estado = 3;
                     complete = true;
+                    Invoke("SwapScene", 2.0f);
                 }
             }
         }
@@ -65,7 +67,7 @@ public class plat_controller : MonoBehaviour
                 {
                     estado = 3;
                     complete = true;
-
+                    Invoke("SwapScene", 2.0f);
                 }
             }
         }
@@ -79,5 +81,10 @@ public class plat_controller : MonoBehaviour
         Sprite state = plat_states[estado];
         GetComponent<SpriteRenderer>().sprite = state;
 
+    }
+
+    void SwapScene()
+    {
+        SceneManager.LoadScene("Credits");
     }
 }
