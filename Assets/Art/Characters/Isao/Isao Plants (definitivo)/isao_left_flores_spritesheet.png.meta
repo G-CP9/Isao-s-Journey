@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ac693f9e9de38a840ac145f24aea2b8a
+guid: 1d6685d0e9a96f140bbe5fee640b5b49
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -117,13 +117,34 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: isao_right_flores_spritesheet_0
+      name: isao_left_flores_spritesheet_0
       rect:
         serializedVersion: 2
-        x: 958
-        y: 3507
+        x: 849
+        y: 3492
         width: 115
-        height: 422
+        height: 436
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ffb51003b5bbef42a78dec248e49bac
+      internalID: -1411002744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isao_left_flores_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 2683
+        y: 3502
+        width: 250
+        height: 436
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,62 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a2848840a938274d86b5611e7c5b000
-      internalID: -1810248385
+      spriteID: b500bc59ad7de7040a24a5609c3430b5
+      internalID: 243008484
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isao_right_flores_spritesheet_1
+      name: isao_left_flores_spritesheet_2
       rect:
         serializedVersion: 2
-        x: 2880
-        y: 3506
-        width: 116
-        height: 423
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6cd9d8fc974fdad4d832bef474da1dec
-      internalID: 483798281
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: isao_right_flores_spritesheet_2
-      rect:
-        serializedVersion: 2
-        x: 4766
-        y: 3501
-        width: 246
-        height: 421
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3d83c73b8f6c83445bba5c29d929426d
-      internalID: -815353437
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: isao_right_flores_spritesheet_3
-      rect:
-        serializedVersion: 2
-        x: 944
-        y: 2422
+        x: 825
+        y: 2416
         width: 153
-        height: 421
+        height: 436
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,83 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf6d7d1260286894fb630c3e1adfe665
-      internalID: -2030807885
+      spriteID: 72b56fb395044e64bbc9dc092428c055
+      internalID: -1194244401
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isao_right_flores_spritesheet_4
+      name: isao_left_flores_spritesheet_3
       rect:
         serializedVersion: 2
-        x: 2844
-        y: 2420
-        width: 247
-        height: 422
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5043a0ad5923c6d40af0ddb587daae20
-      internalID: 281486572
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: isao_right_flores_spritesheet_5
-      rect:
-        serializedVersion: 2
-        x: 4787
-        y: 2422
-        width: 155
-        height: 422
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2cda4eece1e07384ea2f3c7a369d59a0
-      internalID: -240898319
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: isao_right_flores_spritesheet_6
-      rect:
-        serializedVersion: 2
-        x: 910
-        y: 1347
-        width: 252
-        height: 422
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 950ebd95774fca94bb9929e2fddde3c0
-      internalID: -65155102
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: isao_right_flores_spritesheet_7
-      rect:
-        serializedVersion: 2
-        x: 2832
-        y: 1347
+        x: 2682
+        y: 2421
         width: 251
-        height: 421
+        height: 436
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,20 +194,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a30971a9dc69d145aa520f0775b9f50
-      internalID: -508818350
+      spriteID: 926bc15ec3d340e45ac80db0099b2b36
+      internalID: 1680010080
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isao_right_flores_spritesheet_8
+      name: isao_left_flores_spritesheet_4
       rect:
         serializedVersion: 2
-        x: 910
-        y: 264
-        width: 252
-        height: 424
+        x: 754
+        y: 1336
+        width: 246
+        height: 436
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -299,20 +215,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 030ba70ac473ca240aa2057202ef05f5
-      internalID: 1393965212
+      spriteID: 766880b4322f38445b98af5cf81ecfbd
+      internalID: 2095578790
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isao_right_flores_spritesheet_9
+      name: isao_left_flores_spritesheet_5
       rect:
         serializedVersion: 2
-        x: 2833
-        y: 264
+        x: 2683
+        y: 1338
+        width: 250
+        height: 436
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c4cb2e5c8861e641a1dd27cb2fbbd79
+      internalID: 59730772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isao_left_flores_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 257
         width: 251
-        height: 421
+        height: 436
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -320,8 +257,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cfd27d19969487540a6ac8e7969234e8
-      internalID: 1802500772
+      spriteID: 259b7235a64a48f478d61143fc462da8
+      internalID: -957002156
       vertices: []
       indices: 
       edges: []
@@ -337,16 +274,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      isao_right_flores_spritesheet_3: -2030807885
-      isao_right_flores_spritesheet_2: -815353437
-      isao_right_flores_spritesheet_7: -508818350
-      isao_right_flores_spritesheet_4: 281486572
-      isao_right_flores_spritesheet_9: 1802500772
-      isao_right_flores_spritesheet_0: -1810248385
-      isao_right_flores_spritesheet_6: -65155102
-      isao_right_flores_spritesheet_1: 483798281
-      isao_right_flores_spritesheet_5: -240898319
-      isao_right_flores_spritesheet_8: 1393965212
+      isao_left_flores_spritesheet_0: -1411002744
+      isao_left_flores_spritesheet_4: 2095578790
+      isao_left_flores_spritesheet_5: 59730772
+      isao_left_flores_spritesheet_6: -957002156
+      isao_left_flores_spritesheet_3: 1680010080
+      isao_left_flores_spritesheet_2: -1194244401
+      isao_left_flores_spritesheet_1: 243008484
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

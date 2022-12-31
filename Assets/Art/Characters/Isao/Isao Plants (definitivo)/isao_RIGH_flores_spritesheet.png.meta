@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 27eb9fd7edf8cac48b6989fcd2d19824
+guid: 99bb2acfd2b0adc4f85498f0933fa1cb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -117,127 +117,148 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: isao_back_flores_spritesheet_0
+      name: isao_RIGH_flores_spritesheet_0
       rect:
         serializedVersion: 2
-        x: 908
-        y: 2429
-        width: 109
-        height: 421
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 911
+        y: 3501
+        width: 250
+        height: 436
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86f341cd3b2f8814e8dd220b8bf080f8
-      internalID: 1093822405
+      spriteID: 49a0023e0b0fbfd4a940b5270658438f
+      internalID: -460597690
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isao_back_flores_spritesheet_1
+      name: isao_RIGH_flores_spritesheet_1
       rect:
         serializedVersion: 2
-        x: 2834
-        y: 2394
-        width: 109
-        height: 456
+        x: 2880
+        y: 3491
+        width: 115
+        height: 436
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c9b17c0c829a1474bb0e6902897ba922
-      internalID: -94000869
+      spriteID: 3b3b1289a9de0214cb4172935e10a78b
+      internalID: 1688394228
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isao_back_flores_spritesheet_2
+      name: isao_RIGH_flores_spritesheet_2
       rect:
         serializedVersion: 2
-        x: 913
-        y: 1328
-        width: 104
-        height: 440
+        x: 911
+        y: 2420
+        width: 251
+        height: 436
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e26d4d3257f92e4bb49004963d6cab4
-      internalID: 1889385095
+      spriteID: 4c1cbe058a0f69c4fbb580e71fb7a15b
+      internalID: 971874694
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isao_back_flores_spritesheet_3
+      name: isao_RIGH_flores_spritesheet_3
       rect:
         serializedVersion: 2
-        x: 2834
-        y: 1312
-        width: 103
-        height: 456
+        x: 2866
+        y: 2415
+        width: 153
+        height: 436
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 381a577fddd1e8343b66b9c9e3843af1
-      internalID: -1164373069
+      spriteID: 179bfaa22aa3f654397a7fe240e15db2
+      internalID: -850333436
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isao_back_flores_spritesheet_4
+      name: isao_RIGH_flores_spritesheet_4
       rect:
         serializedVersion: 2
-        x: 912
-        y: 230
-        width: 103
-        height: 456
+        x: 911
+        y: 1337
+        width: 250
+        height: 436
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f511d9605417084aad929624d94e4be
-      internalID: -383688114
+      spriteID: e1c99db911e5cb641a397c8d2b15d6ee
+      internalID: 373943984
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isao_back_flores_spritesheet_5
+      name: isao_RIGH_flores_spritesheet_5
       rect:
         serializedVersion: 2
-        x: 2834
-        y: 230
-        width: 109
-        height: 456
+        x: 2844
+        y: 1335
+        width: 246
+        height: 436
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64bb7d2b8e44ec341a156e20725a04e4
-      internalID: 6408420
+      spriteID: 8eb831b0a588db24d9efa746e378aac4
+      internalID: 1800747573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isao_RIGH_flores_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 2833
+        y: 256
+        width: 251
+        height: 436
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82c10001e6e8da14683038d08612923b
+      internalID: 1574461664
       vertices: []
       indices: 
       edges: []
@@ -253,12 +274,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      isao_back_flores_spritesheet_2: 1889385095
-      isao_back_flores_spritesheet_4: -383688114
-      isao_back_flores_spritesheet_3: -1164373069
-      isao_back_flores_spritesheet_5: 6408420
-      isao_back_flores_spritesheet_1: -94000869
-      isao_back_flores_spritesheet_0: 1093822405
+      isao_RIGH_flores_spritesheet_4: 373943984
+      isao_RIGH_flores_spritesheet_5: 1800747573
+      isao_RIGH_flores_spritesheet_1: 1688394228
+      isao_RIGH_flores_spritesheet_3: -850333436
+      isao_RIGH_flores_spritesheet_2: 971874694
+      isao_RIGH_flores_spritesheet_0: -460597690
+      isao_RIGH_flores_spritesheet_6: 1574461664
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
