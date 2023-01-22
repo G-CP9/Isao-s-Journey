@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     private float moveY;
 
     public AudioClip step;
+    public VirtualJoystick joystick;
 
     private void Start()
     {
@@ -37,8 +38,13 @@ public class PlayerController : MonoBehaviour
 
     void ProcessInputs()
     {
-        moveX = Input.GetAxisRaw("Horizontal");
-        moveY = Input.GetAxisRaw("Vertical");
+        // PC
+        /*moveX = Input.GetAxisRaw("Horizontal");
+        moveY = Input.GetAxisRaw("Vertical");*/
+
+        // Movil
+        moveX = joystick.Horizontal();
+        moveY = joystick.Vertical();
     }
 
     void Move()
