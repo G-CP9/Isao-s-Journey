@@ -41,7 +41,7 @@ public class Player : MonoBehaviour
 
     //Book
     public GameObject Book;
-    bool book_open;
+    public bool book_open;
 
     //Box
 

@@ -39,4 +39,9 @@ public class Game_manager : MonoBehaviour
     {
         player.interact_pressed = true;
     }
+
+    public void Open_Book()
+    {
+        player.book_open = true;
+    }
 }
