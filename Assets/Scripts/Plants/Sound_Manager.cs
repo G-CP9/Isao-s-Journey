@@ -15,6 +15,7 @@ public class Sound_Manager : MonoBehaviour
     //Player
     public Player player;
     AudioSource game_song;
+   
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +30,7 @@ public class Sound_Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
     }
 
     void Songs()

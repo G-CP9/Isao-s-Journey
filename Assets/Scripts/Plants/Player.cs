@@ -81,6 +81,9 @@ public class Player : MonoBehaviour
     public AudioClip pick_flower;
 
     public PlayerSounds playerSounds;
+
+    //mobile controls
+    public bool interact_pressed = false;
     
     
     
@@ -166,7 +169,7 @@ public class Player : MonoBehaviour
         //If the button pressed is <<P>> & player isn't moving
         if (canInteract)
         {
-            if ((Input.GetKeyUp(KeyCode.P)))
+            if ((Input.GetKeyUp(KeyCode.E)) || (interact_pressed == true))
             {
 
                 //isTouching= true;
@@ -225,6 +228,7 @@ public class Player : MonoBehaviour
                 //playerSounds.Interact();
 
             }
+            interact_pressed = false;
             
         }
 

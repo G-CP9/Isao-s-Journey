@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class Game_manager : MonoBehaviour
 {
@@ -8,11 +10,14 @@ public class Game_manager : MonoBehaviour
     public TextBox_Controller textBox_Controller;
     public GameObject final_screen;
     public GameObject boton_salir;
+    public Button interact_button;
+    public Player player;
 
     private void Start()
     {
         final_screen.SetActive(false);
         boton_salir.SetActive(false);
+        
 
     }
     private void Update()
@@ -28,5 +33,10 @@ public class Game_manager : MonoBehaviour
         //textBox_Controller.PauseGame();
         final_screen.SetActive(true);
         boton_salir.SetActive(false);
+    }
+
+    public void Interact()
+    {
+        player.interact_pressed = true;
     }
 }
