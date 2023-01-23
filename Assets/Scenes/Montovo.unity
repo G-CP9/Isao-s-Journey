@@ -1805,6 +1805,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instruccion: {fileID: 2087569343}
+  screenControls: {fileID: 0}
   minigame: Carrera
 --- !u!1 &1229101022
 GameObject:
@@ -1881,6 +1882,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instruccion: {fileID: 8951342}
+  screenControls: {fileID: 1994574482}
   minigame: Slingshot
 --- !u!1 &1316410822
 GameObject:
@@ -2939,6 +2941,124 @@ MonoBehaviour:
   m_BoundingShape2D: {fileID: 1529001983}
   m_ConfineScreenEdges: 1
   m_Damping: 0
+--- !u!1001 &1994574479
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2127271201}
+    m_Modifications:
+    - target: {fileID: 686780095158998268, guid: 325ee22b5eac0ea4f9bea3f9a34899a5, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 686780095158998268, guid: 325ee22b5eac0ea4f9bea3f9a34899a5, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 686780095158998268, guid: 325ee22b5eac0ea4f9bea3f9a34899a5, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 686780095158998268, guid: 325ee22b5eac0ea4f9bea3f9a34899a5, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 686780095158998268, guid: 325ee22b5eac0ea4f9bea3f9a34899a5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 686780095158998268, guid: 325ee22b5eac0ea4f9bea3f9a34899a5, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 686780095158998268, guid: 325ee22b5eac0ea4f9bea3f9a34899a5, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 686780095158998268, guid: 325ee22b5eac0ea4f9bea3f9a34899a5, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 686780095158998268, guid: 325ee22b5eac0ea4f9bea3f9a34899a5, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 686780095158998268, guid: 325ee22b5eac0ea4f9bea3f9a34899a5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 686780095158998268, guid: 325ee22b5eac0ea4f9bea3f9a34899a5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 686780095158998268, guid: 325ee22b5eac0ea4f9bea3f9a34899a5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 686780095158998268, guid: 325ee22b5eac0ea4f9bea3f9a34899a5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 686780095158998268, guid: 325ee22b5eac0ea4f9bea3f9a34899a5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 686780095158998268, guid: 325ee22b5eac0ea4f9bea3f9a34899a5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 686780095158998268, guid: 325ee22b5eac0ea4f9bea3f9a34899a5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 686780095158998268, guid: 325ee22b5eac0ea4f9bea3f9a34899a5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 686780095158998268, guid: 325ee22b5eac0ea4f9bea3f9a34899a5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 686780095158998268, guid: 325ee22b5eac0ea4f9bea3f9a34899a5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 686780095158998268, guid: 325ee22b5eac0ea4f9bea3f9a34899a5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 686780095158998268, guid: 325ee22b5eac0ea4f9bea3f9a34899a5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 686780095158998269, guid: 325ee22b5eac0ea4f9bea3f9a34899a5, type: 3}
+      propertyPath: m_Name
+      value: ScreenJoystick
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 325ee22b5eac0ea4f9bea3f9a34899a5, type: 3}
+--- !u!224 &1994574480 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 686780095158998268, guid: 325ee22b5eac0ea4f9bea3f9a34899a5, type: 3}
+  m_PrefabInstance: {fileID: 1994574479}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1994574481 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 686780095158998243, guid: 325ee22b5eac0ea4f9bea3f9a34899a5, type: 3}
+  m_PrefabInstance: {fileID: 1994574479}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994574482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5f310afac5f21d40919d336cb6d30eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1994574482 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 686780095158998269, guid: 325ee22b5eac0ea4f9bea3f9a34899a5, type: 3}
+  m_PrefabInstance: {fileID: 1994574479}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2087569343
 GameObject:
   m_ObjectHideFlags: 0
@@ -3434,6 +3554,7 @@ RectTransform:
   - {fileID: 1316410823}
   - {fileID: 8951343}
   - {fileID: 2087569344}
+  - {fileID: 1994574480}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3450,9 +3571,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1299879242908649518, guid: 47cacf80413fd8c4db4f75bd1e0e765f, type: 3}
-      propertyPath: moveSpeed
-      value: 3.5
-      objectReference: {fileID: 0}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 1994574481}
     - target: {fileID: 3514340211050888241, guid: 47cacf80413fd8c4db4f75bd1e0e765f, type: 3}
       propertyPath: m_Name
       value: ANGELICA
@@ -3590,6 +3711,10 @@ PrefabInstance:
       propertyPath: instruccion
       value: 
       objectReference: {fileID: 1950524464}
+    - target: {fileID: 531344447594007129, guid: 2500187b1d7ed9c4f9b32fb0ac5fce0b, type: 3}
+      propertyPath: screenControls
+      value: 
+      objectReference: {fileID: 1994574482}
     - target: {fileID: 531344447594007129, guid: 2500187b1d7ed9c4f9b32fb0ac5fce0b, type: 3}
       propertyPath: optionsInterface
       value: 

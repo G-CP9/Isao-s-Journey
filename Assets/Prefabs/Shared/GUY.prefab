@@ -380,7 +380,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.014445305, y: 0.6207065}
+  m_Offset: {x: 0.29048538, y: 0.49647737}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.03209748}
@@ -391,7 +391,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.8079891, y: 1.3943213}
+  m_Size: {x: 2.9661026, y: 1.145863}
   m_EdgeRadius: 0
 --- !u!1 &6605984901803746184
 GameObject:
@@ -472,4 +472,5 @@ MonoBehaviour:
   instruccion: {fileID: 0}
   talkBox: {fileID: 3311024580741003669}
   optionsInterface: {fileID: 0}
+  screenControls: {fileID: 0}
   player: {fileID: 0}

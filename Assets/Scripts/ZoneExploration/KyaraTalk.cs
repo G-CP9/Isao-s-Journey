@@ -9,6 +9,7 @@ public class KyaraTalk : MonoBehaviour
     public GameObject instruccion;
     public GameObject talkBox;
     public GameObject optionsInterface;
+    public GameObject screenControls;
     public PlayerController player;
     bool canTalk = false;
 
@@ -35,6 +36,7 @@ public class KyaraTalk : MonoBehaviour
     {
         player.LockMovement();
         instruccion.SetActive(false);
+        screenControls.SetActive(false);
         talkBox.SetActive(true);
         optionsInterface.SetActive(true);
     }
@@ -43,6 +45,7 @@ public class KyaraTalk : MonoBehaviour
     {
         player.UnlockMovement();
         instruccion.SetActive(true);
+        screenControls.SetActive(true);
         talkBox.SetActive(false);
         optionsInterface.SetActive(false);
     }

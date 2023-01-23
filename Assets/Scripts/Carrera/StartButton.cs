@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class StartButton : MonoBehaviour
 {
+    public GameObject screenControls;
+
     private void Awake()
     {
         Time.timeScale = 0;
@@ -14,5 +16,6 @@ public class StartButton : MonoBehaviour
     {
         Time.timeScale = 1;
         gameObject.SetActive(false);
+        screenControls.SetActive(true);
     }
 }

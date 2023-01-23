@@ -18,6 +18,7 @@ public class VehicleController : MonoBehaviour
     public AudioSource carEngine;
     public UIHealthController UIHealth;
     public GameObject endText;
+    public VirtualJoystick joystick;
 
     public AudioClip hit;
     void Start()
@@ -31,8 +32,13 @@ public class VehicleController : MonoBehaviour
 
     void Update()
     {
-        horizontal = Input.GetAxis("Horizontal");
-        vertical = Input.GetAxis("Vertical");
+        // PC
+        /*horizontal = Input.GetAxis("Horizontal");
+        vertical = Input.GetAxis("Vertical");*/
+
+        // Movil
+        horizontal = joystick.Horizontal();
+        vertical = joystick.Vertical();
         ChangeEnginePitch();
 
         if (!Endline.end)
@@ -83,6 +89,7 @@ public class VehicleController : MonoBehaviour
             if (currentHealth <= 0)
             {
                 Endline.end = true;
+                joystick.gameObject.SetActive(false);
                 endText.SetActive(true);
                 Destroy(gameObject);
             }
@@ -97,20 +104,16 @@ public class VehicleController : MonoBehaviour
 
     void ChangeEnginePitch()
     {
-        Debug.Log("Entra");
-        if (horizontal == 1)
+        if (horizontal > 0)
         {
-            Debug.Log("Entra2");
             carEngine.pitch = 1.2f;
         }
-        else if (horizontal == -1)
+        else if (horizontal < 0)
         {
-            Debug.Log("Entra3");
             carEngine.pitch = 0.9f;
         }
         else
         {
-            Debug.Log("Entra4");
             carEngine.pitch = 1;
         }
     }
