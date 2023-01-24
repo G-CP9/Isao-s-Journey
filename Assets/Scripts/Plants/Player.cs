@@ -88,9 +88,11 @@ public class Player : MonoBehaviour
 
     //slider object
     public GameObject slider;
-    
-    
-    
+    public GameObject interact_button_object;
+    public GameObject joystick_object;
+
+
+
 
 
 
@@ -248,6 +250,8 @@ public class Player : MonoBehaviour
                 book_open = true;
                 toolBart_object.SetActive(false);
                 slider.SetActive(false);
+                interact_button_object.SetActive(false);
+                joystick_object.SetActive(false);
             }
             else if(book_open)
             {
@@ -256,6 +260,9 @@ public class Player : MonoBehaviour
                 book_open = false;
                 toolBart_object.SetActive(true);
                 slider.SetActive(false);
+                interact_button_object.SetActive(true);
+                joystick_object.SetActive(true);
+
 
             }
         }
@@ -413,6 +420,10 @@ public class Player : MonoBehaviour
             book_open = true;
             toolBart_object.SetActive(false);
             slider.SetActive(false);
+            interact_button_object.SetActive(false);
+            joystick_object.SetActive(false);
+
+
         }
         else if (state == false)
         {
@@ -421,6 +432,9 @@ public class Player : MonoBehaviour
             book_open = false;
             toolBart_object.SetActive(true);
             slider.SetActive(false);
+            interact_button_object.SetActive(true) ;
+            joystick_object.SetActive(true);
+            joystick_object.SetActive(true);
         }
     }
 

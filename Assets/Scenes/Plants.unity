@@ -2195,14 +2195,14 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 631001977}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b96c6d1cf9975d64a8fdd5039ee7c6f8, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 17f45dd7b86e59b4a808a41fca8c4b5f, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.439
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -2682,11 +2682,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7994729574101362313, guid: 032428d81191245d4ae5a23a0a301ae9, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 553.55
+      value: 576.5458
       objectReference: {fileID: 0}
     - target: {fileID: 7994729574101362313, guid: 032428d81191245d4ae5a23a0a301ae9, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 435.39
+      value: 391.6979
       objectReference: {fileID: 0}
     - target: {fileID: 7994729574101362313, guid: 032428d81191245d4ae5a23a0a301ae9, type: 3}
       propertyPath: m_LocalScale.x
@@ -3796,7 +3796,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 633.93317, y: -0.7614441}
+  m_AnchoredPosition: {x: 636, y: 55}
   m_SizeDelta: {x: 397.71, y: 226.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1088927818
@@ -4665,7 +4665,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -634.6273, y: -0.7614441}
+  m_AnchoredPosition: {x: -638, y: 55}
   m_SizeDelta: {x: 397.71, y: 226.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1307890382
@@ -6848,9 +6848,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7952175011230549851}
     - target: {fileID: 2957546254192332449, guid: a87e26842ec0dc4448103e95d0a1768c, type: 3}
+      propertyPath: joystick_object
+      value: 
+      objectReference: {fileID: 1198593650}
+    - target: {fileID: 2957546254192332449, guid: a87e26842ec0dc4448103e95d0a1768c, type: 3}
       propertyPath: toolBart_object
       value: 
       objectReference: {fileID: 6784655}
+    - target: {fileID: 2957546254192332449, guid: a87e26842ec0dc4448103e95d0a1768c, type: 3}
+      propertyPath: interact_button_object
+      value: 
+      objectReference: {fileID: 289416663}
     - target: {fileID: 2957546254192332457, guid: a87e26842ec0dc4448103e95d0a1768c, type: 3}
       propertyPath: Priority
       value: 202

@@ -68,11 +68,13 @@ public class Game_manager : MonoBehaviour
         if(player.book_open == true)
         {
             player.Book_opened(false);
+            
 
         }
         else
         {
             player.Book_opened(true);
+
         }
     }
 }

@@ -15,7 +15,8 @@ public class Sound_Manager : MonoBehaviour
     //Player
     public Player player;
     AudioSource game_song;
-   
+    AudioClip Start_window;
+
 
     // Start is called before the first frame update
     void Start()
