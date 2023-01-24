@@ -13,7 +13,7 @@ public class TextBox_Controller : MonoBehaviour
 
     //Text Box Grande
     public Text text_box1;
-
+     
     public string box_text;
     public string bin_text;
     public string planta;
@@ -25,7 +25,7 @@ public class TextBox_Controller : MonoBehaviour
 
     //Start game
     public GameObject StartWindow;
-    public GameObject boton_salir;
+    
 
     public GameObject toolbar_object;
     public GameObject ProgressBar;
@@ -64,7 +64,6 @@ public class TextBox_Controller : MonoBehaviour
         {
             StartWindow.SetActive(false);
             ResumeGame();
-            boton_salir.SetActive(true);
             toolbar_object.SetActive(true);
             ProgressBar.SetActive(true);
             Inventory.SetActive(true);
@@ -151,7 +150,7 @@ public class TextBox_Controller : MonoBehaviour
         Time.timeScale = 0;
     }
 
-    void ResumeGame()
+    public void ResumeGame()
     {
         Time.timeScale = 1;
     }

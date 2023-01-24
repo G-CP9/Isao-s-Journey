@@ -38,6 +38,7 @@ public class Player : MonoBehaviour
 
     //The toolbar
     public ToolBarController toolBar;
+    public GameObject toolBart_object;
 
     //Book
     public GameObject Book;
@@ -84,6 +85,9 @@ public class Player : MonoBehaviour
 
     //mobile controls
     public bool interact_pressed = false;
+
+    //slider object
+    public GameObject slider;
     
     
     
@@ -242,12 +246,17 @@ public class Player : MonoBehaviour
                 canMove = false;
                 Book.SetActive(true);
                 book_open = true;
+                toolBart_object.SetActive(false);
+                slider.SetActive(false);
             }
             else if(book_open)
             {
                 canMove = true;
                 Book.SetActive(false);
                 book_open = false;
+                toolBart_object.SetActive(true);
+                slider.SetActive(false);
+
             }
         }
         if (isMoving) { thing = "Null"; }
@@ -394,7 +403,26 @@ public class Player : MonoBehaviour
         }
     }
    
-    
+    public void Book_opened(bool state)
+    {
+        if (state == true)
+        {
+
+            canMove = false;
+            Book.SetActive(true);
+            book_open = true;
+            toolBart_object.SetActive(false);
+            slider.SetActive(false);
+        }
+        else if (state == false)
+        {
+            canMove = true;
+            Book.SetActive(false);
+            book_open = false;
+            toolBart_object.SetActive(true);
+            slider.SetActive(false);
+        }
+    }
 
 
 
