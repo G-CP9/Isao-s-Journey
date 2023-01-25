@@ -141,6 +141,101 @@ public class BinController : MonoBehaviour
     }
 
 
+        //Controles táctiles
+
+    public void Input_flower_touch(string flor)
+    {
+        if (flor == "Lavanda")
+        {
+            if (toolBar.num_Lavanda > 0)
+            {
+                flower = "Lavanda";
+                toolBar.num_objects--;
+            }
+            else
+            {
+                Debug.Log("No tienes flores de ese tipo");
+            }
+
+        }
+
+        if (flor == "Camomila")
+        {
+            if (toolBar.num_Camomila > 0)
+            {
+                flower = "Camomila";
+                toolBar.num_objects--;
+
+            }
+            else
+            {
+                Debug.Log("No tienes flores de ese tipo");
+            }
+
+        }
+
+        if (flor == "Calendula")
+        {
+            if (toolBar.num_Calendula > 0)
+            {
+                flower = "Calendula";
+                toolBar.num_objects--;
+
+            }
+            else
+            {
+                Debug.Log("No tienes flores de ese tipo");
+            }
+
+        }
+
+        if (flor == "Evil Lavanda")
+        {
+            if (toolBar.num_e_lavanda > 0)
+            {
+                flower = "Evil Lavanda";
+                toolBar.num_objects--;
+
+            }
+            else
+            {
+                Debug.Log("No tienes flores de ese tipo");
+            }
+
+        }
+
+        if (flor == "Evil Camomila")
+        {
+            if (toolBar.num_e_camomila > 0)
+            {
+                flower = "Evil Camomila";
+                toolBar.num_objects--;
+
+            }
+            else
+            {
+                Debug.Log("No tienes flores de ese tipo");
+            }
+
+        }
+
+        if (flor == "Evil Calendula")
+        {
+            if (toolBar.num_e_calendula > 0)
+            {
+                flower = "Evil Calendula";
+                toolBar.num_objects--;
+
+            }
+            else
+            {
+                Debug.Log("No tienes flores de ese tipo");
+            }
+
+        }
+    }
+
+  
 
 
 }

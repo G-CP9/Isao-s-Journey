@@ -60,7 +60,7 @@ public class TextBox_Controller : MonoBehaviour
     {
         flower_collision = player.flower;
         Debug.Log(flower_collision);
-        if (Input.GetKeyUp(KeyCode.Space))
+        /* if (Input.GetKeyUp(KeyCode.Space))
         {
             StartWindow.SetActive(false);
             ResumeGame();
@@ -70,7 +70,8 @@ public class TextBox_Controller : MonoBehaviour
             Book.SetActive(true);
 
         }
-        else if (box.box_open)
+        else */
+        if (box.box_open)
         {
             Box_Text();
         }

@@ -76,9 +76,6 @@ public class Player : MonoBehaviour
     public AudioClip walk_sound;
     public AudioClip grass_sound;
     public AudioClip book;
-    public AudioClip throw_bin;
-    public AudioClip open_bin;
-    public AudioClip open_box;
     public AudioClip pick_flower;
 
     public PlayerSounds playerSounds;
@@ -195,12 +192,14 @@ public class Player : MonoBehaviour
 
                 else if(thing == "box")
                 {
-                    interact.clip = open_box;
+
+                    box.Opening();
                     if (!box_open)
                     {
                         canMove = false;
                         box_open = true;
                         box.OpenState(box_open);
+                        
 
                     }
                     else
@@ -214,7 +213,7 @@ public class Player : MonoBehaviour
                 }
                 else if (thing == "bin")
                 {
-                    interact.clip = open_bin;
+                    box.Opening();
                     if (!bin_open)
                     {
                         canMove = false;
@@ -244,24 +243,12 @@ public class Player : MonoBehaviour
             playerSounds.Book();
             if (!book_open)
             {
-               
-                canMove = false;
-                Book.SetActive(true);
-                book_open = true;
-                toolBart_object.SetActive(false);
-                slider.SetActive(false);
-                interact_button_object.SetActive(false);
-                joystick_object.SetActive(false);
+
+                Book_opened(true);
             }
             else if(book_open)
             {
-                canMove = true;
-                Book.SetActive(false);
-                book_open = false;
-                toolBart_object.SetActive(true);
-                slider.SetActive(false);
-                interact_button_object.SetActive(true);
-                joystick_object.SetActive(true);
+                Book_opened(false);
 
 
             }
@@ -425,13 +412,13 @@ public class Player : MonoBehaviour
 
 
         }
-        else if (state == false)
+        else
         {
             canMove = true;
             Book.SetActive(false);
             book_open = false;
             toolBart_object.SetActive(true);
-            slider.SetActive(false);
+            slider.SetActive(true);
             interact_button_object.SetActive(true) ;
             joystick_object.SetActive(true);
             joystick_object.SetActive(true);

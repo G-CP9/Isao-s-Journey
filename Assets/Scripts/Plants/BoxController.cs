@@ -10,6 +10,11 @@ public class BoxController : MonoBehaviour
     public ToolBarController toolBar;
     public bool isThrowing;
 
+    //Sound
+    public AudioSource box_sound;
+    public AudioClip keep_flower;
+    public AudioClip open_box;
+
     
     
 
@@ -28,6 +33,7 @@ public class BoxController : MonoBehaviour
         if(box_open)
         {
             Debug.Log("Box Open");
+
         }
         else
         {
@@ -51,6 +57,7 @@ public class BoxController : MonoBehaviour
    
     private void Input_flower()
     {
+        box_sound.clip= keep_flower;
         if(Input.GetKeyUp(KeyCode.Alpha1))
         {
             if(toolBar.num_Lavanda > 0)
@@ -58,6 +65,7 @@ public class BoxController : MonoBehaviour
                 flower = "Lavanda";
                 toolBar.num_objects--;
                 isThrowing = true;
+                box_sound.Play();
             }
             else
             {
@@ -73,6 +81,7 @@ public class BoxController : MonoBehaviour
                 flower = "Camomila";
                 toolBar.num_objects--;
                 isThrowing = true;
+                box_sound.Play();
             }
             else
             {
@@ -88,6 +97,7 @@ public class BoxController : MonoBehaviour
                 flower = "Calendula";
                 toolBar.num_objects--;
                 isThrowing = true;
+                box_sound.Play();
             }
             else
             {
@@ -103,6 +113,7 @@ public class BoxController : MonoBehaviour
                 flower = "Evil Lavanda";
                 toolBar.num_objects--;
                 isThrowing = true;
+
             }
             else
             {
@@ -142,4 +153,112 @@ public class BoxController : MonoBehaviour
         }
     }
 
+    public void Opening()
+    {
+        box_sound.clip = open_box;
+        
+        if (!box_sound.isPlaying)
+        {
+            box_sound.Play();
+        }
+    }
+
+    //  Control táctil
+    public  void Input_flower_touch(string flor)
+    {
+        box_sound.clip = keep_flower;
+        if (flor == "Lavanda")
+        {
+            if (toolBar.num_Lavanda > 0)
+            {
+                flower = "Lavanda";
+                toolBar.num_objects--;
+                isThrowing = true;
+                box_sound.Play();
+            }
+            else
+            {
+                Debug.Log("No tienes flores A");
+            }
+
+        }
+
+        if (flor == "Camomila")
+        {
+            if (toolBar.num_Camomila > 0)
+            {
+                flower = "Camomila";
+                toolBar.num_objects--;
+                isThrowing = true;
+                box_sound.Play();
+            }
+            else
+            {
+                Debug.Log("No tienes flores B");
+            }
+
+        }
+
+        if (flor == "Calendula")
+        {
+            if (toolBar.num_Calendula > 0)
+            {
+                flower = "Calendula";
+                toolBar.num_objects--;
+                isThrowing = true;
+                box_sound.Play();
+            }
+            else
+            {
+                Debug.Log("No tienes flores C");
+            }
+
+        }
+
+        if (flor == "Evil Lavanda")
+        {
+            if (toolBar.num_e_lavanda > 0)
+            {
+                flower = "Evil Lavanda";
+                toolBar.num_objects--;
+                isThrowing = true;
+
+            }
+            else
+            {
+                Debug.Log("No tienes flores de ese tipo");
+            }
+
+        }
+
+        if (flor == "Evil Camomila")
+        {
+            if (toolBar.num_e_camomila > 0)
+            {
+                flower = "Evil Camomila";
+                toolBar.num_objects--;
+                isThrowing = true;
+            }
+            else
+            {
+                Debug.Log("No tienes flores de ese tipo");
+            }
+
+        }
+
+        if (flor == "Evil Calendula")
+        {
+            if (toolBar.num_e_calendula > 0)
+            {
+                flower = "Evil Calendula";
+                toolBar.num_objects--;
+                isThrowing = true;
+            }
+            else
+            {
+                Debug.Log("No tienes flores de ese tipo");
+            }
+
+        }
+    }
 }
