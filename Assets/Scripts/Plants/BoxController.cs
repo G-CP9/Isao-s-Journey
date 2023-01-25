@@ -57,15 +57,17 @@ public class BoxController : MonoBehaviour
    
     private void Input_flower()
     {
-        box_sound.clip= keep_flower;
+        
         if(Input.GetKeyUp(KeyCode.Alpha1))
         {
-            if(toolBar.num_Lavanda > 0)
+            box_sound.clip = keep_flower;
+            if (toolBar.num_Lavanda > 0)
             {
                 flower = "Lavanda";
                 toolBar.num_objects--;
                 isThrowing = true;
                 box_sound.Play();
+                
             }
             else
             {
@@ -76,6 +78,7 @@ public class BoxController : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.Alpha2))
         {
+            box_sound.clip = keep_flower;
             if (toolBar.num_Camomila > 0)
             {
                 flower = "Camomila";
@@ -92,6 +95,7 @@ public class BoxController : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.Alpha3))
         {
+            box_sound.clip = keep_flower;
             if (toolBar.num_Calendula > 0)
             {
                 flower = "Calendula";
@@ -108,6 +112,7 @@ public class BoxController : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.Alpha4))
         {
+            box_sound.clip = keep_flower;
             if (toolBar.num_e_lavanda > 0)
             {
                 flower = "Evil Lavanda";
@@ -124,6 +129,7 @@ public class BoxController : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.Alpha5))
         {
+            box_sound.clip = keep_flower;
             if (toolBar.num_e_camomila > 0)
             {
                 flower = "Evil Camomila";
@@ -139,6 +145,7 @@ public class BoxController : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.Alpha6))
         {
+            box_sound.clip = keep_flower;
             if (toolBar.num_e_calendula > 0)
             {
                 flower = "Evil Calendula";
@@ -156,11 +163,8 @@ public class BoxController : MonoBehaviour
     public void Opening()
     {
         box_sound.clip = open_box;
-        
-        if (!box_sound.isPlaying)
-        {
-            box_sound.Play();
-        }
+        box_sound.Play();
+       
     }
 
     //  Control táctil

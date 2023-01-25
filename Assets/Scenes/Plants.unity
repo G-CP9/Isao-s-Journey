@@ -936,7 +936,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a5a649b8fdc2a984bb6a9e0682864783, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1ff19ea6ca93f5448a3573119b58a548, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1525,6 +1525,86 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &443281889
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 443281890}
+  - component: {fileID: 443281892}
+  - component: {fileID: 443281891}
+  m_Layer: 5
+  m_Name: Text_Box3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &443281890
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443281889}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1960087520}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 407, y: -401}
+  m_SizeDelta: {x: 1011.52, y: 290.68}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &443281891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443281889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.7075472, g: 0.6930857, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: bf8158428ce734916b803a9572a1df0d, type: 3}
+    m_FontSize: 100
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 100
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &443281892
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443281889}
+  m_CullTransparentMesh: 1
 --- !u!1 &449950050
 GameObject:
   m_ObjectHideFlags: 0
@@ -1850,7 +1930,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d045bb118512fd4498c7df4448f1551, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MAX_PLANTS: 20
+  MAX_PLANTS: 4
   INITIAL_PLANTS: 0
   planta: {fileID: 8216229695206736, guid: a0430387f32c2f646879a221ab89df91, type: 3}
   respawnTime: 10
@@ -2690,6 +2770,9 @@ MonoBehaviour:
   bin_text: "\xBFQu\xE9 flor quieres tirar? (1-6)"
   planta: 
   text_box2: {fileID: 614959046}
+  text_box3: {fileID: 443281891}
+  exit_box_text: Pulsa E para cerrar la caja
+  exit_bin_text: Pulsa E para cerrar la basura
   StartWindow: {fileID: 1295610810}
   toolbar_object: {fileID: 6784655}
   ProgressBar: {fileID: 1441918440}
@@ -2946,7 +3029,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d045bb118512fd4498c7df4448f1551, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MAX_PLANTS: 4
+  MAX_PLANTS: 2
   INITIAL_PLANTS: 0
   planta: {fileID: 2808059287509319185, guid: 4fa7bf040510d8c4ea0c936bd5a708f2, type: 3}
   respawnTime: 10
@@ -4389,7 +4472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d045bb118512fd4498c7df4448f1551, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MAX_PLANTS: 20
+  MAX_PLANTS: 5
   INITIAL_PLANTS: 0
   planta: {fileID: 8216229695206736, guid: a0430387f32c2f646879a221ab89df91, type: 3}
   respawnTime: 5
@@ -5723,7 +5806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d045bb118512fd4498c7df4448f1551, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MAX_PLANTS: 20
+  MAX_PLANTS: 5
   INITIAL_PLANTS: 0
   planta: {fileID: 5913275101819077026, guid: 88255cb9fc241a44db5ec53afa139c89, type: 3}
   respawnTime: 10
@@ -5852,7 +5935,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d045bb118512fd4498c7df4448f1551, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MAX_PLANTS: 20
+  MAX_PLANTS: 4
   INITIAL_PLANTS: 0
   planta: {fileID: 8216229695206736, guid: a0430387f32c2f646879a221ab89df91, type: 3}
   respawnTime: 10
@@ -5981,7 +6064,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d045bb118512fd4498c7df4448f1551, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MAX_PLANTS: 20
+  MAX_PLANTS: 3
   INITIAL_PLANTS: 0
   planta: {fileID: 5913275101819077026, guid: 88255cb9fc241a44db5ec53afa139c89, type: 3}
   respawnTime: 10
@@ -6992,6 +7075,7 @@ RectTransform:
   - {fileID: 1952068076}
   - {fileID: 614959048}
   - {fileID: 1722943005}
+  - {fileID: 443281890}
   m_Father: {fileID: 849643527}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7106,7 +7190,7 @@ PrefabInstance:
     - target: {fileID: 7262052687605758082, guid: d6125d7029217b746a4b5538e34ad754, type: 3}
       propertyPath: open_box
       value: 
-      objectReference: {fileID: 8300000, guid: a5a649b8fdc2a984bb6a9e0682864783, type: 3}
+      objectReference: {fileID: 8300000, guid: 1ff19ea6ca93f5448a3573119b58a548, type: 3}
     - target: {fileID: 7262052687605758082, guid: d6125d7029217b746a4b5538e34ad754, type: 3}
       propertyPath: box_sound
       value: 

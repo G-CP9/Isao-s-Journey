@@ -23,6 +23,12 @@ public class TextBox_Controller : MonoBehaviour
     public Text text_box2;
     string flower_collision;
 
+    //Text Box para cerrar la basura o caja
+    public Text text_box3;
+    public string exit_box_text;
+    public string exit_bin_text;
+
+
     //Start game
     public GameObject StartWindow;
     
@@ -59,7 +65,6 @@ public class TextBox_Controller : MonoBehaviour
     private void Update()
     {
         flower_collision = player.flower;
-        Debug.Log(flower_collision);
         /* if (Input.GetKeyUp(KeyCode.Space))
         {
             StartWindow.SetActive(false);
@@ -100,7 +105,6 @@ public class TextBox_Controller : MonoBehaviour
             Clear_Text();
         }
 
-        Debug.Log(player.picked);
 
     }
 
@@ -109,7 +113,6 @@ public class TextBox_Controller : MonoBehaviour
         yield return new WaitForSeconds(1);
 
         player.picked = false;
-        Debug.Log("a");
 
 
         // Code to execute after the delay
@@ -117,12 +120,15 @@ public class TextBox_Controller : MonoBehaviour
 
     public void Box_Text()
     {
-        text_box1.text = box_text;   
+        text_box1.text = box_text;
+        text_box3.text = exit_box_text;
     }
 
     public void Bin_Text()
     {
         text_box1.text = bin_text;
+        text_box3.text = exit_bin_text;
+
 
     }
 
@@ -130,6 +136,8 @@ public class TextBox_Controller : MonoBehaviour
     {
         text_box1.text = "";
         text_box2.text = "";
+        text_box3.text = "";
+
 
     }
 
