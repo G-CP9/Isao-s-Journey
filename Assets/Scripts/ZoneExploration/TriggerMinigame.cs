@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class TriggerMinigame : MonoBehaviour
 {
     public GameObject instruccion;
+    public GameObject reminder;
     public GameObject screenControls;
     public string minigame;
     PlayerController player;
@@ -22,7 +23,10 @@ public class TriggerMinigame : MonoBehaviour
         {
             player.LockMovement();
             screenControls.SetActive(false);
-            instruccion.SetActive(true);
+            if (!player.talked)
+                reminder.SetActive(true);
+            else
+                instruccion.SetActive(true);
         }
     }
 
@@ -34,6 +38,7 @@ public class TriggerMinigame : MonoBehaviour
 
     public void Back()
     {
+        reminder.SetActive(false);
         instruccion.SetActive(false);
         screenControls.SetActive(true);
         player.UnlockMovement();

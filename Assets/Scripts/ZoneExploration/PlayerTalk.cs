@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class KyaraTalk : MonoBehaviour
+public class PlayerTalk : MonoBehaviour
 {
-
     public GameObject instruccion;
     public GameObject talkBox;
     public GameObject optionsInterface;
@@ -46,12 +45,14 @@ public class KyaraTalk : MonoBehaviour
 
     public void EndTalk()
     {
-        player.UnlockMovement();
-        player.talked = true;
-        instruccion.SetActive(true);
+        this.gameObject.transform.parent.GetComponent<PlayerController>().UnlockMovement();
+        this.gameObject.transform.parent.GetComponent<PlayerController>().talked = true;
+        player.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+        //instruccion.SetActive(true);
         screenControls.SetActive(true);
         talkBox.SetActive(false);
         optionsInterface.SetActive(false);
+        this.gameObject.SetActive(false);
     }
 
     /*void StartTalk()

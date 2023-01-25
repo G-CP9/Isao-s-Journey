@@ -10,7 +10,8 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed;
     private Vector2 moveDirection;
     private Vector2 lastMoveDirection;
-    public bool canMove = true;
+    public bool talked;
+    public bool canMove;
 
     private float moveX;
     private float moveY;
@@ -23,6 +24,8 @@ public class PlayerController : MonoBehaviour
         rigidBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
+        talked = false;
+        lastMoveDirection = new Vector2(0, 0);
     }
 
     void Update()

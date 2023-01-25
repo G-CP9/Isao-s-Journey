@@ -265,6 +265,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3.5
+  talked: 0
   canMove: 1
   step: {fileID: 8300000, guid: b1db2a3858c985d4a92edbee0b2cbae0, type: 3}
   joystick: {fileID: 0}
