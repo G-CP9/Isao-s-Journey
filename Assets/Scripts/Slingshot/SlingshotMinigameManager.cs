@@ -14,6 +14,9 @@ public class SlingshotMinigameManager : MonoBehaviour
     public Wind Wind;
     public TextMeshProUGUI score;
     public TextMeshProUGUI throwResult;
+    public ButtonPressed upButton;
+    public ButtonPressed downButton;
+    public ButtonPressed throwButton;
 
     public int turn = 0;
     public bool canThrow = false;
@@ -40,19 +43,28 @@ public class SlingshotMinigameManager : MonoBehaviour
 
     private void Update()
     {
+        if (upButton.isPressed)
+        {
+            throwAngle += 20 * Time.deltaTime;
+        }
+        if (downButton.isPressed)
+        {
+            throwAngle -= 20 * Time.deltaTime;
+        }
         throwAngle += Input.GetAxisRaw("Vertical") * 20 * Time.deltaTime;
         if (throwAngle > 45f) throwAngle = 45f;
         else if (throwAngle < 0f) throwAngle = 0f;
 
 
-        if (canThrow && Input.GetKey(KeyCode.Space))
+        if (canThrow && (Input.GetKey(KeyCode.Space) || throwButton.isPressed))
         {
             throwPower += 10 * Time.deltaTime;
             if (throwPower > MAX_THROW_POWER) throwPower = MAX_THROW_POWER;
             throwInput.SetPower();
         } 
-         else if (canThrow && Input.GetKeyUp(KeyCode.Space))
+         else if (canThrow && (Input.GetKeyUp(KeyCode.Space) || throwButton.buttonReleased))
         {
+            throwButton.buttonReleased = false;
             AnimateThrow();
         }
     }
@@ -119,5 +131,10 @@ public class SlingshotMinigameManager : MonoBehaviour
     public void SwapScene()
     {
         SceneManager.LoadScene(sceneName:"Montovo2");
+    }
+
+    public void ToggleInstructionsManual()
+    {
+        
     }
 }
