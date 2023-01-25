@@ -1,15 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class TriggerMinigame : MonoBehaviour
+public class Barrier : MonoBehaviour
 {
-    public GameObject instruccion;
     public GameObject reminder;
     public GameObject screenControls;
-    public string minigame;
     PlayerController player;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -17,27 +14,22 @@ public class TriggerMinigame : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             player = collision.gameObject.GetComponent<PlayerController>();
-            player.LockMovement();
-            screenControls.SetActive(false);
-            if (!player.talked)
-                reminder.SetActive(true);
-            else
-                instruccion.SetActive(true);
-        }
-    }
 
-    public void Go()
-    {
-        instruccion.SetActive(false);
-        SceneManager.LoadScene(minigame);
+            if (!player.talked)
+            {
+                player.LockMovement();
+                screenControls.SetActive(false);
+                reminder.SetActive(true);
+            }
+            else
+                this.gameObject.SetActive(false);
+        }
     }
 
     public void Back()
     {
         reminder.SetActive(false);
-        instruccion.SetActive(false);
         screenControls.SetActive(true);
         player.UnlockMovement();
     }
-
 }

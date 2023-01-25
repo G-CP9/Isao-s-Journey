@@ -17,8 +17,9 @@ public class PlayerTalk : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            instruccion.SetActive(true);
+            //instruccion.SetActive(true);
             canTalk = true;
+            Talk();
         }
     }
 

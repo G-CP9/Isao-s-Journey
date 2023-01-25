@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
         talked = false;
-        lastMoveDirection = new Vector2(0, 0);
+        lastMoveDirection = new Vector2(0, -1);
     }
 
     void Update()
