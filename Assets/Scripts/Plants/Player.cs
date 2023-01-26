@@ -213,7 +213,7 @@ public class Player : MonoBehaviour
                 }
                 else if (thing == "bin")
                 {
-                    box.Opening();
+                    bin.Opening();
                     if (!bin_open)
                     {
                         canMove = false;

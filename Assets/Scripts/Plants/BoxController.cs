@@ -173,6 +173,7 @@ public class BoxController : MonoBehaviour
         box_sound.clip = keep_flower;
         if (flor == "Lavanda")
         {
+            box_sound.clip = keep_flower;
             if (toolBar.num_Lavanda > 0)
             {
                 flower = "Lavanda";
@@ -189,6 +190,7 @@ public class BoxController : MonoBehaviour
 
         if (flor == "Camomila")
         {
+            box_sound.clip = keep_flower;
             if (toolBar.num_Camomila > 0)
             {
                 flower = "Camomila";
@@ -205,6 +207,7 @@ public class BoxController : MonoBehaviour
 
         if (flor == "Calendula")
         {
+            box_sound.clip = keep_flower;
             if (toolBar.num_Calendula > 0)
             {
                 flower = "Calendula";
@@ -221,6 +224,7 @@ public class BoxController : MonoBehaviour
 
         if (flor == "Evil Lavanda")
         {
+            box_sound.clip = keep_flower;
             if (toolBar.num_e_lavanda > 0)
             {
                 flower = "Evil Lavanda";
@@ -237,6 +241,7 @@ public class BoxController : MonoBehaviour
 
         if (flor == "Evil Camomila")
         {
+            box_sound.clip = keep_flower;
             if (toolBar.num_e_camomila > 0)
             {
                 flower = "Evil Camomila";
@@ -252,6 +257,7 @@ public class BoxController : MonoBehaviour
 
         if (flor == "Evil Calendula")
         {
+            box_sound.clip = keep_flower;
             if (toolBar.num_e_calendula > 0)
             {
                 flower = "Evil Calendula";
