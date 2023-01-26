@@ -18,7 +18,7 @@ public class Barrier : MonoBehaviour
             if (!player.talked)
             {
                 player.LockMovement();
-                screenControls.SetActive(false);
+                screenControls.gameObject.GetComponent<VirtualJoystick>().Hide();
                 reminder.SetActive(true);
             }
             else

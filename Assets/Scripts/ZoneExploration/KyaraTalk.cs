@@ -38,7 +38,7 @@ public class KyaraTalk : MonoBehaviour
         {
             player.LockMovement();
             instruccion.SetActive(false);
-            screenControls.SetActive(false);
+            screenControls.gameObject.GetComponent<VirtualJoystick>().Hide();
             talkBox.SetActive(true);
             optionsInterface.SetActive(true);
         }

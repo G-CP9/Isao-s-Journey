@@ -18,7 +18,7 @@ public class TriggerMinigame : MonoBehaviour
         {
             player = collision.gameObject.GetComponent<PlayerController>();
             player.LockMovement();
-            screenControls.SetActive(false);
+            screenControls.gameObject.GetComponent<VirtualJoystick>().Hide();
             if (!player.talked)
                 reminder.SetActive(true);
             else

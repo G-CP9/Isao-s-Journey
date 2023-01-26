@@ -89,7 +89,7 @@ public class VehicleController : MonoBehaviour
             if (currentHealth <= 0)
             {
                 Endline.end = true;
-                joystick.gameObject.SetActive(false);
+                joystick.Hide();
                 endText.SetActive(true);
                 Destroy(gameObject);
             }

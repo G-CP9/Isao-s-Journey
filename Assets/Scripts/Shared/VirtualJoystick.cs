@@ -63,4 +63,11 @@ public class VirtualJoystick : MonoBehaviour, IDragHandler, IPointerDownHandler,
         else
             return Input.GetAxis("Vertical");
     }
+
+    public void Hide()
+    {
+        inputVector = Vector3.zero;
+        joystick.rectTransform.anchoredPosition = Vector3.zero;
+        this.gameObject.SetActive(false);
+    }
 }

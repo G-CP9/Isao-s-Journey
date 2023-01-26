@@ -38,7 +38,7 @@ public class PlayerTalk : MonoBehaviour
         {
             player.LockMovement();
             instruccion.SetActive(false);
-            screenControls.SetActive(false);
+            screenControls.gameObject.GetComponent<VirtualJoystick>().Hide();
             talkBox.SetActive(true);
             optionsInterface.SetActive(true);
         }
@@ -47,7 +47,7 @@ public class PlayerTalk : MonoBehaviour
     public void EndTalk()
     {
         this.gameObject.transform.parent.GetComponent<PlayerController>().UnlockMovement();
-        this.gameObject.transform.parent.GetComponent<PlayerController>().talked = true;
+        //this.gameObject.transform.parent.GetComponent<PlayerController>().talked = true;
         player.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
         //instruccion.SetActive(true);
         screenControls.SetActive(true);

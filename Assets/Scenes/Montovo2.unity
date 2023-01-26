@@ -1426,6 +1426,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4752384142655301837, guid: c33dc47d17250eb4da2981883b481008, type: 3}
+      propertyPath: talked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4752384142655301837, guid: c33dc47d17250eb4da2981883b481008, type: 3}
       propertyPath: canMove
       value: 0
       objectReference: {fileID: 0}

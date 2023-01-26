@@ -18,7 +18,7 @@ public class Endline : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             end = true;
-            screenControls.SetActive(false);
+            screenControls.gameObject.GetComponent<VirtualJoystick>().Hide();
             endText.SetActive(true);
         }
     }
