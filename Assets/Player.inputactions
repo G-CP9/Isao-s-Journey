@@ -40,7 +40,7 @@
                     "path": "<Gamepad>/leftStick",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";Gamepad",
+                    "groups": "Gamepad;Keyboard&Mouse;Touch;Joystick;XR",
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -146,11 +146,11 @@
                 },
                 {
                     "name": "",
-                    "id": "f79a2b62-3337-447b-bec4-0bb2fc142bf4",
+                    "id": "968fd289-e1a9-40f3-a531-88b1f38dc207",
                     "path": "<AndroidJoystick>/stick",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Joystick",
+                    "groups": "Keyboard&Mouse;Gamepad;Touch;Joystick;XR",
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": false
