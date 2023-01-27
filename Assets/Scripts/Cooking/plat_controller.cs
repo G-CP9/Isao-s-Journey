@@ -72,9 +72,10 @@ public class plat_controller : MonoBehaviour
             }
         }
 
+        
+
     }
 
-   
 
     public void Plat_render()
     {
@@ -87,4 +88,15 @@ public class plat_controller : MonoBehaviour
     {
         SceneManager.LoadScene("Credits");
     }
+
+    void plat_completed(bool state)
+    {
+        if(state == true)
+        {
+            this.gameObject.SetActive(false);
+
+        }
+    }
+
+    
 }
