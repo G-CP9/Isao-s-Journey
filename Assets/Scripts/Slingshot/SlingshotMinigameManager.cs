@@ -17,6 +17,7 @@ public class SlingshotMinigameManager : MonoBehaviour
     public ButtonPressed upButton;
     public ButtonPressed downButton;
     public ButtonPressed throwButton;
+    public GameObject book;
 
     public int turn = 0;
     public bool canThrow = false;
@@ -26,9 +27,10 @@ public class SlingshotMinigameManager : MonoBehaviour
     public float windPower;
     public float throwAngle;
     public float MAX_THROW_POWER;
-    public float throwPower = 0;
+    public float throwPower;
     public int POINTS_TO_WIN;
-    public int points = 0;
+    public int points;
+    public bool openBook;
 
     private void Awake() {
         Instance = this;
@@ -135,6 +137,7 @@ public class SlingshotMinigameManager : MonoBehaviour
 
     public void ToggleInstructionsManual()
     {
-        
+        openBook = !openBook;
+        book.SetActive(openBook);
     }
 }
