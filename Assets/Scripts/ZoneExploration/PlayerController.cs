@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
         rigidBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
-        talked = false;
+        //talked = false;
         lastMoveDirection = new Vector2(0, -1);
     }
 

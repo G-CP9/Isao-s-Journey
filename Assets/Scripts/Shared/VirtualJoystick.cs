@@ -27,7 +27,8 @@ public class VirtualJoystick : MonoBehaviour, IDragHandler, IPointerDownHandler,
             pos.x = (pos.x / bg.rectTransform.sizeDelta.x);
             pos.y = (pos.y / bg.rectTransform.sizeDelta.y);
 
-            inputVector = new Vector3(pos.x * 2, 0, pos.y * 2);
+            inputVector = new Vector3((pos.x * 2) - 1.0f, 0, (pos.y * 2) - 1.0f);
+            //Debug.Log(inputVector);
             inputVector = (inputVector.magnitude > 1.0f) ? inputVector.normalized : inputVector;
 
             // Mover imagen joystick

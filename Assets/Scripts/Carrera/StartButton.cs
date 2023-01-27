@@ -16,6 +16,6 @@ public class StartButton : MonoBehaviour
     {
         Time.timeScale = 1;
         gameObject.SetActive(false);
-        screenControls.gameObject.GetComponent<VirtualJoystick>().Hide();
+        screenControls.SetActive(true);
     }
 }
