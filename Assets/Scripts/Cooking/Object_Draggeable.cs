@@ -38,5 +38,10 @@ public class Object_Draggeable : MonoBehaviour
             this.gameObject.transform.position = originalPos;
         }
     }
+
+    public void Added()
+    {
+        this.gameObject.transform.position = originalPos;
+    }
 }   
     

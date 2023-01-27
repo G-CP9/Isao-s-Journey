@@ -10,7 +10,7 @@ public class Pan: MonoBehaviour
     public Sprite[] pan_states;
 
 
-    int estado;
+    public int estado;
     bool filled;
     bool onFire;
     public bool isCook;
@@ -60,30 +60,31 @@ public class Pan: MonoBehaviour
         if ((collision.gameObject.name == "Patata") && estado == 0)
         {
             estado = 1;
-            Destroy(collision.gameObject);
+            //Destroy(collision.gameObject);
         }
         if ((collision.gameObject.name == "Zanahoria") && estado == 1)
         {
             estado = 2;
-            Destroy(collision.gameObject);
+            
+            //Destroy(collision.gameObject);
 
         }
         if ((collision.gameObject.name == "Cebolla") && estado == 2)
         {
             estado = 3;
-            Destroy(collision.gameObject);
+            //Destroy(collision.gameObject);
 
         }
         if ((collision.gameObject.name == "Curry") && estado == 3)
         {
             estado = 4;
-            Destroy(collision.gameObject);
+            //Destroy(collision.gameObject);
 
         }
         if ((collision.gameObject.name == "Pollo") && estado == 4)
         {
             estado = 5;
-            Destroy(collision.gameObject);
+            //Destroy(collision.gameObject);
             filled = true;
 
         }

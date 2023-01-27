@@ -8,7 +8,7 @@ public class Pot_controller : MonoBehaviour
 {
     public Sprite[] pot_states;
 
-    int estado;
+    public int estado;
     bool filled;
     bool onFire;
     public bool isCook;
@@ -58,12 +58,12 @@ public class Pot_controller : MonoBehaviour
         if ((collision.gameObject.name == "Agua") && estado == 0)
         {
             estado = 1;
-            Destroy(collision.gameObject);
+           // Destroy(collision.gameObject);
         }
         if ((collision.gameObject.name == "Arroz") && estado == 1)
         {
             estado = 2;
-            Destroy(collision.gameObject);
+            //Destroy(collision.gameObject);
             filled = true;
         }
         if ((collision.gameObject.name == "Plat") && isCook)
