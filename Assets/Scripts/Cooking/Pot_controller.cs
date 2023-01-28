@@ -13,8 +13,9 @@ public class Pot_controller : MonoBehaviour
     bool onFire;
     public bool isCook;
     public Timer timer;
+    int time;
 
-    
+
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +30,7 @@ public class Pot_controller : MonoBehaviour
     {
         if (onFire && filled)
         {
-            int time = Mathf.FloorToInt(timer.timeValue);
+            time = Mathf.FloorToInt(timer.timeValue);
             Debug.Log(time);
 
             if (time == 12)
@@ -72,11 +73,13 @@ public class Pot_controller : MonoBehaviour
         {
             estado = 0;
             filled = false;
+            timer.timeValue = 15;
         }
         if ((collision.gameObject.name == "Basura") && estado == 5)
         {
             estado = 0;
             filled = false;
+            timer.timeValue = 15;
         }
 
     }
