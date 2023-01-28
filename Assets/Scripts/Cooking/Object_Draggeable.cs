@@ -28,6 +28,7 @@ public class Object_Draggeable : MonoBehaviour
 
     private void OnMouseUp()
     {
+        
         object_collider.enabled = !object_collider.enabled;
     }
 
@@ -35,8 +36,16 @@ public class Object_Draggeable : MonoBehaviour
     {
         if(collision.gameObject.name != "Grill")
         {
-            this.gameObject.transform.position = originalPos;
+            if(((this.gameObject.name == "Pot") && collision.gameObject.name != "Agua") || collision.gameObject.name == "Pan" )
+            {
+                
+                this.gameObject.transform.position = originalPos;
+            }
+
+            
         }
+
+
     }
 
     public void Added()

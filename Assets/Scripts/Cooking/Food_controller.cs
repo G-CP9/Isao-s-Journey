@@ -9,6 +9,8 @@ public class Food_controller : MonoBehaviour
     Collider2D object_collider;
     Vector2 originalPos;
 
+    Pot_controller pot_Controller;
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -57,8 +59,16 @@ public class Food_controller : MonoBehaviour
 
 
         }
-        else if (collision.gameObject.name == "Pot")
+        if (collision.gameObject.name == "Pot")
         {
+            Debug.Log("A");
+            if ((this.gameObject.name == "Agua") && collision.gameObject.GetComponent<Pot_controller>().estado == 0)
+            {
+                
+                pot_Controller = collision.gameObject.GetComponent<Pot_controller>();
+                Invoke("Fill", 2.0f);
+            }
+
             if ((this.gameObject.name == "Arroz") && collision.gameObject.GetComponent<Pot_controller>().estado == 1)
             {
                 this.GetComponent<SpriteRenderer>().enabled = false;
@@ -81,5 +91,12 @@ public class Food_controller : MonoBehaviour
         this.GetComponent<SpriteRenderer>().enabled = true;
     }
 
+    void Fill()
+    {
+        Debug.Log("Aaaa");
+        pot_Controller.estado = 1;
+        this.GetComponent<Object_Draggeable>().Added();
+        
+    }
 
 }
