@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VirtualJoystickFloating : VirtualJoystick
+public class VirtualJoystickFloating : VirtualJoysticka
 {
 
     [SerializeField] private bool hideOnPointerUp = false;

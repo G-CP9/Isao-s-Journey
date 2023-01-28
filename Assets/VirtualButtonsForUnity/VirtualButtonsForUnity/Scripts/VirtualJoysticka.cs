@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public enum VirtualJoystickType { Fixed, Floating }
 
-public class VirtualJoystick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler
+public class VirtualJoysticka : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler
 {
 
     [SerializeField] private RectTransform centerArea = null;
