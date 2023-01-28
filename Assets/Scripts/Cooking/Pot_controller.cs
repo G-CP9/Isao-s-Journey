@@ -73,6 +73,11 @@ public class Pot_controller : MonoBehaviour
             estado = 0;
             filled = false;
         }
+        if ((collision.gameObject.name == "Basura") && estado == 5)
+        {
+            estado = 0;
+            filled = false;
+        }
 
     }
 
@@ -119,6 +124,7 @@ public class Pot_controller : MonoBehaviour
         yield return new WaitForSeconds(2);
 
         estado = 1;
+       
         Invoke("Original_pos", 1.0f);
         
     }
@@ -126,6 +132,7 @@ public class Pot_controller : MonoBehaviour
     void Original_pos()
     {
         this.GetComponent<Object_Draggeable>().Added();
+        this.gameObject.GetComponent<CircleCollider2D>().enabled = true;
     }
 
 }

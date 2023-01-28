@@ -42,6 +42,11 @@ public class Object_Draggeable : MonoBehaviour
                 this.gameObject.transform.position = originalPos;
             }
 
+            else if(((collision.gameObject.name == "Pot") && (this.gameObject.name == "Agua")) || (collision.gameObject.name == "Agua") && (this.gameObject.name == "Pot"))
+            {
+                object_collider.enabled = !object_collider.enabled;
+            }
+
             
         }
 

@@ -96,6 +96,12 @@ public class Pan: MonoBehaviour
             estado = 0;
             filled = false;
         }
+
+        if ((collision.gameObject.name == "Basura") && estado == 8)
+        {
+            estado = 0;
+            filled = false;
+        }
     }
 
 

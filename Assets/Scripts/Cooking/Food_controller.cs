@@ -61,13 +61,7 @@ public class Food_controller : MonoBehaviour
         }
         if (collision.gameObject.name == "Pot")
         {
-            Debug.Log("A");
-            if ((this.gameObject.name == "Agua") && collision.gameObject.GetComponent<Pot_controller>().estado == 0)
-            {
-                
-                pot_Controller = collision.gameObject.GetComponent<Pot_controller>();
-                Invoke("Fill", 2.0f);
-            }
+            
 
             if ((this.gameObject.name == "Arroz") && collision.gameObject.GetComponent<Pot_controller>().estado == 1)
             {
