@@ -18,6 +18,12 @@ public class SlingshotMinigameManager : MonoBehaviour
     public ButtonPressed downButton;
     public ButtonPressed throwButton;
     public GameObject book;
+    public GameObject backgroundMusic;
+
+    private AudioSource audioSource;
+    public AudioClip throwSound;
+    public AudioClip successSound;
+    public AudioClip victorySound;
 
     public int turn = 0;
     public bool canThrow = false;
@@ -38,6 +44,7 @@ public class SlingshotMinigameManager : MonoBehaviour
 
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         score.text = points + "/" + POINTS_TO_WIN;
         throwInput.SetMaxPower();
         ChangeWind();
@@ -66,6 +73,7 @@ public class SlingshotMinigameManager : MonoBehaviour
         } 
          else if (canThrow && (Input.GetKeyUp(KeyCode.Space) || throwButton.buttonReleased))
         {
+            canThrow = false;
             throwButton.buttonReleased = false;
             AnimateThrow();
         }
@@ -99,11 +107,14 @@ public class SlingshotMinigameManager : MonoBehaviour
             score.text = points + "/" + POINTS_TO_WIN;
             if (points == POINTS_TO_WIN)
             {
+                backgroundMusic.SetActive(false);
+                audioSource.PlayOneShot(victorySound);
                 throwResult.text = "¡HAS GANADO!";
-                Invoke("SwapScene", 2.0f);
+                Invoke("SwapScene", 3.0f);
             }
             else
             {
+                audioSource.PlayOneShot(successSound);
                 throwResult.text = "¡BIEN!";
                 ChangeWind();
             }
@@ -123,6 +134,7 @@ public class SlingshotMinigameManager : MonoBehaviour
         if (throwAngle < 16) animator.SetTrigger("ThrowLow");
         else if (throwAngle < 31) animator.SetTrigger("ThrowMedium");
         else animator.SetTrigger("ThrowHigh");
+        audioSource.PlayOneShot(throwSound);
     }
 
     public void Throw()

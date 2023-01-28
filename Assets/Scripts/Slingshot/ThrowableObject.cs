@@ -6,13 +6,17 @@ public class ThrowableObject : MonoBehaviour
 {
     public Transform SlingshotHead;
     private Rigidbody2D rb;
+    private AudioSource audioSource;
     private SlingshotMinigameManager minigame;
     private bool turnFinished;
+    
+    public AudioClip hitSound;
 
     void Start()
     {
         minigame = SlingshotMinigameManager.Instance;
         rb = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
         minigame.StartTurn();
     }
 
@@ -40,12 +44,14 @@ public class ThrowableObject : MonoBehaviour
         }
         else if (other.gameObject.tag == "Ground")
         {
+            audioSource.PlayOneShot(hitSound);
             FinishTurn(false);
         }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        audioSource.PlayOneShot(hitSound);
         FinishTurn(true);
     }
 
