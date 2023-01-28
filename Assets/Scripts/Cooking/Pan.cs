@@ -10,11 +10,12 @@ public class Pan: MonoBehaviour
     public Sprite[] pan_states;
 
 
-    int estado;
+    public int estado;
     bool filled;
     bool onFire;
     public bool isCook;
     public Timer timer;
+    int time;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +30,7 @@ public class Pan: MonoBehaviour
     {
         if (onFire && filled)
         {
-            int time = Mathf.FloorToInt(timer.timeValue);
+            time = Mathf.FloorToInt(timer.timeValue);
             Debug.Log(time);
 
             if (time == 12)
@@ -56,34 +57,37 @@ public class Pan: MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
-        Debug.Log("Colisiooon");
+        
         if ((collision.gameObject.name == "Patata") && estado == 0)
         {
             estado = 1;
-            Destroy(collision.gameObject);
+            //Destroy(collision.gameObject);
+            
         }
         if ((collision.gameObject.name == "Zanahoria") && estado == 1)
         {
             estado = 2;
-            Destroy(collision.gameObject);
+            
+            //Destroy(collision.gameObject);
 
         }
         if ((collision.gameObject.name == "Cebolla") && estado == 2)
         {
             estado = 3;
-            Destroy(collision.gameObject);
+            //Destroy(collision.gameObject);
+            
 
         }
         if ((collision.gameObject.name == "Curry") && estado == 3)
         {
             estado = 4;
-            Destroy(collision.gameObject);
+            //Destroy(collision.gameObject);
 
         }
         if ((collision.gameObject.name == "Pollo") && estado == 4)
         {
             estado = 5;
-            Destroy(collision.gameObject);
+            //Destroy(collision.gameObject);
             filled = true;
 
         }
@@ -92,6 +96,14 @@ public class Pan: MonoBehaviour
         {
             estado = 0;
             filled = false;
+            timer.timeValue = 15;
+        }
+
+        if ((collision.gameObject.name == "Basura") && estado == 8)
+        {
+            estado = 0;
+            filled = false;
+            timer.timeValue = 15;
         }
     }
 

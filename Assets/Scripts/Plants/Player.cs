@@ -38,10 +38,11 @@ public class Player : MonoBehaviour
 
     //The toolbar
     public ToolBarController toolBar;
+    public GameObject toolBart_object;
 
     //Book
     public GameObject Book;
-    bool book_open;
+    public bool book_open;
 
     //Box
 
@@ -75,15 +76,20 @@ public class Player : MonoBehaviour
     public AudioClip walk_sound;
     public AudioClip grass_sound;
     public AudioClip book;
-    public AudioClip throw_bin;
-    public AudioClip open_bin;
-    public AudioClip open_box;
     public AudioClip pick_flower;
 
     public PlayerSounds playerSounds;
-    
-    
-    
+
+    //mobile controls
+    public bool interact_pressed = false;
+
+    //slider object
+    public GameObject slider;
+    public GameObject interact_button_object;
+    public GameObject joystick_object;
+
+
+
 
 
 
@@ -166,7 +172,7 @@ public class Player : MonoBehaviour
         //If the button pressed is <<P>> & player isn't moving
         if (canInteract)
         {
-            if ((Input.GetKeyUp(KeyCode.P)))
+            if ((Input.GetKeyUp(KeyCode.E)) || (interact_pressed == true))
             {
 
                 //isTouching= true;
@@ -186,12 +192,14 @@ public class Player : MonoBehaviour
 
                 else if(thing == "box")
                 {
-                    interact.clip = open_box;
+
+                    box.Opening();
                     if (!box_open)
                     {
                         canMove = false;
                         box_open = true;
                         box.OpenState(box_open);
+                        
 
                     }
                     else
@@ -205,7 +213,7 @@ public class Player : MonoBehaviour
                 }
                 else if (thing == "bin")
                 {
-                    interact.clip = open_bin;
+                    bin.Opening();
                     if (!bin_open)
                     {
                         canMove = false;
@@ -225,6 +233,7 @@ public class Player : MonoBehaviour
                 //playerSounds.Interact();
 
             }
+            interact_pressed = false;
             
         }
 
@@ -234,16 +243,14 @@ public class Player : MonoBehaviour
             playerSounds.Book();
             if (!book_open)
             {
-               
-                canMove = false;
-                Book.SetActive(true);
-                book_open = true;
+
+                Book_opened(true);
             }
             else if(book_open)
             {
-                canMove = true;
-                Book.SetActive(false);
-                book_open = false;
+                Book_opened(false);
+
+
             }
         }
         if (isMoving) { thing = "Null"; }
@@ -255,7 +262,6 @@ public class Player : MonoBehaviour
     private void OnCollisionStay2D(Collision2D collision)
     {
 
-        Debug.Log(collision.gameObject.tag);
         //If the player is touching a Flower
         if ((collision.gameObject.tag == "Lavanda") || (collision.gameObject.tag == "Camomila") || (collision.gameObject.tag == "Calendula"))
         {
@@ -281,7 +287,6 @@ public class Player : MonoBehaviour
 
 
 
-        Debug.Log(thing);
         
 
     }
@@ -390,7 +395,33 @@ public class Player : MonoBehaviour
         }
     }
    
-    
+    public void Book_opened(bool state)
+    {
+        if (state == true)
+        {
+
+            canMove = false;
+            Book.SetActive(true);
+            book_open = true;
+            toolBart_object.SetActive(false);
+            slider.SetActive(false);
+            interact_button_object.SetActive(false);
+            joystick_object.SetActive(false);
+
+
+        }
+        else
+        {
+            canMove = true;
+            Book.SetActive(false);
+            book_open = false;
+            toolBart_object.SetActive(true);
+            slider.SetActive(true);
+            interact_button_object.SetActive(true) ;
+            joystick_object.SetActive(true);
+            joystick_object.SetActive(true);
+        }
+    }
 
 
 

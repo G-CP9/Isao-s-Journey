@@ -8,11 +8,14 @@ public class Pot_controller : MonoBehaviour
 {
     public Sprite[] pot_states;
 
-    int estado;
+    public int estado;
     bool filled;
     bool onFire;
     public bool isCook;
     public Timer timer;
+    int time;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +30,7 @@ public class Pot_controller : MonoBehaviour
     {
         if (onFire && filled)
         {
-            int time = Mathf.FloorToInt(timer.timeValue);
+            time = Mathf.FloorToInt(timer.timeValue);
             Debug.Log(time);
 
             if (time == 12)
@@ -57,19 +60,26 @@ public class Pot_controller : MonoBehaviour
         Debug.Log("Colisiooon");
         if ((collision.gameObject.name == "Agua") && estado == 0)
         {
-            estado = 1;
-            Destroy(collision.gameObject);
+            StartCoroutine(Water_fill());
+           // Destroy(collision.gameObject);
         }
         if ((collision.gameObject.name == "Arroz") && estado == 1)
         {
             estado = 2;
-            Destroy(collision.gameObject);
+            //Destroy(collision.gameObject);
             filled = true;
         }
         if ((collision.gameObject.name == "Plat") && isCook)
         {
             estado = 0;
             filled = false;
+            timer.timeValue = 15;
+        }
+        if ((collision.gameObject.name == "Basura") && estado == 5)
+        {
+            estado = 0;
+            filled = false;
+            timer.timeValue = 15;
         }
 
     }
@@ -110,6 +120,22 @@ public class Pot_controller : MonoBehaviour
         filled = false;
     }
 
+    IEnumerator Water_fill()
+    {
+        
 
+        yield return new WaitForSeconds(2);
+
+        estado = 1;
+       
+        Invoke("Original_pos", 1.0f);
+        
+    }
+
+    void Original_pos()
+    {
+        this.GetComponent<Object_Draggeable>().Added();
+        this.gameObject.GetComponent<CircleCollider2D>().enabled = true;
+    }
 
 }

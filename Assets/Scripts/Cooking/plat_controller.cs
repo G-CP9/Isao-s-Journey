@@ -13,6 +13,8 @@ public class plat_controller : MonoBehaviour
     bool onFire;
     public bool complete;
 
+    int num_plats;
+
     
     
     public Pan pan;
@@ -28,6 +30,10 @@ public class plat_controller : MonoBehaviour
     void Update()
     {
         Plat_render();
+        if(complete==true)
+        {
+            Invoke("Plat_complete", 1.0f);
+        }
     }
 
 
@@ -49,7 +55,7 @@ public class plat_controller : MonoBehaviour
                 {
                     estado = 3;
                     complete = true;
-                    Invoke("SwapScene", 2.0f);
+                   
                 }
             }
         }
@@ -67,14 +73,18 @@ public class plat_controller : MonoBehaviour
                 {
                     estado = 3;
                     complete = true;
-                    Invoke("SwapScene", 2.0f);
+                    
+
+
+
                 }
             }
         }
 
+        
+
     }
 
-   
 
     public void Plat_render()
     {
@@ -87,4 +97,28 @@ public class plat_controller : MonoBehaviour
     {
         SceneManager.LoadScene("Credits");
     }
+    void Plat_complete()
+    {
+        complete = false;
+        this.GetComponent<SpriteRenderer>().enabled = false;
+        num_plats++;
+
+        Invoke("Complete_minigame", 2.0f);
+        
+    }
+
+    void Complete_minigame()
+    {
+        if(num_plats == 5)
+        {
+            SwapScene();
+        }
+        estado = 0;
+
+        this.GetComponent<SpriteRenderer>().enabled = true;
+
+
+    }
+
+    
 }

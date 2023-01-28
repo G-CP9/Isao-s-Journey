@@ -19,6 +19,7 @@ TagManager:
   - Lavanda
   - Box
   - Bin
+  - Onion
   layers:
   - Default
   - TransparentFX
