@@ -6797,6 +6797,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PAU
       objectReference: {fileID: 0}
+    - target: {fileID: 6721999888048085232, guid: 8e962e8e96732fe4e866eb6aa3628d77, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3812396226231191618, guid: 7ad34fd53cce1de488c7b36a6d390b5b, type: 2}
+    - target: {fileID: 6721999888434387986, guid: 8e962e8e96732fe4e866eb6aa3628d77, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8639591755647823838, guid: 8e962e8e96732fe4e866eb6aa3628d77, type: 3}
       propertyPath: player
       value: 
