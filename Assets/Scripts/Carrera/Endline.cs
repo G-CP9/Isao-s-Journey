@@ -6,6 +6,7 @@ public class Endline : MonoBehaviour
 {
     public static bool end;
     public GameObject endText;
+    public GameObject screenControls;
 
     private void Start()
     {
@@ -17,6 +18,7 @@ public class Endline : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             end = true;
+            screenControls.gameObject.GetComponent<VirtualJoystick>().Hide();
             endText.SetActive(true);
         }
     }

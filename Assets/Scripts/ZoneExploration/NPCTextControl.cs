@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class NPCTextControl : MonoBehaviour
 {
-    public GameObject textBox;
+    public GameObject textBox1;
+    public GameObject textBox2;
+    PlayerController player;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            textBox.SetActive(true);
+            player = collision.gameObject.GetComponent<PlayerController>();
+            if (!player.talked)
+                textBox1.SetActive(true);
+            else
+                textBox2.SetActive(true);
         }
     }
 
@@ -18,7 +24,11 @@ public class NPCTextControl : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            textBox.SetActive(false);
+            player = collision.gameObject.GetComponent<PlayerController>();
+            if (!player.talked)
+                textBox1.SetActive(false);
+            else
+                textBox2.SetActive(false);
         }
     }
 }

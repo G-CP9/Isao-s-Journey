@@ -185,7 +185,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Texto
+  m_text: '
 
 '
   m_isRightToLeft: 0
@@ -380,7 +380,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.014445305, y: 0.6207065}
+  m_Offset: {x: 0.17023373, y: 0.51881504}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -391,7 +391,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.8079891, y: 1.3943213}
+  m_Size: {x: 2.1329594, y: 0.6556082}
   m_EdgeRadius: 0
 --- !u!1 &8529310908041331661
 GameObject:
@@ -472,4 +472,5 @@ MonoBehaviour:
   instruccion: {fileID: 0}
   talkBox: {fileID: 1251432912}
   optionsInterface: {fileID: 0}
+  screenControls: {fileID: 0}
   player: {fileID: 0}

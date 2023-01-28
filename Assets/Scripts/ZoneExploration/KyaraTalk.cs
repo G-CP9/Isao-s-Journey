@@ -9,6 +9,7 @@ public class KyaraTalk : MonoBehaviour
     public GameObject instruccion;
     public GameObject talkBox;
     public GameObject optionsInterface;
+    public GameObject screenControls;
     public PlayerController player;
     bool canTalk = false;
 
@@ -31,27 +32,33 @@ public class KyaraTalk : MonoBehaviour
         }
     }
 
-    private void Talk()
+    public void Talk()
     {
-        player.LockMovement();
-        instruccion.SetActive(false);
-        talkBox.SetActive(true);
-        optionsInterface.SetActive(true);
+        if (canTalk)
+        {
+            player.LockMovement();
+            instruccion.SetActive(false);
+            screenControls.gameObject.GetComponent<VirtualJoystick>().Hide();
+            talkBox.SetActive(true);
+            optionsInterface.SetActive(true);
+        }
     }
 
     public void EndTalk()
     {
         player.UnlockMovement();
+        player.talked = true;
         instruccion.SetActive(true);
+        screenControls.SetActive(true);
         talkBox.SetActive(false);
         optionsInterface.SetActive(false);
     }
 
-    void Update()
+    /*void StartTalk()
     {
-        if (Input.GetKeyDown(KeyCode.H) && canTalk)
+        if (canTalk)
         {
             Talk();
         }
-    }
+    }*/
 }

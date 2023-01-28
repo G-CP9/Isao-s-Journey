@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: ca60c1bd70573274cb5f39bb41a9ca5c, type: 3}
-  m_Color: {r: 0.5921569, g: 0.7411765, b: 0.7254902, a: 1}
+  m_Color: {r: 0.29411766, g: 0.34117648, b: 0.16862746, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -143,7 +143,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: 3812396226231191618, guid: 7ad34fd53cce1de488c7b36a6d390b5b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -380,7 +380,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.014445305, y: 0.6207065}
+  m_Offset: {x: 0.29048538, y: 0.49647737}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.03209748}
@@ -391,7 +391,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.8079891, y: 1.3943213}
+  m_Size: {x: 2.9661026, y: 1.145863}
   m_EdgeRadius: 0
 --- !u!1 &6605984901803746184
 GameObject:
@@ -472,4 +472,5 @@ MonoBehaviour:
   instruccion: {fileID: 0}
   talkBox: {fileID: 3311024580741003669}
   optionsInterface: {fileID: 0}
+  screenControls: {fileID: 0}
   player: {fileID: 0}

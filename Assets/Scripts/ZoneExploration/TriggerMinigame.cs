@@ -7,20 +7,22 @@ using UnityEngine.UI;
 public class TriggerMinigame : MonoBehaviour
 {
     public GameObject instruccion;
+    public GameObject reminder;
+    public GameObject screenControls;
     public string minigame;
     PlayerController player;
-
-    private void Start()
-    {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            player = collision.gameObject.GetComponent<PlayerController>();
             player.LockMovement();
-            instruccion.SetActive(true);
+            screenControls.gameObject.GetComponent<VirtualJoystick>().Hide();
+            if (!player.talked)
+                reminder.SetActive(true);
+            else
+                instruccion.SetActive(true);
         }
     }
 
@@ -32,7 +34,9 @@ public class TriggerMinigame : MonoBehaviour
 
     public void Back()
     {
+        reminder.SetActive(false);
         instruccion.SetActive(false);
+        screenControls.SetActive(true);
         player.UnlockMovement();
     }
 

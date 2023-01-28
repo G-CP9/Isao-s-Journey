@@ -10,18 +10,22 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed;
     private Vector2 moveDirection;
     private Vector2 lastMoveDirection;
-    public bool canMove = true;
+    public bool talked;
+    public bool canMove;
 
     private float moveX;
     private float moveY;
 
     public AudioClip step;
+    public VirtualJoystick joystick;
 
     private void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
+        //talked = false;
+        lastMoveDirection = new Vector2(0, -1);
     }
 
     void Update()
@@ -37,8 +41,13 @@ public class PlayerController : MonoBehaviour
 
     void ProcessInputs()
     {
-        moveX = Input.GetAxisRaw("Horizontal");
-        moveY = Input.GetAxisRaw("Vertical");
+        // PC
+        /*moveX = Input.GetAxisRaw("Horizontal");
+        moveY = Input.GetAxisRaw("Vertical");*/
+
+        // Movil
+        moveX = joystick.Horizontal();
+        moveY = joystick.Vertical();
     }
 
     void Move()

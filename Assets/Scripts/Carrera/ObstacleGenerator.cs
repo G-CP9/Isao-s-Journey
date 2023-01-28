@@ -15,8 +15,8 @@ public class ObstacleGenerator : MonoBehaviour
 
     void Start()
     {
-        Debug.Log(Camera.main.orthographicSize * 2 * (16 / 9));
-        // Alto y ancho del srpite del obstáculo desde el pivot
+        Debug.Log(Camera.main.orthographicSize * 2f * Camera.main.aspect);
+        // Alto y ancho del srpite del obstáculo desde el centro
         obstacleHeight = obstacle.GetComponent<SpriteRenderer>().bounds.size.y / 2;
         obstacleWidth = obstacle.GetComponent<SpriteRenderer>().bounds.size.x / 2;
 
@@ -29,8 +29,12 @@ public class ObstacleGenerator : MonoBehaviour
         playerHeight = player.transform.GetChild(0).GetComponent<SpriteRenderer>().bounds.size.y;
 
         // Creamos el primer obstáculo en una posición aleatoria
-        Vector3 obstaclePos = new Vector3(gameObject.transform.position.x + Random.Range(-areaWidth + obstacleWidth, areaWidth - obstacleWidth),
-                gameObject.transform.position.y + Random.Range(-(Camera.main.orthographicSize - obstacleHeight), areaHeight - obstacleHeight), 0);
+        Vector3 obstaclePos;
+        do
+        {
+            obstaclePos = new Vector3(gameObject.transform.position.x + Random.Range(-areaWidth + obstacleWidth, areaWidth - obstacleWidth),
+                    gameObject.transform.position.y + Random.Range(-(Camera.main.orthographicSize - obstacleHeight), areaHeight - obstacleHeight), 0);
+        } while (obstaclePos.x < Camera.main.orthographicSize * 2f * Camera.main.aspect); // Se repite hasta que se cree fuera de la cámara
 
         obstacles.Add(Instantiate(obstacle, obstaclePos, Quaternion.identity, gameObject.transform));
         currentAmount++;
@@ -43,7 +47,7 @@ public class ObstacleGenerator : MonoBehaviour
                 gameObject.transform.position.y + Random.Range(-(Camera.main.orthographicSize - obstacleHeight), areaHeight - obstacleHeight), 0);
 
             // Si la posición está por detrás de la cámara se descarta el obstáculo directamente
-            if (obstaclePos.x > Camera.main.orthographicSize * 2 * (16 / 9))
+            if (obstaclePos.x > Camera.main.orthographicSize * 2f * Camera.main.aspect)
             {
                 bool create = true;
                 // Se comprueba que el objeto no solape con los obstáculos ya creados y deje siempre un hueco suficiente 
