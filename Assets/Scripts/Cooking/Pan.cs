@@ -56,11 +56,12 @@ public class Pan: MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
-        Debug.Log("Colisiooon");
+        
         if ((collision.gameObject.name == "Patata") && estado == 0)
         {
             estado = 1;
             //Destroy(collision.gameObject);
+            
         }
         if ((collision.gameObject.name == "Zanahoria") && estado == 1)
         {
@@ -73,6 +74,7 @@ public class Pan: MonoBehaviour
         {
             estado = 3;
             //Destroy(collision.gameObject);
+            
 
         }
         if ((collision.gameObject.name == "Curry") && estado == 3)

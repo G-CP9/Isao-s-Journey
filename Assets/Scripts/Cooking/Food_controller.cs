@@ -36,28 +36,28 @@ public class Food_controller : MonoBehaviour
                 StartCoroutine(Adding());
 
             }
-            if ((this.gameObject.name == "Cebolla") && collision.gameObject.GetComponent<Pan>().estado == 2)
+            if ((this.gameObject.name == "Cebolla") && collision.gameObject.GetComponent<Pan>().estado == 3)
+            {
+                Debug.Log("A");
+                this.GetComponent<SpriteRenderer>().enabled = false;
+                StartCoroutine(Adding());
+
+            }
+            if ((this.gameObject.name == "Curry") && collision.gameObject.GetComponent<Pan>().estado == 4)
             {
                 this.GetComponent<SpriteRenderer>().enabled = false;
                 StartCoroutine(Adding());
 
             }
-            if ((this.gameObject.name == "Curry") && collision.gameObject.GetComponent<Pan>().estado == 3)
+            if ((this.gameObject.name == "Pollo") && collision.gameObject.GetComponent<Pan>().estado == 5)
             {
                 this.GetComponent<SpriteRenderer>().enabled = false;
                 StartCoroutine(Adding());
-
-            }
-            if ((this.gameObject.name == "Pollo") && collision.gameObject.GetComponent<Pan>().estado == 4)
-            {
-                this.GetComponent<SpriteRenderer>().enabled = false;
-                StartCoroutine(Adding());
-
             }
 
 
         }
-        if (collision.gameObject.name == "Pot")
+        else if (collision.gameObject.name == "Pot")
         {
             if ((this.gameObject.name == "Arroz") && collision.gameObject.GetComponent<Pot_controller>().estado == 1)
             {
@@ -73,10 +73,11 @@ public class Food_controller : MonoBehaviour
 
     IEnumerator Adding()
     {
-        Debug.Log("aaaaaaaaa");
+        this.GetComponent<Object_Draggeable>().Added();
+      
         yield return new WaitForSeconds(2);
 
-        this.GetComponent<Object_Draggeable>().Added();
+        
         this.GetComponent<SpriteRenderer>().enabled = true;
     }
 
