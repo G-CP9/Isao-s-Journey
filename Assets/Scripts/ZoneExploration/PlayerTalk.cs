@@ -9,6 +9,7 @@ public class PlayerTalk : MonoBehaviour
     public GameObject talkBox;
     public GameObject optionsInterface;
     public GameObject screenControls;
+    public GameObject barrier;
     public PlayerController player;
     bool canTalk = false;
 
@@ -53,6 +54,8 @@ public class PlayerTalk : MonoBehaviour
         screenControls.SetActive(true);
         talkBox.SetActive(false);
         optionsInterface.SetActive(false);
+        if (this.gameObject.transform.parent.GetComponent<PlayerController>().talked == true)
+            barrier.SetActive(true);
         this.gameObject.SetActive(false);
     }
 

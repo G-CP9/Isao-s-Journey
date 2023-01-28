@@ -348,7 +348,7 @@ GameObject:
   - component: {fileID: 97619222}
   m_Layer: 0
   m_Name: casaF3
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -445,7 +445,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!1 &97986018
 GameObject:
   m_ObjectHideFlags: 3
@@ -547,7 +547,7 @@ GameObject:
   - component: {fileID: 211653759}
   m_Layer: 0
   m_Name: Tirachinas
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1161,7 +1161,7 @@ GameObject:
   - component: {fileID: 286758944}
   m_Layer: 0
   m_Name: casaL2 (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1258,7 +1258,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!1001 &338971099
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1538,7 +1538,7 @@ GameObject:
   - component: {fileID: 386056644}
   m_Layer: 0
   m_Name: casaF1 (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1635,7 +1635,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!1 &388979937
 GameObject:
   m_ObjectHideFlags: 0
@@ -1784,7 +1784,7 @@ GameObject:
   - component: {fileID: 405212679}
   m_Layer: 0
   m_Name: casaL3 (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1881,7 +1881,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!1 &452400482
 GameObject:
   m_ObjectHideFlags: 0
@@ -2272,7 +2272,7 @@ GameObject:
   - component: {fileID: 618598079}
   m_Layer: 0
   m_Name: casaF3 (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2369,7 +2369,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!1 &734794868
 GameObject:
   m_ObjectHideFlags: 0
@@ -2696,7 +2696,7 @@ GameObject:
   - component: {fileID: 784742181}
   m_Layer: 0
   m_Name: casaL2
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2807,7 +2807,7 @@ GameObject:
   - component: {fileID: 847261123}
   m_Layer: 0
   m_Name: casaL3 (2)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2904,7 +2904,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!1 &935518144
 GameObject:
   m_ObjectHideFlags: 0
@@ -3335,7 +3335,7 @@ GameObject:
   - component: {fileID: 993599414}
   m_Layer: 0
   m_Name: casaL1 (2)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3432,7 +3432,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!1 &1114893879
 GameObject:
   m_ObjectHideFlags: 0
@@ -3794,7 +3794,7 @@ GameObject:
   - component: {fileID: 1290903940}
   m_Layer: 0
   m_Name: Casas
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3843,7 +3843,7 @@ GameObject:
   - component: {fileID: 1302446552}
   m_Layer: 0
   m_Name: Puente
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4733,7 +4733,7 @@ GameObject:
   - component: {fileID: 1361485675}
   m_Layer: 0
   m_Name: casaL1
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4920,7 +4920,7 @@ GameObject:
   - component: {fileID: 1487538132}
   m_Layer: 0
   m_Name: casaF1
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5017,7 +5017,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!1 &1504166389
 GameObject:
   m_ObjectHideFlags: 0
@@ -5031,7 +5031,7 @@ GameObject:
   - component: {fileID: 1504166391}
   m_Layer: 0
   m_Name: casaF2
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5128,7 +5128,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!1 &1529001982
 GameObject:
   m_ObjectHideFlags: 0
@@ -5203,7 +5203,7 @@ GameObject:
   - component: {fileID: 1605550272}
   m_Layer: 0
   m_Name: casaL2 (2)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5300,7 +5300,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!114 &1624149883 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1299879242908649518, guid: 47cacf80413fd8c4db4f75bd1e0e765f, type: 3}
@@ -5325,7 +5325,7 @@ GameObject:
   - component: {fileID: 1689630763}
   m_Layer: 0
   m_Name: casaF2 (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5422,7 +5422,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!1 &1731906225
 GameObject:
   m_ObjectHideFlags: 0
@@ -5654,7 +5654,7 @@ GameObject:
   - component: {fileID: 1772461058}
   m_Layer: 0
   m_Name: Ayuntamiento
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5900,7 +5900,7 @@ GameObject:
   - component: {fileID: 1830913177}
   m_Layer: 0
   m_Name: casaF1 (2)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5997,7 +5997,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!1001 &1832663006
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6134,7 +6134,7 @@ GameObject:
   - component: {fileID: 1834612262}
   m_Layer: 0
   m_Name: casaL3
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6205,7 +6205,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!61 &1834612262
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6857,7 +6857,7 @@ GameObject:
   - component: {fileID: 1992674597}
   m_Layer: 0
   m_Name: Fuente
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7758,7 +7758,7 @@ GameObject:
   - component: {fileID: 2137578655}
   m_Layer: 0
   m_Name: casaL1 (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7855,7 +7855,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!1001 &1299879242375874389
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7993,11 +7993,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8339342743334856396, guid: 0ee43b605da332c48b8e026380546e39, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.88
+      value: -5.13
       objectReference: {fileID: 0}
     - target: {fileID: 8339342743334856396, guid: 0ee43b605da332c48b8e026380546e39, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.74
+      value: 9.61
       objectReference: {fileID: 0}
     - target: {fileID: 8339342743334856396, guid: 0ee43b605da332c48b8e026380546e39, type: 3}
       propertyPath: m_LocalPosition.z
