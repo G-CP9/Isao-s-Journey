@@ -21,7 +21,12 @@ public class Pan: MonoBehaviour
     public AudioSource pan_sounds;
 
     public AudioSource pan_filling;
-    
+
+    public AudioSource help_sound;
+
+    public AudioClip ready;
+    public AudioClip burned;
+
 
     // Start is called before the first frame update
     void Start()
@@ -48,11 +53,13 @@ public class Pan: MonoBehaviour
             {
                 estado = 7;
                 isCook = true;
+                help_sound.PlayOneShot(ready);
             }
             if (time == 0)
             {
                 estado = 8;
                 isCook = false;
+                help_sound.PlayOneShot(burned);
 
             }
         }
