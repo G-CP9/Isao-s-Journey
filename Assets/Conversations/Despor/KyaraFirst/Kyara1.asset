@@ -17,5 +17,5 @@ MonoBehaviour:
   last: 0
   option1: "S\xED, soy yo. Me llamo Isao, encantado."
   option2: 
-  op1Conv: {fileID: 11400000, guid: 8c78a538508c56943ba387c3912289c6, type: 2}
+  op1Conv: {fileID: 11400000, guid: d63af43e935cce64d866acb0c2fcfe7c, type: 2}
   op2Conv: {fileID: 0}

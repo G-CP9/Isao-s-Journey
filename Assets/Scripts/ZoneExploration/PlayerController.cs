@@ -64,7 +64,10 @@ public class PlayerController : MonoBehaviour
     {
         animator.SetFloat("Horizontal", moveDirection.x);
         animator.SetFloat("Vertical", moveDirection.y);
-        animator.SetFloat("Magnitude", moveDirection.magnitude);
+        if (canMove)
+            animator.SetFloat("Magnitude", moveDirection.magnitude);
+        else
+            animator.SetFloat("Magnitude", 0);
         animator.SetFloat("LastHorizontal", lastMoveDirection.x);
         animator.SetFloat("LastVertical", lastMoveDirection.y);
     }
@@ -83,6 +86,7 @@ public class PlayerController : MonoBehaviour
     {
         canMove = false;
         rigidBody.velocity = new Vector2(0, 0);
+
         //lastMoveDirection = moveDirection;
         //moveDirection = new Vector2(0, 0);
     }
@@ -94,7 +98,6 @@ public class PlayerController : MonoBehaviour
 
     public void PlaySound(AudioClip clip)
     {
-        Debug.Log("si");
         audioSource.PlayOneShot(clip);
     }
 
