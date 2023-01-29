@@ -50,7 +50,7 @@ public class Object_Draggeable : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(this.gameObject.name == "Pot" && !pot_ingredients.Contains(collision.gameObject.name) && collision.gameObject.name != "Agua")
+        if(this.gameObject.name == "Pot" && this.gameObject.name != "Plat" && !pot_ingredients.Contains(collision.gameObject.name) && collision.gameObject.name != "Agua")
         {
             collision.gameObject.transform.position = collision.gameObject.GetComponent<Food_draggable>().originalPos;
         }

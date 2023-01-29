@@ -11,7 +11,7 @@ public class Pan: MonoBehaviour
 
 
     public int estado;
-    bool filled;
+    public bool filled;
     bool onFire;
     public bool isCook;
     public Timer timer;

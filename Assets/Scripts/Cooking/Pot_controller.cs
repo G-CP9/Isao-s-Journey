@@ -9,7 +9,7 @@ public class Pot_controller : MonoBehaviour
     public Sprite[] pot_states;
 
     public int estado;
-    bool filled;
+    public bool filled;
     bool onFire;
     public bool isCook;
     public Timer timer;
@@ -78,6 +78,8 @@ public class Pot_controller : MonoBehaviour
                 Debug.Log("vaciate guarra");
                 Clear_out();
                 timer.timeValue = 15;
+                estado = 0;
+                this.gameObject.transform.position = this.GetComponent<Object_Draggeable>().originalPos;
             }
             
         }

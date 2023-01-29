@@ -9,6 +9,8 @@ public class Grill_controller : MonoBehaviour
 {
     public bool isEmpty;
     public GameObject objeto;
+    Pot_controller pot;
+    Pan pan;
 
     // Start is called before the first frame update
     void Start()
@@ -26,9 +28,32 @@ public class Grill_controller : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
+        objeto = collision.gameObject;
 
-        isEmpty = false;
-        GetComponent<SpriteRenderer>().enabled = true;
+        if(collision.gameObject.name == "Pot")
+        {
+            pot = collision.GetComponent<Pot_controller>();
+
+            if(pot.filled == true)
+            {
+                isEmpty = false;
+                GetComponent<SpriteRenderer>().enabled = true;
+            }
+
+        }
+
+        if (collision.gameObject.name == "Pan")
+        {
+            pan = collision.GetComponent<Pan>();
+
+            if (pan.filled == true)
+            {
+                isEmpty = false;
+                GetComponent<SpriteRenderer>().enabled = true;
+            }
+
+        }
+
 
 
     }
