@@ -38,6 +38,7 @@ public class Grill_controller : MonoBehaviour
             {
                 isEmpty = false;
                 GetComponent<SpriteRenderer>().enabled = true;
+                pot.pot_sounds.Play();
             }
 
         }
@@ -46,10 +47,13 @@ public class Grill_controller : MonoBehaviour
         {
             pan = collision.GetComponent<Pan>();
 
+            pan.pan_sounds.Stop();
             if (pan.filled == true)
             {
+                
                 isEmpty = false;
                 GetComponent<SpriteRenderer>().enabled = true;
+                pan.pan_sounds.Play();
             }
 
         }
@@ -61,6 +65,28 @@ public class Grill_controller : MonoBehaviour
     {
         isEmpty = true;
         GetComponent<SpriteRenderer>().enabled = false;
+        objeto = collision.gameObject;
 
+        if (collision.gameObject.name == "Pot")
+        {
+            pot = collision.GetComponent<Pot_controller>();
+
+            if (pot.pot_sounds.isPlaying)
+            {
+                pot.pot_sounds.Stop();
+            }
+
+        }
+
+        if (collision.gameObject.name == "Pan")
+        {
+            pan = collision.GetComponent<Pan>();
+
+            if (pan.pan_sounds.isPlaying)
+            {
+                pan.pan_sounds.Stop();
+            }
+
+        }
     }
 }

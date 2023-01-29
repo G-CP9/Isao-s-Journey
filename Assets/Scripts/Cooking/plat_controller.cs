@@ -32,7 +32,7 @@ public class plat_controller : MonoBehaviour
         Plat_render();
         if(complete==true)
         {
-            Invoke("Plat_complete", 1.0f);
+            
         }
         if(num_plats > 2)
         {
@@ -49,9 +49,12 @@ public class plat_controller : MonoBehaviour
         if (collision.gameObject.name == "Pot")
         {
             pot_Controller = collision.gameObject.GetComponent<Pot_controller>();
+            
             if (pot_Controller.isCook)
             {
-                if(estado == 0)
+                pot_Controller.Clear_out();
+
+                if (estado == 0)
                 {
                     estado = 1;
                 }
@@ -59,7 +62,8 @@ public class plat_controller : MonoBehaviour
                 {
                     estado = 3;
                     complete = true;
-                   
+                    Invoke("Plat_complete", 1.0f);
+
                 }
             }
         }
@@ -76,8 +80,8 @@ public class plat_controller : MonoBehaviour
                 if (estado == 1)
                 {
                     estado = 3;
-                    complete = true;
-                    
+                    Invoke("Plat_complete", 1.0f);
+
 
 
 
@@ -99,7 +103,7 @@ public class plat_controller : MonoBehaviour
 
     void SwapScene()
     {
-        SceneManager.LoadScene("Credits");
+        SceneManager.LoadScene("Opria2");
     }
     void Plat_complete()
     {
@@ -107,16 +111,24 @@ public class plat_controller : MonoBehaviour
         this.GetComponent<SpriteRenderer>().enabled = false;
         num_plats++;
 
-        Invoke("Complete_minigame", 2.0f);
+        if(num_plats == 2)
+        {
+            Invoke("SwapScene", 0.5f);
+        }
+        else 
+        {
+            Invoke("Complete", 0.5f);
+        }
+        
         
     }
 
-    void Complete_minigame()
+    void Complete()
     {
         
         estado = 0;
-
         this.GetComponent<SpriteRenderer>().enabled = true;
+
 
 
     }

@@ -16,6 +16,11 @@ public class Pot_controller : MonoBehaviour
     int time;
 
 
+    //Sounds
+    public AudioSource pot_sounds;
+    public AudioSource pot_filling;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -69,25 +74,26 @@ public class Pot_controller : MonoBehaviour
             estado = 2;
             //Destroy(collision.gameObject);
             filled = true;
+            pot_filling.Play();
         }
         if ((collision.gameObject.name == "Plat") && isCook)
         {
             plat_controller plat = collision.gameObject.GetComponent<plat_controller>();
             if(plat.estado == 2 || plat.estado == 0 || plat.estado == 3)
             {
-                Debug.Log("vaciate guarra");
+                
                 Clear_out();
                 timer.timeValue = 15;
-                estado = 0;
+                
                 this.gameObject.transform.position = this.GetComponent<Object_Draggeable>().originalPos;
+                pot_filling.Play();
             }
             
         }
         if ((collision.gameObject.name == "Basura") && estado == 5)
         {
-            estado = 0;
-            filled = false;
-            timer.timeValue = 15;
+            Clear_out();
+            
         }
 
     }
@@ -99,6 +105,7 @@ public class Pot_controller : MonoBehaviour
         {
             if (filled)
             {
+                pot_sounds.Play();
                 onFire = true;
                 timer.StartCooking = true;
             }
@@ -126,11 +133,14 @@ public class Pot_controller : MonoBehaviour
     {
         estado = 0;
         filled = false;
+        this.gameObject.transform.position = this.gameObject.GetComponent<Object_Draggeable>().originalPos;
+        timer.timeValue = 15;
         Pot_render();
+
     }
 
     
-
+    
     
 
 }

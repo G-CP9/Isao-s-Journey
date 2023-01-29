@@ -11,6 +11,12 @@ public class Water_controller : MonoBehaviour
     Animator animator;
     public Sprite[] pot_states;
     int estado;
+
+    //Sounds
+
+    public AudioSource filling;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -88,6 +94,7 @@ public class Water_controller : MonoBehaviour
                 pot_gameobject.SetActive(false);
                 pot_gameobject.transform.position = pot_gameobject.GetComponent<Object_Draggeable>().originalPos;
                 animator.SetTrigger("filling");
+                filling.Play();
                 estado = 1;
                 Render();
                 Invoke("Pot_filled", 1.340179f);
