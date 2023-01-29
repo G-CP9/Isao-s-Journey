@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8200a43d5a2fde47842b095a121196f, type: 3}
   m_Name: Guy1
   m_EditorClassIdentifier: 
-  text: "\xBFQue onda? Bienvenida a Montovo. Por lo que veo est\xE1s aqu\xED de voluntaria,
-    \xBFcierto?"
+  text: "\xBFQu\xE9 onda? Bienvenida a Montovo. Por lo que veo est\xE1s aqu\xED de
+    voluntaria, \xBFcierto?"
   multiple: 0
   last: 0
   option1: "S\xED, reci\xE9n me he unido. Me llamo Angelica, \xBFt\xFA eres...?"

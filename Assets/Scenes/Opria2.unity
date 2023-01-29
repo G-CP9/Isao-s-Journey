@@ -856,7 +856,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   view: {fileID: 193163096}
-  currentNode: {fileID: 11400000, guid: 8ca62ca3a3050ca44baba885a8c40525, type: 2}
+  currentNode: {fileID: 11400000, guid: a434e97d45066a94cbc3e22cf0eebcb0, type: 2}
   talker: {fileID: 1872921090}
 --- !u!114 &193163096
 MonoBehaviour:
@@ -3646,7 +3646,7 @@ MonoBehaviour:
   instruccion: {fileID: 2087569343}
   reminder: {fileID: 672689034}
   screenControls: {fileID: 1269097611}
-  minigame: Cooking
+  minigame: Credits
 --- !u!1001 &1249033314
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4164,7 +4164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   view: {fileID: 1316410828}
-  currentNode: {fileID: 11400000, guid: 04c7516417333e74fb2a6a1610de593b, type: 2}
+  currentNode: {fileID: 11400000, guid: 108234c5ef2470e49834c8d6da11c566, type: 2}
   talker: {fileID: 3075019175939381632}
 --- !u!114 &1316410828
 MonoBehaviour:
@@ -7366,6 +7366,14 @@ PrefabInstance:
     - target: {fileID: 4490100659500719556, guid: 8e962e8e96732fe4e866eb6aa3628d77, type: 3}
       propertyPath: m_Name
       value: PAU
+      objectReference: {fileID: 0}
+    - target: {fileID: 6721999888048085232, guid: 8e962e8e96732fe4e866eb6aa3628d77, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3812396226231191618, guid: 7ad34fd53cce1de488c7b36a6d390b5b, type: 2}
+    - target: {fileID: 6721999888434387986, guid: 8e962e8e96732fe4e866eb6aa3628d77, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8639591755647823838, guid: 8e962e8e96732fe4e866eb6aa3628d77, type: 3}
       propertyPath: player

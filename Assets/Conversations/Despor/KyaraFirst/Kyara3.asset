@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Kyara3
   m_EditorClassIdentifier: 
   text: Actualmente estamos tratando de encontrar una cura para una enfermedad desconocida
-    que asola Despor.
+    que asola el poblado.
   multiple: 1
   last: 0
-  option1: "Me gustar\xEDa ayudar a acelerar el proceso, \xBFcomo puedo hacerlo?"
+  option1: "Me gustar\xEDa ayudar a acelerar el proceso, \xBFc\xF3mo puedo hacerlo?"
   option2: "\xBFEs por eso que est\xE1 restringido el acceso a las casas?"
   op1Conv: {fileID: 11400000, guid: d6839bb2e5ba8d24c94b0868fad0019a, type: 2}
   op2Conv: {fileID: 11400000, guid: 535c8580ee06f1d469ea236ecd003b8b, type: 2}

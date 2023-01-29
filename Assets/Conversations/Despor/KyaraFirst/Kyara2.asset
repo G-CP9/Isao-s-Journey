@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8200a43d5a2fde47842b095a121196f, type: 3}
   m_Name: Kyara2
   m_EditorClassIdentifier: 
-  text: Yo soy Kyara. Bienvenido a la zona de Despor. En este momento nos viene muy
-    bien tu ayuda.
+  text: Bienvenido a Despor. Yo soy Kyara, la enfermera encargada de la zona. En
+    este momento nos viene muy bien tu ayuda.
   multiple: 0
   last: 0
-  option1: "\xBFQue tipo de accion est\xE1is realizando en Despor?"
+  option1: "Encantado de ayudar. \xBFQu\xE9 tipo de acci\xF3n est\xE1is realizando
+    en Despor?"
   option2: 
   op1Conv: {fileID: 11400000, guid: 044af6ec6dddaad48a6bdf4c0b4cfdb3, type: 2}
   op2Conv: {fileID: 0}

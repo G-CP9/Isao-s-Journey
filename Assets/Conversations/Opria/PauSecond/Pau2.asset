@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8200a43d5a2fde47842b095a121196f, type: 3}
+  m_Name: Pau2
+  m_EditorClassIdentifier: 
+  text: "Genial, te lo agradecemos mucho. \xBFQue har\xE1s ahora?."
+  multiple: 0
+  last: 1
+  option1: "Me quedar\xE9 por aqu\xED para seguir ayudando mientras pueda, pero antes
+    ir\xE9 a avisar a mi compa\xF1ero Isao."
+  option2: 
+  op1Conv: {fileID: 0}
+  op2Conv: {fileID: 0}
