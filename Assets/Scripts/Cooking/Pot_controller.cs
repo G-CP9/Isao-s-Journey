@@ -110,8 +110,14 @@ public class Pot_controller : MonoBehaviour
                 timer.StartCooking = true;
             }
 
+
+        }
+        if (collision.gameObject.name == "limits")
+        {
+            this.gameObject.transform.position = this.gameObject.GetComponent<Object_Draggeable>().originalPos;
         }
     }
+
 
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -120,6 +126,7 @@ public class Pot_controller : MonoBehaviour
             onFire = false;
             timer.StartCooking = false;
         }
+        
     }
 
     public void Pot_render()

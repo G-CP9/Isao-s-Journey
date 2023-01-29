@@ -12,7 +12,7 @@ public class Object_Draggeable : MonoBehaviour
 
     Pot_controller pot_Controller;
     
-
+    
 
 
     private void Start()
