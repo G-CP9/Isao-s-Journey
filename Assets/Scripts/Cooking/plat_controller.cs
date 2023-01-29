@@ -9,7 +9,7 @@ public class plat_controller : MonoBehaviour
     public Sprite[] plat_states;
 
 
-    int estado;
+    public int estado;
     bool onFire;
     public bool complete;
 
@@ -33,6 +33,10 @@ public class plat_controller : MonoBehaviour
         if(complete==true)
         {
             Invoke("Plat_complete", 1.0f);
+        }
+        if(num_plats > 2)
+        {
+            SwapScene();
         }
     }
 
@@ -109,10 +113,7 @@ public class plat_controller : MonoBehaviour
 
     void Complete_minigame()
     {
-        if(num_plats == 5)
-        {
-            SwapScene();
-        }
+        
         estado = 0;
 
         this.GetComponent<SpriteRenderer>().enabled = true;

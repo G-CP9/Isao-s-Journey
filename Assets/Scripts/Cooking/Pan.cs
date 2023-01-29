@@ -94,9 +94,14 @@ public class Pan: MonoBehaviour
 
         if ((collision.gameObject.name == "Plat") && isCook)
         {
-            estado = 0;
-            filled = false;
-            timer.timeValue = 15;
+            plat_controller plat = collision.gameObject.GetComponent<plat_controller>();
+            if(plat.estado == 1 || plat.estado == 0 || plat.estado == 3)
+            {
+                estado = 0;
+                filled = false;
+                timer.timeValue = 15;
+            }
+            
         }
 
         if ((collision.gameObject.name == "Basura") && estado == 8)
