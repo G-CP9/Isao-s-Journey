@@ -213,9 +213,10 @@ public class Player : MonoBehaviour
                 }
                 else if (thing == "bin")
                 {
-                    bin.Opening();
+                    
                     if (!bin_open)
                     {
+                        bin.Opening();
                         canMove = false;
                         bin_open = true;
                         bin.OpenState(bin_open);
@@ -223,6 +224,9 @@ public class Player : MonoBehaviour
                     }
                     else
                     {
+
+
+                        bin.Close();
                         bin_open = false;
                         bin.OpenState(bin_open);
                         canMove = true;
@@ -281,6 +285,7 @@ public class Player : MonoBehaviour
         }
         else if ((collision.gameObject.tag == "Bin"))
         {
+            Debug.Log("pputa");
             thing = "bin";
 
         }
@@ -300,7 +305,7 @@ public class Player : MonoBehaviour
             //The player is picking a flower
 
 
-            int i = Random.Range(1, 3);
+            int i = Random.Range(1, 5);
 
 
             if (i == 2)

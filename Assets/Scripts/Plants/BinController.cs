@@ -271,4 +271,12 @@ public class BinController : MonoBehaviour
 
     }
 
+    public void Close()
+    {
+        bin_sound.clip = open_bin;
+        bin_sound.Play();
+    }
+
+
+
 }
