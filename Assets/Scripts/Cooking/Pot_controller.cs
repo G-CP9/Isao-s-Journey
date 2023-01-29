@@ -19,7 +19,10 @@ public class Pot_controller : MonoBehaviour
     //Sounds
     public AudioSource pot_sounds;
     public AudioSource pot_filling;
+    public AudioSource help_sound;
 
+    public AudioClip ready;
+    public AudioClip burned;
 
 
     // Start is called before the first frame update
@@ -47,11 +50,13 @@ public class Pot_controller : MonoBehaviour
             {
                 estado = 4;
                 isCook= true;
+                help_sound.PlayOneShot(ready);
             }
             if (time == 0)
             {
                 estado = 5;
                 isCook = false;
+                help_sound.PlayOneShot(burned);
 
             }
         }
@@ -86,7 +91,7 @@ public class Pot_controller : MonoBehaviour
                 timer.timeValue = 15;
                 
                 this.gameObject.transform.position = this.GetComponent<Object_Draggeable>().originalPos;
-                pot_filling.Play();
+                
             }
             
         }

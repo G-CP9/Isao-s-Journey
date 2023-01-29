@@ -11,9 +11,13 @@ public class plat_controller : MonoBehaviour
 
     public int estado;
     bool onFire;
-    public bool complete;
+    
 
     int num_plats;
+
+    public AudioClip bell;
+    public AudioClip fill;
+    AudioSource plat_sound;
 
     
     
@@ -23,6 +27,7 @@ public class plat_controller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        plat_sound= GetComponent<AudioSource>();
         estado = 0;
     }
 
@@ -30,10 +35,6 @@ public class plat_controller : MonoBehaviour
     void Update()
     {
         Plat_render();
-        if(complete==true)
-        {
-            
-        }
         if(num_plats > 2)
         {
             SwapScene();
@@ -53,6 +54,7 @@ public class plat_controller : MonoBehaviour
             if (pot_Controller.isCook)
             {
                 pot_Controller.Clear_out();
+                plat_sound.PlayOneShot(fill);
 
                 if (estado == 0)
                 {
@@ -61,7 +63,7 @@ public class plat_controller : MonoBehaviour
                 if(estado == 2)
                 {
                     estado = 3;
-                    complete = true;
+                    
                     Invoke("Plat_complete", 1.0f);
 
                 }
@@ -73,6 +75,7 @@ public class plat_controller : MonoBehaviour
 
             if (pan.isCook)
             {
+                plat_sound.PlayOneShot(fill);
                 if (estado == 0)
                 {
                     estado = 2;
@@ -80,6 +83,7 @@ public class plat_controller : MonoBehaviour
                 if (estado == 1)
                 {
                     estado = 3;
+                    
                     Invoke("Plat_complete", 1.0f);
 
 
@@ -107,17 +111,19 @@ public class plat_controller : MonoBehaviour
     }
     void Plat_complete()
     {
-        complete = false;
+
+        plat_sound.PlayOneShot(bell);
         this.GetComponent<SpriteRenderer>().enabled = false;
         num_plats++;
 
         if(num_plats == 2)
         {
-            Invoke("SwapScene", 0.5f);
+            Invoke("SwapScene", 1.0f);
         }
         else 
         {
-            Invoke("Complete", 0.5f);
+            
+            Invoke("Complete", 1.0f);
         }
         
         

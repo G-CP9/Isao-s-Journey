@@ -102,7 +102,6 @@ public class Pan: MonoBehaviour
             plat_controller plat = collision.gameObject.GetComponent<plat_controller>();
             if(plat.estado == 1 || plat.estado == 0 || plat.estado == 3)
             {
-                pan_filling.Play();
                 estado = 0;
                 filled = false;
                 timer.timeValue = 15;
