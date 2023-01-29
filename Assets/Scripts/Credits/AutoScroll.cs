@@ -25,7 +25,12 @@ public class AutoScroll : MonoBehaviour
         }
         else
         {
-            button.SetActive(true); 
+            Invoke("Show_button", 1.0f);
         }
+    }
+
+    void Show_button()
+    {
+        button.SetActive(true);
     }
 }
