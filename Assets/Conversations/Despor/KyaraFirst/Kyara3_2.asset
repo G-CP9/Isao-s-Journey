@@ -16,7 +16,7 @@ MonoBehaviour:
     a los habitantes. "
   multiple: 1
   last: 0
-  option1: "\xBFComo podr\xEDa colaborar en este momento?"
-  option2: "\xBFY quienes son esos hombres que andan deambulando?"
+  option1: "\xBFC\xF3mo podr\xEDa colaborar en este momento? "
+  option2: "\xBFY qui\xE9nes son esos hombres que andan deambulando?"
   op1Conv: {fileID: 11400000, guid: d6839bb2e5ba8d24c94b0868fad0019a, type: 2}
-  op2Conv: {fileID: 11400000, guid: 2ea286e479e8267449c527a0ee15c1c0, type: 2}
+  op2Conv: {fileID: 11400000, guid: c4ca6680d6bb4ea49bb87268966ca083, type: 2}

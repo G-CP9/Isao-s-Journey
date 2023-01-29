@@ -2599,6 +2599,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1251432912, guid: 9696c28aef61d4b4f85dbc85922d260b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1939725618, guid: 9696c28aef61d4b4f85dbc85922d260b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3812396226231191618, guid: 7ad34fd53cce1de488c7b36a6d390b5b, type: 2}
     - target: {fileID: 3075019174926854684, guid: 9696c28aef61d4b4f85dbc85922d260b, type: 3}
       propertyPath: player
       value: 
@@ -2947,7 +2955,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   view: {fileID: 1316410828}
-  currentNode: {fileID: 11400000, guid: 3af1370938dbb5c42887ea05b451d3e8, type: 2}
+  currentNode: {fileID: 11400000, guid: 9777affd802b2784b9e5e0612a1aea34, type: 2}
   talker: {fileID: 821063512}
 --- !u!114 &1316410828
 MonoBehaviour:
