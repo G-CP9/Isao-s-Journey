@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2957546254192332457}
   - component: {fileID: 2957546254192332449}
   - component: {fileID: 2957546254192332448}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Isao
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -270,7 +270,9 @@ MonoBehaviour:
   thing: 
   picked: 0
   toolBar: {fileID: 0}
+  toolBart_object: {fileID: 0}
   Book: {fileID: 0}
+  book_open: 0
   box: {fileID: 0}
   bin: {fileID: 0}
   moveSpeed: 150
@@ -282,11 +284,12 @@ MonoBehaviour:
   walk_sound: {fileID: 8300000, guid: c20162d3b362aad4a99c1b188d4f4a28, type: 3}
   grass_sound: {fileID: 8300000, guid: 53bfb8ba832e40744af0249fc49c14af, type: 3}
   book: {fileID: 0}
-  throw_bin: {fileID: 0}
-  open_bin: {fileID: 0}
-  open_box: {fileID: 0}
   pick_flower: {fileID: 0}
   playerSounds: {fileID: 0}
+  interact_pressed: 0
+  slider: {fileID: 0}
+  interact_button_object: {fileID: 0}
+  joystick_object: {fileID: 0}
 --- !u!114 &2957546254192332448
 MonoBehaviour:
   m_ObjectHideFlags: 0
