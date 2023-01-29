@@ -17,5 +17,5 @@ MonoBehaviour:
   last: 0
   option1: '[...]'
   option2: 
-  op1Conv: {fileID: 0}
+  op1Conv: {fileID: 11400000, guid: 9ebb87b628661954aa50e8f13b525dc7, type: 2}
   op2Conv: {fileID: 0}
