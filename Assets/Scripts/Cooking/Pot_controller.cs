@@ -61,7 +61,7 @@ public class Pot_controller : MonoBehaviour
         Debug.Log("Colisiooon");
         if ((collision.gameObject.name == "Agua") && estado == 0)
         {
-            StartCoroutine(Water_fill());
+            //StartCoroutine(Water_fill());
            // Destroy(collision.gameObject);
         }
         if ((collision.gameObject.name == "Arroz") && estado == 1)
@@ -127,22 +127,8 @@ public class Pot_controller : MonoBehaviour
         Pot_render();
     }
 
-    IEnumerator Water_fill()
-    {
-        
+    
 
-        yield return new WaitForSeconds(2);
-
-        estado = 1;
-       
-        Invoke("Original_pos", 1.0f);
-        
-    }
-
-    void Original_pos()
-    {
-        this.GetComponent<Object_Draggeable>().Added();
-        this.gameObject.GetComponent<CircleCollider2D>().enabled = true;
-    }
+    
 
 }

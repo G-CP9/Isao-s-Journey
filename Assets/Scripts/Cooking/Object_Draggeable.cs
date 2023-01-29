@@ -6,7 +6,7 @@ public class Object_Draggeable : MonoBehaviour
 {
     Vector2 difference = Vector2.zero;
     Collider2D object_collider;
-    Vector2 originalPos;
+    public Vector2 originalPos;
     List<string> pan_ingredients = new List<string>();
     List<string> pot_ingredients = new List<string>();
 
