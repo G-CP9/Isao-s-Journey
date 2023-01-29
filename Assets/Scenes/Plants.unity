@@ -2141,7 +2141,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7994729574101362318, guid: 032428d81191245d4ae5a23a0a301ae9, type: 3}
       propertyPath: movementRange
-      value: 50
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 7994729574101362318, guid: 032428d81191245d4ae5a23a0a301ae9, type: 3}
       propertyPath: stickControlPath
@@ -4747,7 +4747,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MAX_PLANTS: 5
   INITIAL_PLANTS: 0
-  planta: {fileID: 6863496786465775432}
+  planta: {fileID: 8079879441197177278, guid: 28b0194292cb75c4dad40a1b9b97d629, type: 3}
   respawnTime: 5
   size: {x: 0, y: 0}
 --- !u!212 &1108269602
@@ -8249,11 +8249,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28b0194292cb75c4dad40a1b9b97d629, type: 3}
---- !u!1 &6863496786465775432 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8079879441197177278, guid: 28b0194292cb75c4dad40a1b9b97d629, type: 3}
-  m_PrefabInstance: {fileID: 6863496786465775431}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7952175011230549844 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5138780553260001345, guid: a87e26842ec0dc4448103e95d0a1768c, type: 3}
