@@ -94,6 +94,7 @@ public class PlayerController : MonoBehaviour
 
     public void PlaySound(AudioClip clip)
     {
+        Debug.Log("si");
         audioSource.PlayOneShot(clip);
     }
 
