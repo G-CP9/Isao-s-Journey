@@ -90,9 +90,18 @@ public class Object_Draggeable : MonoBehaviour
                 object_collider.enabled = !object_collider.enabled;
             }
         }
+        
             
 
 
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.name == "limits")
+        {
+            this.gameObject.transform.position = originalPos;
+        }
     }
 
     public void Added()

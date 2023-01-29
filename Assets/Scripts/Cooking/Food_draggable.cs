@@ -1,5 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+using System.Reflection;
+
 
 public class Food_draggable : MonoBehaviour
 {
@@ -117,6 +120,18 @@ public class Food_draggable : MonoBehaviour
     {
         this.gameObject.transform.position = originalPos;
 
+    }
+
+    
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        Debug.Log("mamona");
+
+        if (collision.gameObject.name == "limits")
+        {
+            this.gameObject.transform.position = originalPos;
+        }
     }
 }
 
