@@ -376,7 +376,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 1
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -437,8 +437,8 @@ GameObject:
   - component: {fileID: 640976785}
   - component: {fileID: 640976784}
   - component: {fileID: 640976782}
-  - component: {fileID: 640976786}
   - component: {fileID: 640976787}
+  - component: {fileID: 640976788}
   m_Layer: 0
   m_Name: Zanahoria
   m_TagString: Untagged
@@ -539,18 +539,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 21.48}
---- !u!114 &640976786
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 640976780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5832b6e9cd395154faa99339ef7008c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &640976787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -563,6 +551,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9442e028de51b6e46a15cfd30d26d233, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &640976788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 640976780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47c1d23faf9e12848ae9a7869a75350c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalPos: {x: 0, y: 0}
 --- !u!1 &862239400
 GameObject:
   m_ObjectHideFlags: 0
@@ -806,8 +807,8 @@ GameObject:
   - component: {fileID: 1294175457}
   - component: {fileID: 1294175456}
   - component: {fileID: 1294175454}
-  - component: {fileID: 1294175458}
   - component: {fileID: 1294175459}
+  - component: {fileID: 1294175460}
   m_Layer: 0
   m_Name: Patata
   m_TagString: Potato
@@ -908,18 +909,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1294175458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1294175452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5832b6e9cd395154faa99339ef7008c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1294175459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -932,6 +921,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9442e028de51b6e46a15cfd30d26d233, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1294175460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294175452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47c1d23faf9e12848ae9a7869a75350c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalPos: {x: 0, y: 0}
 --- !u!1 &1305261307
 GameObject:
   m_ObjectHideFlags: 0
@@ -1121,8 +1123,8 @@ GameObject:
   - component: {fileID: 1338397293}
   - component: {fileID: 1338397292}
   - component: {fileID: 1338397290}
-  - component: {fileID: 1338397294}
   - component: {fileID: 1338397295}
+  - component: {fileID: 1338397296}
   m_Layer: 0
   m_Name: Pollo
   m_TagString: Untagged
@@ -1223,18 +1225,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1338397294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1338397288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5832b6e9cd395154faa99339ef7008c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1338397295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1247,6 +1237,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9442e028de51b6e46a15cfd30d26d233, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1338397296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338397288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47c1d23faf9e12848ae9a7869a75350c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalPos: {x: 0, y: 0}
 --- !u!1001 &1546062934
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1553,7 +1556,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1588326502}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
@@ -1751,8 +1754,8 @@ GameObject:
   - component: {fileID: 1704717605}
   - component: {fileID: 1704717604}
   - component: {fileID: 1704717602}
-  - component: {fileID: 1704717606}
   - component: {fileID: 1704717607}
+  - component: {fileID: 1704717608}
   m_Layer: 0
   m_Name: Curry
   m_TagString: Untagged
@@ -1853,18 +1856,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1704717606
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1704717600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5832b6e9cd395154faa99339ef7008c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1704717607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1877,6 +1868,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9442e028de51b6e46a15cfd30d26d233, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1704717608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1704717600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47c1d23faf9e12848ae9a7869a75350c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalPos: {x: 0, y: 0}
 --- !u!1 &1808827726
 GameObject:
   m_ObjectHideFlags: 0
@@ -1999,6 +2003,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: c17132a3700dd68438a8d62530e305d5, type: 3}
   - {fileID: 21300000, guid: 47a90a3d10475a24099062d8151026c5, type: 3}
   - {fileID: 21300000, guid: 4025b8e29518c1b44a894ec48925e77f, type: 3}
+  estado: 0
   complete: 0
   pan: {fileID: 0}
   pot_Controller: {fileID: 0}
@@ -2129,8 +2134,8 @@ GameObject:
   - component: {fileID: 1965280250}
   - component: {fileID: 1965280249}
   - component: {fileID: 1965280247}
-  - component: {fileID: 1965280251}
   - component: {fileID: 1965280252}
+  - component: {fileID: 1965280253}
   m_Layer: 0
   m_Name: Cebolla
   m_TagString: Onion
@@ -2231,18 +2236,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1965280251
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1965280245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5832b6e9cd395154faa99339ef7008c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1965280252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2255,6 +2248,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9442e028de51b6e46a15cfd30d26d233, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1965280253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965280245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47c1d23faf9e12848ae9a7869a75350c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalPos: {x: 0, y: 0}
 --- !u!1 &1972261652
 GameObject:
   m_ObjectHideFlags: 0
@@ -2266,8 +2272,8 @@ GameObject:
   - component: {fileID: 1972261657}
   - component: {fileID: 1972261656}
   - component: {fileID: 1972261654}
-  - component: {fileID: 1972261658}
   - component: {fileID: 1972261659}
+  - component: {fileID: 1972261660}
   m_Layer: 0
   m_Name: Arroz
   m_TagString: Untagged
@@ -2368,18 +2374,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1972261658
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1972261652}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5832b6e9cd395154faa99339ef7008c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1972261659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2392,6 +2386,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9442e028de51b6e46a15cfd30d26d233, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1972261660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972261652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47c1d23faf9e12848ae9a7869a75350c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalPos: {x: 0, y: 0}
 --- !u!1 &2038536639
 GameObject:
   m_ObjectHideFlags: 0

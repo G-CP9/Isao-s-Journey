@@ -28,6 +28,7 @@ public class Pot_controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (onFire && filled)
         {
             time = Mathf.FloorToInt(timer.timeValue);
@@ -71,9 +72,14 @@ public class Pot_controller : MonoBehaviour
         }
         if ((collision.gameObject.name == "Plat") && isCook)
         {
-            estado = 0;
-            filled = false;
-            timer.timeValue = 15;
+            plat_controller plat = collision.gameObject.GetComponent<plat_controller>();
+            if(plat.estado == 2 || plat.estado == 0 || plat.estado == 3)
+            {
+                Debug.Log("vaciate guarra");
+                Clear_out();
+                timer.timeValue = 15;
+            }
+            
         }
         if ((collision.gameObject.name == "Basura") && estado == 5)
         {
@@ -118,6 +124,7 @@ public class Pot_controller : MonoBehaviour
     {
         estado = 0;
         filled = false;
+        Pot_render();
     }
 
     IEnumerator Water_fill()
