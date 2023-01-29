@@ -11,9 +11,13 @@ public class plat_controller : MonoBehaviour
 
     public int estado;
     bool onFire;
-    public bool complete;
+    
 
     int num_plats;
+
+    public AudioClip bell;
+    public AudioClip fill;
+    AudioSource plat_sound;
 
     
     
@@ -23,6 +27,7 @@ public class plat_controller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        plat_sound= GetComponent<AudioSource>();
         estado = 0;
     }
 
@@ -30,10 +35,6 @@ public class plat_controller : MonoBehaviour
     void Update()
     {
         Plat_render();
-        if(complete==true)
-        {
-            Invoke("Plat_complete", 1.0f);
-        }
         if(num_plats > 2)
         {
             SwapScene();
@@ -49,17 +50,22 @@ public class plat_controller : MonoBehaviour
         if (collision.gameObject.name == "Pot")
         {
             pot_Controller = collision.gameObject.GetComponent<Pot_controller>();
+            
             if (pot_Controller.isCook)
             {
-                if(estado == 0)
+                pot_Controller.Clear_out();
+                plat_sound.PlayOneShot(fill);
+
+                if (estado == 0)
                 {
                     estado = 1;
                 }
                 if(estado == 2)
                 {
                     estado = 3;
-                    complete = true;
-                   
+                    
+                    Invoke("Plat_complete", 1.0f);
+
                 }
             }
         }
@@ -69,6 +75,7 @@ public class plat_controller : MonoBehaviour
 
             if (pan.isCook)
             {
+                plat_sound.PlayOneShot(fill);
                 if (estado == 0)
                 {
                     estado = 2;
@@ -76,8 +83,9 @@ public class plat_controller : MonoBehaviour
                 if (estado == 1)
                 {
                     estado = 3;
-                    complete = true;
                     
+                    Invoke("Plat_complete", 1.0f);
+
 
 
 
@@ -99,24 +107,34 @@ public class plat_controller : MonoBehaviour
 
     void SwapScene()
     {
-        SceneManager.LoadScene("Credits");
+        SceneManager.LoadScene("Opria2");
     }
     void Plat_complete()
     {
-        complete = false;
+
+        plat_sound.PlayOneShot(bell);
         this.GetComponent<SpriteRenderer>().enabled = false;
         num_plats++;
 
-        Invoke("Complete_minigame", 2.0f);
+        if(num_plats == 2)
+        {
+            Invoke("SwapScene", 1.0f);
+        }
+        else 
+        {
+            
+            Invoke("Complete", 1.0f);
+        }
+        
         
     }
 
-    void Complete_minigame()
+    void Complete()
     {
         
         estado = 0;
-
         this.GetComponent<SpriteRenderer>().enabled = true;
+
 
 
     }

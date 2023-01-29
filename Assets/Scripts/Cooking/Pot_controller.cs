@@ -9,12 +9,20 @@ public class Pot_controller : MonoBehaviour
     public Sprite[] pot_states;
 
     public int estado;
-    bool filled;
+    public bool filled;
     bool onFire;
     public bool isCook;
     public Timer timer;
     int time;
 
+
+    //Sounds
+    public AudioSource pot_sounds;
+    public AudioSource pot_filling;
+    public AudioSource help_sound;
+
+    public AudioClip ready;
+    public AudioClip burned;
 
 
     // Start is called before the first frame update
@@ -42,11 +50,13 @@ public class Pot_controller : MonoBehaviour
             {
                 estado = 4;
                 isCook= true;
+                help_sound.PlayOneShot(ready);
             }
             if (time == 0)
             {
                 estado = 5;
                 isCook = false;
+                help_sound.PlayOneShot(burned);
 
             }
         }
@@ -61,7 +71,7 @@ public class Pot_controller : MonoBehaviour
         Debug.Log("Colisiooon");
         if ((collision.gameObject.name == "Agua") && estado == 0)
         {
-            StartCoroutine(Water_fill());
+            //StartCoroutine(Water_fill());
            // Destroy(collision.gameObject);
         }
         if ((collision.gameObject.name == "Arroz") && estado == 1)
@@ -69,23 +79,26 @@ public class Pot_controller : MonoBehaviour
             estado = 2;
             //Destroy(collision.gameObject);
             filled = true;
+            pot_filling.Play();
         }
         if ((collision.gameObject.name == "Plat") && isCook)
         {
             plat_controller plat = collision.gameObject.GetComponent<plat_controller>();
             if(plat.estado == 2 || plat.estado == 0 || plat.estado == 3)
             {
-                Debug.Log("vaciate guarra");
+                
                 Clear_out();
                 timer.timeValue = 15;
+                
+                this.gameObject.transform.position = this.GetComponent<Object_Draggeable>().originalPos;
+                
             }
             
         }
         if ((collision.gameObject.name == "Basura") && estado == 5)
         {
-            estado = 0;
-            filled = false;
-            timer.timeValue = 15;
+            Clear_out();
+            
         }
 
     }
@@ -97,12 +110,19 @@ public class Pot_controller : MonoBehaviour
         {
             if (filled)
             {
+                pot_sounds.Play();
                 onFire = true;
                 timer.StartCooking = true;
             }
 
+
+        }
+        if (collision.gameObject.name == "limits")
+        {
+            this.gameObject.transform.position = this.gameObject.GetComponent<Object_Draggeable>().originalPos;
         }
     }
+
 
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -111,6 +131,7 @@ public class Pot_controller : MonoBehaviour
             onFire = false;
             timer.StartCooking = false;
         }
+        
     }
 
     public void Pot_render()
@@ -124,25 +145,14 @@ public class Pot_controller : MonoBehaviour
     {
         estado = 0;
         filled = false;
+        this.gameObject.transform.position = this.gameObject.GetComponent<Object_Draggeable>().originalPos;
+        timer.timeValue = 15;
         Pot_render();
+
     }
 
-    IEnumerator Water_fill()
-    {
-        
-
-        yield return new WaitForSeconds(2);
-
-        estado = 1;
-       
-        Invoke("Original_pos", 1.0f);
-        
-    }
-
-    void Original_pos()
-    {
-        this.GetComponent<Object_Draggeable>().Added();
-        this.gameObject.GetComponent<CircleCollider2D>().enabled = true;
-    }
+    
+    
+    
 
 }

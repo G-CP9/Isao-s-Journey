@@ -11,11 +11,17 @@ public class Pan: MonoBehaviour
 
 
     public int estado;
-    bool filled;
+    public bool filled;
     bool onFire;
     public bool isCook;
     public Timer timer;
     int time;
+
+    //Sounds
+    public AudioSource pan_sounds;
+
+    public AudioSource pan_filling;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +36,7 @@ public class Pan: MonoBehaviour
     {
         if (onFire && filled)
         {
+            
             time = Mathf.FloorToInt(timer.timeValue);
             Debug.Log(time);
 
@@ -62,34 +69,32 @@ public class Pan: MonoBehaviour
         {
             estado = 1;
             //Destroy(collision.gameObject);
-            
+            pan_filling.Play();
         }
         if ((collision.gameObject.name == "Zanahoria") && estado == 1)
         {
             estado = 2;
-            
+            pan_filling.Play();
             //Destroy(collision.gameObject);
-
         }
         if ((collision.gameObject.name == "Cebolla") && estado == 2)
         {
             estado = 3;
+            pan_filling.Play();
             //Destroy(collision.gameObject);
-            
-
         }
         if ((collision.gameObject.name == "Curry") && estado == 3)
         {
             estado = 4;
+            pan_filling.Play();
             //Destroy(collision.gameObject);
-
         }
         if ((collision.gameObject.name == "Pollo") && estado == 4)
         {
             estado = 5;
+            pan_filling.Play();
             //Destroy(collision.gameObject);
             filled = true;
-
         }
 
         if ((collision.gameObject.name == "Plat") && isCook)
@@ -101,7 +106,6 @@ public class Pan: MonoBehaviour
                 filled = false;
                 timer.timeValue = 15;
             }
-            
         }
 
         if ((collision.gameObject.name == "Basura") && estado == 8)
@@ -110,6 +114,8 @@ public class Pan: MonoBehaviour
             filled = false;
             timer.timeValue = 15;
         }
+
+        
     }
 
 
@@ -117,7 +123,7 @@ public class Pan: MonoBehaviour
     {
         if (collision.gameObject.tag == "Grill")
         {
-
+           
             if (filled)
             {
                 onFire = true;

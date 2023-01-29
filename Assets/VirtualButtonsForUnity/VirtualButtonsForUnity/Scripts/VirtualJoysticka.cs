@@ -1,7 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem.Controls;
 using UnityEngine.InputSystem.Layouts;
 using UnityEngine.InputSystem.OnScreen;
 using UnityEngine.UI;
@@ -25,6 +28,9 @@ public class VirtualJoysticka : MonoBehaviour, IPointerDownHandler, IPointerUpHa
     protected OnScreenStick handleStickController = null;
     protected CanvasGroup bgCanvasGroup = null;
     protected Vector2 initialPosition = Vector2.zero;
+
+   
+    
 
     protected virtual void Awake()
     {
@@ -61,6 +67,8 @@ public class VirtualJoysticka : MonoBehaviour, IPointerDownHandler, IPointerUpHa
         PointerEventData constructedEventData = new PointerEventData(EventSystem.current);
         constructedEventData.position = handle.position;
         handleStickController.OnPointerDown(constructedEventData);
+        
+
 
         if (joystickType == VirtualJoystickType.Floating)
         {

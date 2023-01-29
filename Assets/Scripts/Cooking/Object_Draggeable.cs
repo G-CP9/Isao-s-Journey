@@ -6,13 +6,13 @@ public class Object_Draggeable : MonoBehaviour
 {
     Vector2 difference = Vector2.zero;
     Collider2D object_collider;
-    Vector2 originalPos;
+    public Vector2 originalPos;
     List<string> pan_ingredients = new List<string>();
     List<string> pot_ingredients = new List<string>();
 
     Pot_controller pot_Controller;
     
-
+    
 
 
     private void Start()
@@ -50,7 +50,7 @@ public class Object_Draggeable : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(this.gameObject.name == "Pot" && !pot_ingredients.Contains(collision.gameObject.name) && collision.gameObject.name != "Agua")
+        if(this.gameObject.name == "Pot" && this.gameObject.name != "Plat" && !pot_ingredients.Contains(collision.gameObject.name) && collision.gameObject.name != "Agua")
         {
             collision.gameObject.transform.position = collision.gameObject.GetComponent<Food_draggable>().originalPos;
         }
@@ -90,9 +90,18 @@ public class Object_Draggeable : MonoBehaviour
                 object_collider.enabled = !object_collider.enabled;
             }
         }
+        
             
 
 
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.name == "limits")
+        {
+            this.gameObject.transform.position = originalPos;
+        }
     }
 
     public void Added()
