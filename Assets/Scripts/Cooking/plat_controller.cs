@@ -140,7 +140,7 @@ public class plat_controller : MonoBehaviour
         
         estado = 0;
         this.GetComponent<SpriteRenderer>().enabled = true;
-
+        
 
 
     }

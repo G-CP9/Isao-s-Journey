@@ -164,6 +164,10 @@ public class Pan: MonoBehaviour
     {
         estado = 0;
         filled = false;
+        this.gameObject.transform.position = this.gameObject.GetComponent<Object_Draggeable>().originalPos;
+        timer.timeValue = 15;
+        Pan_render();
+
     }
 
 
