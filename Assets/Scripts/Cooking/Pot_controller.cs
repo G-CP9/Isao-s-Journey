@@ -81,26 +81,7 @@ public class Pot_controller : MonoBehaviour
             filled = true;
             pot_filling.Play();
         }
-        if ((collision.gameObject.name == "Plat") && isCook)
-        {
-            plat_controller plat = collision.gameObject.GetComponent<plat_controller>();
-            if(plat.estado == 2 || plat.estado == 0 || plat.estado == 3)
-            {
-                
-                Clear_out();
-                timer.timeValue = 15;
-                
-                this.gameObject.transform.position = this.GetComponent<Object_Draggeable>().originalPos;
-                
-            }
-            
-        }
-        if ((collision.gameObject.name == "Basura") && estado == 5)
-        {
-            Clear_out();
-            
-        }
-
+        
     }
 
 
@@ -121,6 +102,26 @@ public class Pot_controller : MonoBehaviour
         {
             this.gameObject.transform.position = this.gameObject.GetComponent<Object_Draggeable>().originalPos;
         }
+        if ((collision.gameObject.name == "Plat") && isCook)
+        {
+            plat_controller plat = collision.gameObject.GetComponent<plat_controller>();
+            if (plat.estado == 2 || plat.estado == 0 || plat.estado == 3)
+            {
+
+                Clear_out();
+                timer.timeValue = 15;
+
+                this.gameObject.transform.position = this.GetComponent<Object_Draggeable>().originalPos;
+
+            }
+
+        }
+        if ((collision.gameObject.name == "Basura") && estado == 5)
+        {
+            Clear_out();
+
+        }
+
     }
 
 

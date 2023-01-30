@@ -104,23 +104,9 @@ public class Pan: MonoBehaviour
             filled = true;
         }
 
-        if ((collision.gameObject.name == "Plat") && isCook)
-        {
-            plat_controller plat = collision.gameObject.GetComponent<plat_controller>();
-            if(plat.estado == 1 || plat.estado == 0 || plat.estado == 3)
-            {
-                estado = 0;
-                filled = false;
-                timer.timeValue = 15;
-            }
-        }
+        
 
-        if ((collision.gameObject.name == "Basura") && estado == 8)
-        {
-            estado = 0;
-            filled = false;
-            timer.timeValue = 15;
-        }
+        
 
         
     }
@@ -138,6 +124,23 @@ public class Pan: MonoBehaviour
             }
 
         }
+        if ((collision.gameObject.name == "Plat") && isCook)
+        {
+            plat_controller plat = collision.gameObject.GetComponent<plat_controller>();
+            if (plat.estado == 1 || plat.estado == 0 || plat.estado == 3)
+            {
+                estado = 0;
+                filled = false;
+                timer.timeValue = 15;
+            }
+        }
+
+        if ((collision.gameObject.name == "Basura") && estado == 8)
+        {
+            estado = 0;
+            filled = false;
+            timer.timeValue = 15;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -147,6 +150,7 @@ public class Pan: MonoBehaviour
             onFire = false;
             timer.StartCooking = false;
         }
+        
     }
 
     public void Pan_render()

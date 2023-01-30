@@ -47,10 +47,19 @@ public class plat_controller : MonoBehaviour
     {
 
         Debug.Log("Colisiooon");
+        
+        
+
+        
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
         if (collision.gameObject.name == "Pot")
         {
             pot_Controller = collision.gameObject.GetComponent<Pot_controller>();
-            
+
             if (pot_Controller.isCook)
             {
                 pot_Controller.Clear_out();
@@ -60,10 +69,10 @@ public class plat_controller : MonoBehaviour
                 {
                     estado = 1;
                 }
-                if(estado == 2)
+                if (estado == 2)
                 {
                     estado = 3;
-                    
+
                     Invoke("Plat_complete", 1.0f);
 
                 }
@@ -72,7 +81,7 @@ public class plat_controller : MonoBehaviour
         if (collision.gameObject.name == "Pan")
         {
             pan = collision.gameObject.GetComponent<Pan>();
-
+            pan.estado = 0;
             if (pan.isCook)
             {
                 plat_sound.PlayOneShot(fill);
@@ -83,7 +92,7 @@ public class plat_controller : MonoBehaviour
                 if (estado == 1)
                 {
                     estado = 3;
-                    
+
                     Invoke("Plat_complete", 1.0f);
 
 
@@ -92,9 +101,6 @@ public class plat_controller : MonoBehaviour
                 }
             }
         }
-
-        
-
     }
 
 
