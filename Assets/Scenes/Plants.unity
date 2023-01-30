@@ -1188,7 +1188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 2
+  m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -1227,7 +1227,7 @@ Canvas:
   m_RenderMode: 1
   m_Camera: {fileID: 1649604866}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -2210,7 +2210,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7994729574101362318, guid: 032428d81191245d4ae5a23a0a301ae9, type: 3}
       propertyPath: movementRange
-      value: 100
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 7994729574101362318, guid: 032428d81191245d4ae5a23a0a301ae9, type: 3}
       propertyPath: stickControlPath
@@ -7784,7 +7784,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1960087520
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8112,6 +8112,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7952175011230549863}
     - target: {fileID: 2957546254192332449, guid: a87e26842ec0dc4448103e95d0a1768c, type: 3}
+      propertyPath: maxSpeed
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2957546254192332449, guid: a87e26842ec0dc4448103e95d0a1768c, type: 3}
       propertyPath: open_bin
       value: 
       objectReference: {fileID: 8300000, guid: db65089e08bfa6c4b90af3af86e6bd3d, type: 3}
@@ -8135,6 +8139,10 @@ PrefabInstance:
       propertyPath: pick_flower
       value: 
       objectReference: {fileID: 8300000, guid: e397172498b323248876398108fe32b9, type: 3}
+    - target: {fileID: 2957546254192332449, guid: a87e26842ec0dc4448103e95d0a1768c, type: 3}
+      propertyPath: idleFriction
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2957546254192332449, guid: a87e26842ec0dc4448103e95d0a1768c, type: 3}
       propertyPath: playerSounds
       value: 
